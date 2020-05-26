@@ -1,0 +1,109 @@
+.Footer-box {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    background-color: #eeeeee;
+}
+
+.Footer-query-section {
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.Footer-query-section__content {
+    color: #424242;
+    font-size: 22px;
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: Medium;
+}
+
+.Footer-query-section__writeToUs {
+    color: #424242;
+    font-size: 24px;
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: Medium;
+}
+
+.Footer-query-section__mail {
+    color: #424242;
+    font-size: 24px;
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: Medium;
+}
+
+.Footer-query-section__callUs {
+    color: #424242;
+    font-size: 24px;
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: Medium;
+}
+
+.Footer-query-section__phoneNumber {
+    color: #424242;
+    font-size: 50px;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: Regular;
+}
+
+.Footer-query-content {
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.Footer-query-content__subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.Footer-query-content__input-button button {
+    background-color: #db2326;
+}
+
+.Footer-query-content__links {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+
+.Footer-query-content__links-list li {
+    list-style-type: none;
+}
+
+.Footer-query-content__link {
+    margin-bottom: 25px;
+}
+
+.Footer-social {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    background-color: #eeeeee;
+}
+
+.Footer-social__icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.Footer-social__icons i {
+    color: #757575;
+    margin-right: 20px;
+}
+
+.Footer-social__links ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.Footer-social__link {
+
+}

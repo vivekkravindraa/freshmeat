@@ -1,0 +1,57 @@
+.Navigation-container ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.Navigation-menu__item {
+    position: relative;
+}
+
+.Navigation-menu__item-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.Navigation-menu__item:last-child > .Navigation-menu__item-link {
+    margin-right: 0;
+}
+
+.Navigation-menu__item-link button {
+    color: white;
+    border: none;
+    outline: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.Navigation-menu__subNavigation-dropdown {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    background-color: #f5f5f5;
+}
+
+.Navigation-menu__subNavigation-items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.Navigation-menu__subNavigation-item {
+    list-style-type: none;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.Navigation-menu__subNavigation-item-link {
+    text-decoration: none;
+    color: black;
+}

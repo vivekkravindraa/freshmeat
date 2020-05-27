@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import masterCard from '../../../assets/Rectangle 683/Rectangle 683.png';
-import secureCard from '../../../assets/Rectangle 682/Rectangle 682.png';
-import visaCard from '../../../assets/Rectangle 684/Rectangle 684.png';
+import masterCard from '../../../assets/HomeComponentAssets/masterCard/masterCard.png';
+import secureCard from '../../../assets/HomeComponentAssets/secureCard/secureCard.png';
+import visaCard from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisa.png';
 
 import './Footer.css';
 

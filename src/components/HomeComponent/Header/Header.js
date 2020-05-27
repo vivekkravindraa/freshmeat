@@ -6,44 +6,16 @@ import './Header.css';
 
 const Header = () => {
     const socialLinks = [
-        {
-            id: 1,
-            path: "/",
-            icon: "fab fa-facebook-f"
-        },
-        {
-            id: 2,
-            path: "/",
-            icon: "fab fa-twitter"
-        },
-        {
-            id: 3,
-            path: "/",
-            icon: "fab fa-instagram"
-        },
-        {
-            id: 4,
-            path: "/",
-            icon: "fab fa-youtube"
-        }
+        { id: 1, path: "/", icon: "fab fa-facebook-f" },
+        { id: 2, path: "/", icon: "fab fa-twitter" },
+        { id: 3, path: "/", icon: "fab fa-instagram" },
+        { id: 4, path: "/", icon: "fab fa-youtube" }
     ];
 
     const siteLinks = [
-        {
-            id: 1,
-            path: "/",
-            icon: "fas fa-user"
-        },
-        {
-            id: 2,
-            path: "/",
-            icon: "fas fa-shopping-cart"
-        },
-        {
-            id: 3,
-            path: "/",
-            icon: "fas fa-search"
-        }
+        { id: 1, path: "/", icon: "fas fa-user" },
+        { id: 2, path: "/", icon: "fas fa-shopping-cart" },
+        { id: 3, path: "/", icon: "fas fa-search" }
     ]
 
     return (

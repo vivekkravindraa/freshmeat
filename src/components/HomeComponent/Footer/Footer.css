@@ -10,7 +10,9 @@
 
 .Footer-query-section__content {
     text-align: left;
-    font: Medium 22px/26px Montserrat;
+    font-weight: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 0.4px;
     color: #424242;
     opacity: 1;
@@ -18,7 +20,9 @@
 
 .Footer-query-section__writeToUs {
     text-align: left;
-    font: Medium 24px/29px Montserrat;
+    font-weight: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 0.43px;
     color: #424242;
     opacity: 1;
@@ -27,7 +31,9 @@
 .Footer-query-section__mail {
     text-align: left;
     text-decoration: underline;
-    font: Medium 24px/29px Montserrat;
+    font-weight: Medium;
+    font-size: 24px;
+    font-family: Montserrat;
     letter-spacing: 0.43px;
     color: #424242;
     opacity: 1;
@@ -35,7 +41,9 @@
 
 .Footer-query-section__callUs {
     text-align: left;
-    font: Medium 24px/29px Montserrat;
+    font-weight: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 0.43px;
     color: #424242;
     opacity: 1;
@@ -44,11 +52,12 @@
 .Footer-query-section__phoneNumber {
     text-align: left;
     font-style: Regular;
-    font-size: 50px;
+    font-size: 35px;
     font-family: Poppins;
     letter-spacing: 0.9px;
     color: #424242;
     opacity: 1;
+    margin-bottom: 0;
 }
 
 .Footer-query-content {
@@ -64,11 +73,12 @@
 .Footer-query-content__subscribe label {
     text-align: left;
     font: bold;
-    font-size: 26px;
+    font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 1.3px;
     color: #424242;
     opacity: 1;
+    margin-bottom: 10px;
 }
 
 .Footer-query-content__subscribe input {
@@ -112,6 +122,7 @@
     letter-spacing: 1.3px;
     color: #424242;
     opacity: 1;
+    margin-bottom: 25px;
 }
 
 .Footer-query-content__links-list li {
@@ -122,7 +133,9 @@
 .Footer-query-content__link {
     text-decoration: none;
     text-align: left;
-    font: Medium 24px/29px Montserrat;
+    font-style: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 1.2px;
     color: #424242;
     opacity: 1;
@@ -162,7 +175,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 50px;
+    padding: 0px 50px 50px;
 }
 
 .Footer-social__icons i {
@@ -170,17 +183,24 @@
     margin-right: 20px;
 }
 
-.Footer-social__links ul {
+.Footer-social__links {
     display: flex;
-    list-style-type: none;
     justify-content: flex-end;
-    align-items: center;
+    padding: 0px 50px 50px;
+}
+
+.Footer-social__links li {
+    display: block;
+    list-style-type: none;
     padding: 10px 50px;
 }
 
 .Footer-social__link {
+    text-decoration: none;
     color: #424242;
-    font: Medium 24px/29px Montserrat;
+    font-weight: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     text-align: left;
     padding: 0 20px;
     border-right-color: 5px solid #212121;

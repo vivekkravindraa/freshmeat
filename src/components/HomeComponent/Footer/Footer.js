@@ -7,6 +7,41 @@ import visaCard from '../../../assets/Rectangle 684/Rectangle 684.png';
 import './Footer.css';
 
 export default function Footer() {
+    const queryContentLinks = [
+        { id: 1, path: "/", page: "My Account" },
+        { id: 2, path: "/", page: "FAQs" },
+        { id: 3, path: "/", page: "Privacy Policy" },
+        { id: 4, path: "/", page: "About us" },
+        { id: 5, path: "/", page: "Terms & Conditions" }
+    ];
+
+    const queryContentDownloadLinks = [
+        { id: 1, path: "/", image: "" },
+        { id: 2, path: "/", image: "" }
+    ];
+
+    const paySecurelyGatewayLinks = [
+        { id: 1, path: "/", image: `` },
+        { id: 2, path: "/", image: `${masterCard}` },
+        { id: 3, path: "/", image: `${secureCard}` },
+        { id: 4, path: "/", image: `${visaCard}` }
+    ];
+
+    const footerIcons = [
+        { id: 1, path: "/", icon: "fab fa-facebook-f" },
+        { id: 2, path: "/", icon: "fab fa-twitter" },
+        { id: 3, path: "/", icon: "fab fa-instagram" },
+        { id: 4, path: "/", icon: "fab fa-youtube" }
+    ]
+
+    const footerLinks = [
+        { id: 1, path: "/", name: "Home" },
+        { id: 2, path: "/", name: "Shop" },
+        { id: 3, path: "/", name: "About us" },
+        { id: 4, path: "/", name: "Blog" },
+        { id: 5, path: "/", name: "Delivery details" }
+    ]
+
     return (
         <div className="Footer-container">
             <div className="Footer-box">
@@ -40,58 +75,42 @@ export default function Footer() {
                         <div className="Footer-query-content__links-list">
                             <p className="Footer-query-content__links-header">USEFUL LINKS</p>
                             <Router>
-                                <li>
-                                    <Link className="Footer-query-content__link" to="/">My Account</Link>
-                                </li>
-                                <li>
-                                    <Link className="Footer-query-content__link" to="/">FAQs</Link>
-                                </li>
-                                <li>
-                                    <Link className="Footer-query-content__link" to="/">Privacy Policy</Link>
-                                </li>
-                                <li>
-                                    <Link className="Footer-query-content__link" to="/">About Us</Link>
-                                </li>
-                                <li>
-                                    <Link className="Footer-query-content__link" to="/">Terms &amp; Conditions</Link>
-                                </li>
+                                {queryContentLinks.map((item,index) => {
+                                    return (
+                                        <li>
+                                            <Link className="Footer-query-content__link" to={item.path}>
+                                                {item.page}
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
                             </Router>
                         </div>
                         <div className="Footer-query-content__download">
                             <p className="Footer-query-content__download-header">DOWNLOAD OUR APP</p>
                             <Router>
-                                <Link to="/">
-                                    <img className="Footer-query-content__download-store" src="" alt="no_image" />
-                                </Link>
-                                <Link to="/">
-                                    <img className="Footer-query-content__download-store" src="" alt="no_image" />
-                                </Link>
+                                {queryContentDownloadLinks.map((item, index) => {
+                                    return (
+                                        <Link to={item.path}>
+                                            <img className="Footer-query-content__download-store" src={item.image} alt="no_image" />
+                                        </Link>
+                                    )
+                                })}
                             </Router>
                         </div>
                         <div className="Footer-query-content__paySecurely">
                             <p className="Footer-query-content__paySecurely-header">PAY SECURELY WITH</p>
                             <div className="Footer-query-content__paySecurely-gateways">
                                 <Router>
-                                    <li>
-                                        <Link to="/">
-                                            <img className="Footer-query-content__paySecurely-gateway" src="" alt="no_image" />
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/">
-                                            <img className="Footer-query-content__paySecurely-gateway" src={masterCard} alt="no_image" />
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/">
-                                            <img className="Footer-query-content__paySecurely-gateway" src={secureCard} alt="no_image" />
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/">
-                                            <img className="Footer-query-content__paySecurely-gateway" src={visaCard} alt="no_image" />
-                                        </Link>
-                                    </li>
+                                    {paySecurelyGatewayLinks.map((item,index) => {
+                                        return (
+                                            <li key={index}>
+                                                <Link to={item.path}>
+                                                    <img className="Footer-query-content__paySecurely-gateway" src={item.image} alt="no_image" />
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
                                 </Router>
                             </div>
                         </div>
@@ -100,19 +119,24 @@ export default function Footer() {
             </div>
             <div className="Footer-social">
                 <div className="Footer-social__icons">
-                    <i className="fab fa-facebook-f"></i>
-                    <i className="fab fa-twitter"></i>
-                    <i className="fab fa-instagram"></i>
-                    <i className="fab fa-youtube"></i>
+                    <Router>
+                        {footerIcons.map((item, index) => {
+                            return (
+                                <Link to={item.path}>
+                                    <i key={index} className={item.icon}></i>
+                                </Link>
+                            )
+                        })}
+                    </Router>
                 </div>
                 <div className="Footer-social__links">
-                    <ul className="Footer-social__links-list">
-                        <li className="Footer-social__link">Home</li>
-                        <li className="Footer-social__link">Shop</li>
-                        <li className="Footer-social__link">About us</li>
-                        <li className="Footer-social__link">Blog</li>
-                        <li className="Footer-social__link">Delivery details</li>
-                    </ul>
+                    <Router>
+                        {footerLinks.map((item, index) => {
+                            return (
+                                <Link key={index} className="Footer-social__link" to={item.path}>{item.name}</Link>
+                            )
+                        })}
+                    </Router>
                 </div>
             </div>
         </div>

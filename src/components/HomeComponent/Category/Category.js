@@ -35,14 +35,21 @@ export default function Category() {
             <div className="Category-title">
                 <h1>EXPLORE BY CATEGORIES</h1>
             </div>
-            {categories.map((item, index) => {
-                return (
-                    <div key={index} className="Category-item">
-                        <div className="Category-item__image" style={{ backgroundImage: `url(${item.categoryImage})` }}></div>
-                        <p className="Category-item__name">{item.categoryName.toUpperCase()}</p>
-                    </div>
-                )
-            })}
+            <div className="Category-items">
+                {categories.map((item, index) => {
+                    return (
+                        <div key={index} className="Category-item">
+                            <div
+                                className="Category-image"
+                                style={{ backgroundImage: `url(${item.categoryImage})` }}>
+                            </div>
+                            <div className="Category-name">
+                                {item.categoryName.toUpperCase()}
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     );
 };

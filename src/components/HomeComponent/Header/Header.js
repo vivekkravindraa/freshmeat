@@ -5,24 +5,60 @@ import Navigation from '../Navigation/Navigation';
 import './Header.css';
 
 const Header = () => {
+    const socialLinks = [
+        {
+            id: 1,
+            path: "/",
+            icon: "fab fa-facebook-f"
+        },
+        {
+            id: 2,
+            path: "/",
+            icon: "fab fa-twitter"
+        },
+        {
+            id: 3,
+            path: "/",
+            icon: "fab fa-instagram"
+        },
+        {
+            id: 4,
+            path: "/",
+            icon: "fab fa-youtube"
+        }
+    ];
+
+    const siteLinks = [
+        {
+            id: 1,
+            path: "/",
+            icon: "fas fa-user"
+        },
+        {
+            id: 2,
+            path: "/",
+            icon: "fas fa-shopping-cart"
+        },
+        {
+            id: 3,
+            path: "/",
+            icon: "fas fa-search"
+        }
+    ]
+
     return (
         <div className="Header">
             <div className="Header-icons">
                 <div className="Header-icons__social">
                     <span className="Header-icons__social-label">Follow us - </span>
                     <Router className="Header-icons__social-router">
-                        <Link className="Header-icons__social-link" to="/">
-                            <i className="fab fa-facebook-f"></i>
-                        </Link>    
-                        <Link className="Header-icons__social-link" to="/">
-                            <i className="fab fa-twitter"></i>
-                        </Link>
-                        <Link className="Header-icons__social-link" to="/">
-                            <i className="fab fa-instagram"></i>
-                        </Link>
-                        <Link className="Header-icons__social-link" to="/">
-                            <i className="fab fa-youtube"></i>
-                        </Link>
+                        {socialLinks.map((item,index) => {
+                            return (
+                                <Link key={index} className="Header-icons__social-link" to={item.path}>
+                                    <i className={item.icon}></i>
+                                </Link>
+                            )
+                        })}
                     </Router>
                 </div>
                 <div className="Header-icons__main">
@@ -30,15 +66,13 @@ const Header = () => {
                 </div>
                 <div className="Header-icons__site">
                     <Router className="Header-icons__site-router">
-                        <Link className="Header-icons__site-link" to="/">
-                            <i className="fas fa-user"></i>
-                        </Link>
-                        <Link className="Header-icons__site-link" to="/">
-                            <i className="fas fa-shopping-cart"></i>
-                        </Link>
-                        <Link className="Header-icons__site-link" to="/">
-                            <i className="fas fa-search"></i>
-                        </Link>
+                        {siteLinks.map((item,index) => {
+                            return (
+                                <Link key={index} className="Header-icons__site-link" to={item.path}>
+                                    <i className={item.icon}></i>
+                                </Link>
+                            )
+                        })}
                     </Router>
                 </div>
             </div>

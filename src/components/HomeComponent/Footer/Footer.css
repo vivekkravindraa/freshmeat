@@ -1,67 +1,100 @@
 .Footer-box {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 4fr 8fr;
     background-color: #eeeeee;
 }
 
 .Footer-query-section {
-    border: 1px solid black;
     padding: 50px;
 }
 
 .Footer-query-section__content {
-    color: #424242;
-    font-size: 22px;
     text-align: left;
-    font-family: Montserrat;
-    font-weight: Medium;
+    font: Medium 22px/26px Montserrat;
+    letter-spacing: 0.4px;
+    color: #424242;
+    opacity: 1;
 }
 
 .Footer-query-section__writeToUs {
-    color: #424242;
-    font-size: 24px;
     text-align: left;
-    font-family: Montserrat;
-    font-weight: Medium;
+    font: Medium 24px/29px Montserrat;
+    letter-spacing: 0.43px;
+    color: #424242;
+    opacity: 1;
 }
 
 .Footer-query-section__mail {
-    color: #424242;
-    font-size: 24px;
     text-align: left;
-    font-family: Montserrat;
-    font-weight: Medium;
+    text-decoration: underline;
+    font: Medium 24px/29px Montserrat;
+    letter-spacing: 0.43px;
+    color: #424242;
+    opacity: 1;
 }
 
 .Footer-query-section__callUs {
-    color: #424242;
-    font-size: 24px;
     text-align: left;
-    font-family: Montserrat;
-    font-weight: Medium;
+    font: Medium 24px/29px Montserrat;
+    letter-spacing: 0.43px;
+    color: #424242;
+    opacity: 1;
 }
 
 .Footer-query-section__phoneNumber {
-    color: #424242;
-    font-size: 50px;
     text-align: left;
+    font-style: Regular;
+    font-size: 50px;
     font-family: Poppins;
-    font-weight: Regular;
+    letter-spacing: 0.9px;
+    color: #424242;
+    opacity: 1;
 }
 
 .Footer-query-content {
-    border: 1px solid black;
     padding: 50px;
 }
 
 .Footer-query-content__subscribe {
     display: flex;
     flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.Footer-query-content__subscribe label {
+    text-align: left;
+    font: bold;
+    font-size: 26px;
+    font-family: Montserrat;
+    letter-spacing: 1.3px;
+    color: #424242;
+    opacity: 1;
+}
+
+.Footer-query-content__subscribe input {
+    background: #fafafa 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: none;
+    opacity: 1;
+    padding: 10px;
+    outline: none;
 }
 
 .Footer-query-content__input-button button {
-    background-color: #db2326;
+    background: #db2c36 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-style: none;
+    text-align: left;
+    font: Medium 24px/29px Montserrat;
+    letter-spacing: 0.43px;
+    color: #ffffff;
+    opacity: 1;    
+    padding: 10px;
+    outline: 0;
 }
 
 .Footer-query-content__links {
@@ -69,16 +102,57 @@
     grid-template-columns: 4fr 4fr 4fr;
 }
 
+.Footer-query-content__links-header,
+.Footer-query-content__download-header,
+.Footer-query-content__paySecurely-header {
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Montserrat;
+    letter-spacing: 1.3px;
+    color: #424242;
+    opacity: 1;
+}
+
 .Footer-query-content__links-list li {
     list-style-type: none;
+    margin-bottom: 25px;    
 }
 
 .Footer-query-content__link {
-    margin-bottom: 25px;
+    text-decoration: none;
+    text-align: left;
+    font: Medium 24px/29px Montserrat;
+    letter-spacing: 1.2px;
+    color: #424242;
+    opacity: 1;
+}
+
+.Footer-query-content__download {
+    display:  flex;
+    flex-direction: column;
+}
+
+.Footer-query-content__download img {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    margin-bottom: 20px;
+    width: fit-content;
+    opacity: 1;
+}
+
+.Footer-query-content__paySecurely-gateways {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    row-gap: 40px;
+}
+
+.Footer-query-content__paySecurely-gateways li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Footer-social {
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 6fr 6fr;
     background-color: #eeeeee;
@@ -105,5 +179,9 @@
 }
 
 .Footer-social__link {
-
+    color: #424242;
+    font: Medium 24px/29px Montserrat;
+    text-align: left;
+    padding: 0 20px;
+    border-right-color: 5px solid #212121;
 }

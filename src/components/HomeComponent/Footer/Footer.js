@@ -38,24 +38,62 @@ export default function Footer() {
                     </div>
                     <div className="Footer-query-content__links">
                         <div className="Footer-query-content__links-list">
-                            <h5 className="Footer-query-content__links-header">USEFUL LINKS</h5>
-                            <li className="Footer-query-content__link">My Account</li>
-                            <li className="Footer-query-content__link">FAQs</li>
-                            <li className="Footer-query-content__link">Privacy Policy</li>
-                            <li className="Footer-query-content__link">About Us</li>
-                            <li className="Footer-query-content__link">Terms &amp; Conditions</li>
+                            <p className="Footer-query-content__links-header">USEFUL LINKS</p>
+                            <Router>
+                                <li>
+                                    <Link className="Footer-query-content__link" to="/">My Account</Link>
+                                </li>
+                                <li>
+                                    <Link className="Footer-query-content__link" to="/">FAQs</Link>
+                                </li>
+                                <li>
+                                    <Link className="Footer-query-content__link" to="/">Privacy Policy</Link>
+                                </li>
+                                <li>
+                                    <Link className="Footer-query-content__link" to="/">About Us</Link>
+                                </li>
+                                <li>
+                                    <Link className="Footer-query-content__link" to="/">Terms &amp; Conditions</Link>
+                                </li>
+                            </Router>
                         </div>
                         <div className="Footer-query-content__download">
-                            <h5 className="Footer-query-content__download-header">DOWNLOAD OUR APP</h5>
-                            <img className="Footer-query-content__download-store" src="" alt="no_image" />
-                            <img className="Footer-query-content__download-store" src="" alt="no_image" />
+                            <p className="Footer-query-content__download-header">DOWNLOAD OUR APP</p>
+                            <Router>
+                                <Link to="/">
+                                    <img className="Footer-query-content__download-store" src="" alt="no_image" />
+                                </Link>
+                                <Link to="/">
+                                    <img className="Footer-query-content__download-store" src="" alt="no_image" />
+                                </Link>
+                            </Router>
                         </div>
                         <div className="Footer-query-content__paySecurely">
-                            <h5 className="Footer-query-content__paySecurely-header">PAY SECURELY WITH</h5>
-                            <img className="Footer-query-content__paySecurely-gateway" src="" alt="no_image" />
-                            <img className="Footer-query-content__paySecurely-gateway" src={masterCard} alt="no_image" />
-                            <img className="Footer-query-content__paySecurely-gateway" src={secureCard} alt="no_image" />
-                            <img className="Footer-query-content__paySecurely-gateway" src={visaCard} alt="no_image" />
+                            <p className="Footer-query-content__paySecurely-header">PAY SECURELY WITH</p>
+                            <div className="Footer-query-content__paySecurely-gateways">
+                                <Router>
+                                    <li>
+                                        <Link to="/">
+                                            <img className="Footer-query-content__paySecurely-gateway" src="" alt="no_image" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <img className="Footer-query-content__paySecurely-gateway" src={masterCard} alt="no_image" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <img className="Footer-query-content__paySecurely-gateway" src={secureCard} alt="no_image" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <img className="Footer-query-content__paySecurely-gateway" src={visaCard} alt="no_image" />
+                                        </Link>
+                                    </li>
+                                </Router>
+                            </div>
                         </div>
                     </div>
                 </div>

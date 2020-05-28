@@ -29,10 +29,14 @@
 }
 
 .Footer-query-section__mail {
+    margin-bottom: 50px;
+}
+
+.Footer-query-section__mail span {
     text-align: left;
     text-decoration: underline;
     font-weight: Medium;
-    font-size: 24px;
+    font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0.43px;
     color: #424242;
@@ -47,6 +51,7 @@
     letter-spacing: 0.43px;
     color: #424242;
     opacity: 1;
+    margin: 0;
 }
 
 .Footer-query-section__phoneNumber {
@@ -57,7 +62,7 @@
     letter-spacing: 0.9px;
     color: #424242;
     opacity: 1;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .Footer-query-content {
@@ -88,7 +93,7 @@
     border-bottom-right-radius: 0;
     border-style: none;
     opacity: 1;
-    padding: 10px;
+    padding: 15px 50px 15px 50px;
     outline: none;
 }
 
@@ -99,11 +104,13 @@
     border-bottom-left-radius: 0;
     border-style: none;
     text-align: left;
-    font: Medium 24px/29px Montserrat;
+    font-weight: Medium;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 0.43px;
     color: #ffffff;
     opacity: 1;    
-    padding: 10px;
+    padding: 15px 25px 15px 25px;
     outline: 0;
 }
 

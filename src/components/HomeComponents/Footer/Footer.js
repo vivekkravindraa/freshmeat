@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.jpg';
+import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 import masterCardS from '../../../assets/HomeComponentAssets/masterCard/masterCardS.png';
 import secureCardS from '../../../assets/HomeComponentAssets/secureCard/secureCardS.png';
 import visaCardS from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisaS.png';
@@ -57,9 +57,11 @@ export default function Footer() {
                     <p className="Footer-query-section__writeToUs">
                         Write to us at
                     </p>
-                    <Router>
-                        <Link className="Footer-query-section__mail" to="/">Abcdefgh@gmail.com</Link>
-                    </Router>
+                    <p className="Footer-query-section__mail">
+                        <Router>
+                            <Link to="/"><span>Abcdefgh@gmail.com</span></Link>
+                        </Router>
+                    </p>
                     <p className="Footer-query-section__callUs">Got queries? Call Us!</p>
                     <p className="Footer-query-section__phoneNumber">+1800 753 23 56</p>
                 </div>
@@ -79,7 +81,7 @@ export default function Footer() {
                             <Router>
                                 {queryContentLinks.map((item,index) => {
                                     return (
-                                        <li>
+                                        <li key={index}>
                                             <Link className="Footer-query-content__link" to={item.path}>
                                                 {item.page}
                                             </Link>
@@ -93,7 +95,7 @@ export default function Footer() {
                             <Router>
                                 {queryContentDownloadLinks.map((item, index) => {
                                     return (
-                                        <Link to={item.path}>
+                                        <Link key={index} to={item.path}>
                                             <img className="Footer-query-content__download-store" src={item.image} alt="no_image" />
                                         </Link>
                                     )
@@ -124,8 +126,8 @@ export default function Footer() {
                     <Router>
                         {footerIcons.map((item, index) => {
                             return (
-                                <Link to={item.path}>
-                                    <i key={index} className={`${item.icon} ${item.size}`}></i>
+                                <Link key={index} to={item.path}>
+                                    <i className={`${item.icon} ${item.size}`}></i>
                                 </Link>
                             )
                         })}

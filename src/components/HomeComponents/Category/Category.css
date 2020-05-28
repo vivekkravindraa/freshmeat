@@ -51,7 +51,7 @@
     top: -5px;
 }
 
-.Category-name:hover {
+.selected {
     color: #ffffff;
     background-color: #db2c36;
 }

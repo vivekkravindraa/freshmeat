@@ -1,4 +1,5 @@
 import React from 'react';
+import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/freshmeatRaw.png';
 
 import './AboutUs.css';
 
@@ -7,11 +8,17 @@ export default function AboutUs() {
         <div className="AboutUs-container">
             <div className="AboutUs-container__top">
                 <div className="AboutUs-content">
-                    <p className="AboutUs-content__title">About Us <span>.</span> <span>-</span></p>
+                    <p className="AboutUs-content__title">About Us <span>.</span><span>-</span></p>
                     <p className="AboutUs-content__sub-title">Raw Meat Production by leading Farms</p>
                     <p className="AboutUs-content__description">For meat to stay fresh and retain its natural juices, it needs to be stored at a temperature between 0° and 5°C. We maintain this temperature from the time we procure the product to cleaning, cutting and storing it, until it leaves for delivery. And even when it’s out for delivery.</p>
-                    <p className="AboutUs-content__phone"><i className="fas fa-phone"></i>+1800 753 23 56</p>
-                    <p className="AboutUs-content__download"><i className="fas fa-download"></i>Download Price list</p>
+                    <div className="AboutUs-content__phone">
+                        <i className="fas fa-phone-alt fa-3x"></i>
+                        <p>+1800 753 23 56</p>
+                    </div>
+                    <div className="AboutUs-content__download">
+                        <i className="fas fa-file-download fa-3x"></i>
+                        <p>Download Price list</p>
+                    </div>
                     <button className="AboutUs-content__read-more">Read More +</button>
                 </div>
                 <div className="AboutUs-image"></div>
@@ -20,19 +27,19 @@ export default function AboutUs() {
                 <div className="AboutUs-banner">
                     <div className="AboutUs-banner__items">
                         <div className="AboutUs-banner__item">
-                            <img src="" alt="no_image" />
+                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p>Nutritious Organic meat</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src="" alt="no_image" />
+                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p>Convenient Vaccum Packaging</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src="" alt="no_image" />
+                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p>International Quality certificate</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src="" alt="no_image" />
+                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p>Proffesional Meat cutting</p>
                         </div>
                     </div>
@@ -41,7 +48,7 @@ export default function AboutUs() {
                     <div className="AboutUs-data">
                         <p className="AboutUs-description">
                             Our farm has been producing organic meat since 1999<br />
-                            We are trusted by many clients from all over the country.
+                            <span>We are trusted</span> by many clients from all over the country.
                         </p>
                     </div>
                     <div className="AboutUs-analytics">

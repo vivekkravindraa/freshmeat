@@ -11,15 +11,15 @@
     text-align: left;
     font-style: Italic;
     font-size: 42px;
-    font-family: Brush Script MT;
+    font-family: Brush Script MT, sans-serif;
     letter-spacing: 0px;
-    color: #BD2C36;
+    color: #bd2c36;
     opacity: 1;
 }
 
 .AboutUs-content__sub-title {
     text-align: left;
-    font-style: SemiBold;
+    font-weight: bold;
     font-size: 32px;
     font-family: Montserrat;
     letter-spacing: 0px;
@@ -35,34 +35,42 @@
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+    margin-bottom: 50px;
 }
 
 .AboutUs-content__phone {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     text-align: left;
     font-style: Regular;
     font-size: 16px;
     font-family: Poppins;
     letter-spacing: 0.65px;
-    color: #BD2C36;
+    color: #bd2c36;
     opacity: 1;
+    margin-bottom: 25px;
 }
 
 .AboutUs-content__download {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     text-align: left;
     font-style: Regular;
     font-size: 16px;
     font-family: Poppins;
     letter-spacing: 0.54px;
-    color: #BD2C36;
+    color: #bd2c36;
     opacity: 1;
+    margin-bottom: 50px;
 }
 
 .AboutUs-content__read-more {
     color: #ffffff;
-    background: #BD2C36 0% 0% no-repeat padding-box;
+    background: #bd2c36 0% 0% no-repeat padding-box;
     border-radius: 29px;
     opacity: 1;
     border: 0;
+    padding: 10px 40px;
 }
 
 .AboutUs-image {
@@ -86,6 +94,23 @@
     padding: 100px 200px;
 }
 
+.AboutUs-banner__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AboutUs-banner__item p {
+    text-align: center;
+    font: SemiBold;
+    font-size: 16px;
+    font-family: Montserrat;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
 .AboutUs-info {
     display: grid;
     grid-template-columns: repeat(2, 6fr);
@@ -93,10 +118,32 @@
 }
 
 .AboutUs-data {
-    padding: 50px;
+    padding: 25px;
     text-align: left;
     letter-spacing: 0.65px;
     opacity: 1;
+}
+
+.AboutUs-description {
+    text-align: left;
+    font-weight: Medium;
+    font-size: 22px;
+    font-family: Montserrat;
+    letter-spacing: 0.65px;
+    opacity: 1;
+}
+
+.AboutUs-description span {
+    text-align: left;
+    font-weight: Medium;
+    font-size: 22px;
+    font-family: Montserrat;
+    letter-spacing: 0.65px;
+    color: #bd2c36;
+}
+
+.AboutUs-analytics {
+    background-color: #bd2c36;
 }
 
 .AboutUs-analytics__items {
@@ -105,4 +152,36 @@
     padding: 60px;
     position: relative;
     top: -50px;
+}
+
+.AboutUs-analytics__item {
+    margin-right: 100px;
+}
+
+.AboutUs-analytics__item:last-child {
+    margin-right: 0;
+}
+
+.AboutUs-analytics__item-quantity {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: Montserrat;
+    letter-spacing: 1.44px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin: 0;
+}
+
+.AboutUs-analytics__item-description {
+    text-align: left;
+    font-weight: SemiBold;
+    font-size: 16   px;
+    font-family: Montserrat;
+    letter-spacing: 0.54px;
+    color: #FFFF8D;
+    opacity: 1;
+    margin: 0;
 }

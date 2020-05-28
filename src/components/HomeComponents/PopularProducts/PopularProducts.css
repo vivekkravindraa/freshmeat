@@ -3,11 +3,34 @@
     flex-direction: column;
 }
 
-.PopularProducts-title {
+.PopularProducts-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.PopularProducts-header__title {
+    text-align: left;
+    font-style: Italic;
+    font-size: 32px;
+    font-family: Brush Script MT;
+    letter-spacing: 0px;
+    color: #bd2c36;
+    opacity: 1;
+    margin: 0 0 5px 0;
+}
+
+.PopularProducts-header__sub-title {
+    text-align: left;
+    font-weight: SemiBold;
+    font-size: 28px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    color: #2E1500;
+    opacity: 1;
+    margin: 0;
 }
 
 .PopularProducts-items {
@@ -18,13 +41,86 @@
 }
 
 .PopularProducts-item-image {
-    width: auto;
-    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.PopularProducts-item-price {
+.PopularProducts-item-button {
+    visibility: hidden;
+    padding: 50px;
+}
+
+.PopularProducts-item__addToBagButton {
+    color: #ffffff;
+    background-color: #bd2c36;
+    border-radius: 28px;
+    padding: 10px 40px;
+    outline: none;
+    border: none;
+    text-align: left;
+    font-style: Medium;
+    font-size: 10px;
+    font-family: Montserrat;
+    letter-spacing: 1.2px;
+    opacity: 1;
+}
+
+.PopularProducts-item-description {
+    margin: 10px 10px;
+}
+
+.PopularProducts-item-description > p {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    color: #2e1500;
+    opacity: 1;
+    margin: 0;
+}
+
+.PopularProducts-item-details {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.PopularProducts-item__know-more {
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: Medium;
+    font-size: 12px;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    color: #2E1500;
+    opacity: 1;
+}
+
+.PopularProducts-item__know-more > i {
+    margin-left: 5px;
+}
+
+.PopularProducts-item__price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #bd2c36;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+    font-weight: SemiBold;
+    font-size: 14px;
+    font-family: Montserrat;
+    letter-spacing: 1.2px;
+    opacity: 1;
+}
+
+.PopularProducts-item__price .selected {
+    color: #ffffff;
+    background-color: #bd2c36;
+    border-top-left-radius: 14px;
 }
 
 .PopularProducts-technologies {
@@ -43,10 +139,27 @@
 .PopularProducts-technologies__quality {
     position: absolute;
     bottom: 0;
-    left: 0;
     background-color: #bd2c36;
-    width: 150px;
-    height: 80px;
+    padding: 20px;
+}
+
+.PopularProducts-technologies__quality-percentage {
+    font-weight: bold;
+    font-size: 28px;
+    font-family: Montserrat;
+    letter-spacing: 1.08px;
+    color: #ffffff;
+    opacity: 1;
+    margin: 0 0 0 5px;
+}
+
+.PopularProducts-technologies__quality-standard {
+    text-align: left;
+    font: SemiBold 30px/36px Montserrat;
+    letter-spacing: 0.54px;
+    color: #FFFF8D;
+    opacity: 1;
+    margin: 0 0 0 5px;
 }
 
 .PopularProducts-technologies__content {
@@ -66,7 +179,7 @@
 
 .PopularProducts-technologies__sub-title {
     text-align: left;
-    font-style: SemiBold;
+    font-weight: bold;
     font-size: 32px;
     font-family: Montserrat;
     letter-spacing: 0px;
@@ -78,9 +191,28 @@
     display: flex;
 }
 
+.PopularProducts-technologies__concept {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PopularProducts-technologies__concept-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Montserrat;
+    letter-spacing: 0.47px;
+    color: #000000;
+    opacity: 1;
+}
+
 .PopularProducts-technologies__description {
     text-align: left;
-    font: SemiBold 70px/84px Montserrat;
+    font-weight: SemiBold;
+    font-size: 16px;
+    font-family: Montserrat;
     letter-spacing: 0px;
     color: #212121;
     opacity: 1;
@@ -90,4 +222,14 @@
     background: #8D6E63 0% 0% no-repeat padding-box;
     border-radius: 29px;
     opacity: 1;
+    padding: 10px 40px;
+    text-align: center;
+    font-weight: SemiBold;
+    font-size: 16px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    outline: none;
+    border: none;
 }

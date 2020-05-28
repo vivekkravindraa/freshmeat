@@ -34,7 +34,6 @@ export default function Category() {
 
     return (
         <div className="Category-container">
-            {console.log(id)}
             <div className="Category-title">
                 <h1>EXPLORE BY CATEGORIES</h1>
             </div>

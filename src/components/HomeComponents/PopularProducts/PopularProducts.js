@@ -1,82 +1,83 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-
 import freshChickenS from '../../../assets/HomeComponentAssets/freshChicken/freshChickenS.png'; 
 import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
 import freshCatlaFishS from '../../../assets/HomeComponentAssets/freshCatlaFish/freshCatlaFishS.png';
 
+import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/freshmeatRaw.png';
+
 import './PopularProducts.css';
 
 export default function PopularProducts() {
+    let popularProductItems = [
+        {
+            productImage: freshChickenS,
+            productTitle: 'Fresh chicken',
+            productType: 'curry Cut with skin',
+            productQuantity: '500 gms',
+            productPrice: 'AED 20.00'
+        },
+        {
+            productImage: goatAndLambS,
+            productTitle: 'Fresh Mutton',
+            productType: 'Halal cut',
+            productQuantity: '1 Kg',
+            productPrice: 'AED 20.00'
+        },
+        {
+            productImage: freshCatlaFishS,
+            productTitle: 'Fresh Catla Fish',
+            productType: '3 Pieces',
+            productQuantity: '450 gms',
+            productPrice: 'AED 20.00'
+        },
+        {
+            productImage: freshChickenS,
+            productTitle: 'Fresh chicken',
+            productType: 'curry Cut with skin',
+            productQuantity: '500gms',
+            productPrice: 'AED 20.00'
+        }
+    ]
+
     return (
         <div className="PopularProducts-container">
-            <div className="PopularProducts-title">
-                <p>Our Store's</p>
-                <p>POPULAR PRODUCTS</p>
+            <div className="PopularProducts-header">
+                <p className="PopularProducts-header__title">Our Store's</p>
+                <p className="PopularProducts-header__sub-title">POPULAR PRODUCTS</p>
             </div>
             <div className="PopularProducts-items">
-                <div className="PopularProducts-item">
-                    <div className="PopularProducts-item-image"
-                        style={{ backgroundImage: `url(${freshChickenS})` }}
-                    >
-                        <button>ADD TO BAG <span>+</span></button>
-                    </div>
-                    <div className="PopularProducts-item-title">
-                        <p>Fresh chicken curry Cut with skin 500 gms</p>
-                    </div>
-                    <div className="PopularProducts-item-price">
-                        <Router><Link to="/"><p>Know more <i className="fas fa-arrow-right"></i></p></Link></Router>
-                        <p>AED 20.00</p>
-                    </div>
-                </div>
-                <div className="PopularProducts-item">
-                    <div className="PopularProducts-item-image"
-                        style={{ backgroundImage: `url(${goatAndLambS})` }}
-                    >
-                        <button>ADD TO BAG <span>+</span></button>
-                    </div>
-                    <div className="PopularProducts-item-title">
-                        <p>Fresh Mutton Halal cut 1 Kg</p>
-                    </div>
-                    <div className="PopularProducts-item-price">
-                        <Router><Link to="/"><p>Know more <i className="fas fa-arrow-right"></i></p></Link></Router>
-                        <p>AED 20.00</p>
-                    </div>
-                </div>
-                <div className="PopularProducts-item">
-                    <div className="PopularProducts-item-image"
-                        style={{ backgroundImage: `url(${freshCatlaFishS})` }}
-                    >
-                        <button>ADD TO BAG <span>+</span></button>
-                    </div>
-                    <div className="PopularProducts-item-title">
-                        <p>Fresh Catla Fish 3 Pieces 450 gms</p>
-                    </div>
-                    <div className="PopularProducts-item-price">
-                        <Router><Link to="/"><p>Know more <i className="fas fa-arrow-right"></i></p></Link></Router>
-                        <p>AED 20.00</p>
-                    </div>
-                </div>
-                <div className="PopularProducts-item">
-                    <div className="PopularProducts-item-image"
-                        style={{ backgroundImage: `url(${freshChickenS})` }}
-                    >
-                        <button>ADD TO BAG <span>+</span></button>
-                    </div>
-                    <div className="PopularProducts-item-title">
-                        <p>Fresh chicken curry Cut with skin 500gms</p>
-                    </div>
-                    <div className="PopularProducts-item-price">
-                        <Router><Link to="/"><p>Know more <i className="fas fa-arrow-right"></i></p></Link></Router>
-                        <p>AED 20.00</p>
-                    </div>
-                </div>
+                {popularProductItems.map((item,index) => {
+                    return (
+                        <div key={index} className="PopularProducts-item">
+                            <div className="PopularProducts-item-image"
+                                style={{ backgroundImage: `url(${item.productImage})` }}
+                            >
+                                <div className="PopularProducts-item-button">
+                                    <button className="PopularProducts-item__addToBagButton">
+                                        ADD TO BAG +
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="PopularProducts-item-description">
+                                <p className="PopularProducts-item__title">{item.productTitle}</p>
+                                <p className="PopularProducts-item__type">{item.productType}</p>
+                                <p className="PopularProducts-item__quantity">{item.productQuantity}</p>
+                            </div>
+                            <div className="PopularProducts-item-details">
+                                <p className="PopularProducts-item__know-more">
+                                    Know more<i className="fas fa-arrow-right"></i>
+                                </p>
+                                <p className="PopularProducts-item__price">{item.productPrice}</p>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
             <div className="PopularProducts-technologies">
                 <div className="PopularProducts-technologies__image">
                     <div className="PopularProducts-technologies__quality">
-                        <p>100%</p>
-                        <p>Proven Quality</p>
+                        <p className="PopularProducts-technologies__quality-percentage">100%</p>
+                        <p className="PopularProducts-technologies__quality-standard">Proven Quality</p>
                     </div>
                 </div>
                 <div className="PopularProducts-technologies__content">
@@ -84,15 +85,15 @@ export default function PopularProducts() {
                     <p className="PopularProducts-technologies__sub-title">Quality Monitoring</p>
                     <div className="PopularProducts-technologies__concepts">
                         <div className="PopularProducts-technologies__concept">
-                            <img className="PopularProducts-technologies__concept-image" src="" alt="no_image" />
+                            <img className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Temperature Control</p>
                         </div>
                         <div className="PopularProducts-technologies__concept">
-                            <img  className="PopularProducts-technologies__concept-image" src="" alt="no_image" />
+                            <img  className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Anti bacterial treatment</p>
                         </div>
                         <div className="PopularProducts-technologies__concept">
-                            <img  className="PopularProducts-technologies__concept-image" src="" alt="no_image" />
+                            <img  className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Laboratory Testing</p>
                         </div>
                     </div>

@@ -8,11 +8,80 @@ import chickenBreastS from '../../../assets/HomeComponentAssets/chickenBreast/ch
 import './ProductPricing.css';
 
 export default function ProductPricing() {
+    const productPricingItems = [
+        {
+            productImage: chickenFullS,
+            productName: 'Chicken full',
+            productType: 'with skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },
+        {
+            productImage: chickenFullS,
+            productName: 'Chicken full',
+            productType: 'with skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },{
+            productImage: chickenThighS,
+            productName: 'Chicken thigh',
+            productType: 'without skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },{
+            productImage: chickenThighS,
+            productName: 'Chicken thigh',
+            productType: 'without skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00 '
+        },{
+            productImage: legPieceS,
+            productName: 'Leg Piece',
+            productType: 'with skin',
+            productQuantity: '6 Pieces',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },{
+            productImage: legPieceS,
+            productName: 'Leg Piece',
+            productType: 'with skin',
+            productQuantity: '6 Pieces',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },{
+            productImage: chickenBreastS,
+            productName: 'Chicken Breast',
+            productType: 'without skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        },{
+            productImage: chickenBreastS,
+            productName: 'Chicken Breast',
+            productType: 'without skin',
+            productQuantity: '500g',
+            productPackage: 'Vaccum package',
+            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
+            productPrice: 'AED 3.00'
+        }
+    ]
+
     return (
         <div className="ProductPricing-container">
-             <div className="ProductPricing-title">
-                <p>Our Store's</p>
-                <p>POPULAR PRODUCTS</p>
+             <div className="ProductPricing-header">
+                <p className="ProductPricing-header__title">Our Store's</p>
+                <p className="ProductPricing-header__sub-title">POPULAR PRODUCTS</p>
             </div>
             <div className="ProductPricing-category-sort">
                 <button>CHICKEN</button>
@@ -21,152 +90,38 @@ export default function ProductPricing() {
                 <button>GOAT &amp; LAMB</button>
             </div>
             <div className="ProductPricing-items">
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{
-                            backgroundImage: `url(${chickenFullS})`,
-                        }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
+                {productPricingItems.map((item, index) => {
+                    return (
+                        <div key={index} className="ProductPricing-item">
+                            <div className="ProductPricing-image"
+                                style={{
+                                    backgroundImage: `url(${item.productImage})`,
+                                }}
+                            >
+                            </div>
+                            <div className="ProductPricing-content">
+                                <p className="ProductPricing-name">{item.productName} - {item.productType}</p>
+                                <p className="ProductPricing-quantity">{item.productQuantity}, {item.productPackage}</p>
+                                <p className="ProductPricing-description">{item.productDescription}</p>
+                                <div className="ProductPricing-cart-options">
+                                    <div>
+                                        <button className="ProductPricing-addToCartButton">
+                                            Add to Cart <span>+</span>
+                                        </button>
+                                        <div className="ProductPricing-quantityVariation">   
+                                            <button className="ProductPricing-decreaseButton">-</button>
+                                            <input type="text" />
+                                            <button className="ProductPricing-increaseButton">+</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="ProductPricing-price">{item.productPrice}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${chickenFullS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${chickenThighS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${chickenThighS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${legPieceS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${legPieceS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${chickenBreastS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
-                <div className="ProductPricing-item">
-                    <div className="ProductPricing-image"
-                        style={{ backgroundImage: `url(${chickenBreastS})` }}
-                    >
-                    </div>
-                    <div className="ProductPricing-content">
-                        <p className="ProductPricing-name">Chicken full - with skin</p>
-                        <p className="ProductPricing-qunatity">500g, Vaccum package</p>
-                        <p className="ProductPricing-description">Lorem ipsum dolor sit amet, consectetur</p>
-                        <button>Add to Cart <span>+</span></button>
-                        <div>   
-                            <button>-</button>
-                            <input type="text" />
-                            <button>+</button>
-                        </div>
-                        <p>AED 3.00</p>
-                    </div>
-                </div>
+                    )
+                })}
             </div>
         </div>
     )

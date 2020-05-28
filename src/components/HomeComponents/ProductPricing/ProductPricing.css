@@ -3,27 +3,91 @@
     flex-direction: column;
 }
 
-.ProductPricing-title {
+.ProductPricing-header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+}
+
+.ProductPricing-header__title {
+    text-align: left;
+    font-style: Italic;
+    font-size: 32px;
+    font-family: Brush Script MT;
+    letter-spacing: 0px;
+    color: #bd2c36;
+    opacity: 1;
+    margin: 0 0 10px 0;
+}
+
+.ProductPricing-header__sub-title {
+    text-align: left;
+    font-weight: SemiBold;
+    font-size: 32px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    color: #2e1500;
+    opacity: 1;
+    margin: 0;
 }
 
 .ProductPricing-category-sort {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
+}
+
+.ProductPricing-category-sort button {
+    margin-right: 100px;
+    border-radius: 22px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: SemiBold;
+    font-size: 14px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    opacity: 1;
+    background-color: #ffffff;
+    color: #bd2c36;
+    border: 1px solid #bd2c36;
+}
+
+.ProductPricing-category-sort button:hover {
+    background: #bd2c36 0% 0% no-repeat padding-box;
+    color: #ffffff;
+}
+
+.ProductPricing-category-sort button:last-child {
+    margin-right: 0;
 }
 
 .ProductPricing-items {
     display: grid;
     grid-template-columns: repeat(2, 6fr);
+    padding: 50px 50px 100px 50px;
+    column-gap: 50px;
+    row-gap: 10px;
 }
 
 .ProductPricing-item {
     display: grid;
     grid-template-columns: 3fr 3fr;
     padding: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.ProductPricing-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+}
+
+.ProductPricing-content {
+    padding: 0 0 0 25px;
 }
 
 .ProductPricing-image {
@@ -31,5 +95,70 @@
     background-position: center;
     background-size: cover;
     width: auto;
-    height: 200px;
+    height: auto;
+}
+
+.ProductPricing-name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Montserrat;
+}
+
+.ProductPricing-quantity {
+    text-align: left;
+    font-weight: SemiBold;
+    font-size: 14px;
+    font-family: Montserrat;
+    color: #bd2c36;
+}
+
+.ProductPricing-description {
+    text-align: left;
+    font-weight: Medium;
+    font-size: 12px;
+    font-family: Montserrat;
+}
+
+.ProductPricing-cart-options {
+    display: inline-grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.ProductPricing-addToCartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #bd2c36 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 4px #0000001F;
+    border-radius: 17px;
+    opacity: 1;
+    outline: none;
+    border: none;
+    padding: 2px 10px;
+    text-align: center;
+    font-weight: Medium;
+    font-size: 12px;
+    font-family: Montserrat;
+    letter-spacing: 1.1px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.ProductPricing-quantityVariation {
+    display: none;
+}
+
+.ProductPricing-price {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin: 0;
+    text-align: center;
+    font-weight: SemiBold;
+    font-size: 16px;
+    font-family: Montserrat;
+    letter-spacing: 1.2px;
+    color: #BD2C36;
+    opacity: 1;
 }

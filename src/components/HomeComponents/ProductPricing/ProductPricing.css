@@ -1,0 +1,35 @@
+.ProductPricing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductPricing-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProductPricing-category-sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProductPricing-items {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+}
+
+.ProductPricing-item {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    padding: 25px;
+}
+
+.ProductPricing-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 200px;
+}

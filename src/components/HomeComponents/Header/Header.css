@@ -1,27 +1,31 @@
-.Header {
-    background-image: url("../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBanner.png");
+.Header-container {
+    background-image: url("../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: black;
+    box-shadow:inset 0 0 0 2000px #0000004d;
 }
 
 .Header-icons {
     display: grid;
     grid-template-columns: repeat(3, 4fr);
     align-items: center;
+    padding: 20px 0 40px 0;
 }
 
 .Header-icons__social {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     margin-left: 50px;
 }
 
 .Header-icons__social-label {
-    color: white;
-    font-size: larger;
+    text-align: left;
+    font-size: 16px;
     font-weight: bold;
+    font-family: Nunito;
+    color: #ffffff;
+    opacity: 1;
 }
 
 .Header-icons__social span {
@@ -94,7 +98,7 @@
 .Header-content__info .title {
     color: #4CAF50;
     font-family: Brush Script MT;
-    font-size: 70px;
+    font-size: 40px;
     text-align: left;
     font-style: italic;
     margin: 45px 0 10px 0;
@@ -102,9 +106,9 @@
 
 .Header-content__info .header {
     color: #ffffff;
-    font-size: 90px;
+    font-size: 60px;
     text-align: left;
-    font-weight: semibold;
+    font-weight: SemiBold;
     font-family: Montserrat;
     margin: 0 0 10px 0;
 }
@@ -112,9 +116,9 @@
 .Header-content__info .description {
     color: #ffffff;
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
-    margin: 0 0 45px 0;
+    margin: 5px 0 45px 0;
 }
 
 .Header-content__right-icon {
@@ -147,14 +151,16 @@
 }
 
 .Header-readmore__button button {
-    background-color: red;
     border: 0;
-    border-radius: 16px;
+    outline: none;
+    background: #bd2c36 0% 0% no-repeat padding-box;
+    border-radius: 29px;
     color: #ffffff;
     font-family: Montserrat;
     font-style: regular;
-    font-size: 22px;
+    font-size: 16px;
     text-align: center;
+    letter-spacing: 0px;
     padding: 10px 40px;
-    outline: none;
+    opacity: 1;
 }

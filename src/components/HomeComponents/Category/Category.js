@@ -1,8 +1,8 @@
 import React from 'react';  
-import chicken from '../../../assets/HomeComponentAssets/chicken/chicken.png';
-import seafood from '../../../assets/HomeComponentAssets/seafood/seafood.png';
-import beef from '../../../assets/HomeComponentAssets/beef/beef.png';
-import goatAndLamb from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLamb.png';
+import chickenS from '../../../assets/HomeComponentAssets/chicken/chickenS.png';
+import seafoodS from '../../../assets/HomeComponentAssets/seafood/seafoodS.png';
+import beefS from '../../../assets/HomeComponentAssets/beef/beefS.png';
+import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
 
 import './Category.css';
 
@@ -11,22 +11,22 @@ export default function Category() {
         {
             id: 1,
             categoryName: 'Chicken',
-            categoryImage: chicken
+            categoryImage: chickenS
         },
         {
             id: 2,
             categoryName: 'Seafood',
-            categoryImage: seafood
+            categoryImage: seafoodS
         },
         {
             id: 3,
             categoryName: 'Beef',
-            categoryImage: beef
+            categoryImage: beefS
         },
         {
             id: 4,
             categoryName: 'Goat & Lamb',
-            categoryImage: goatAndLamb
+            categoryImage: goatAndLambS
         }
     ];
 

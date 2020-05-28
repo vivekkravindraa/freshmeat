@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import masterCard from '../../../assets/HomeComponentAssets/masterCard/masterCard.png';
-import secureCard from '../../../assets/HomeComponentAssets/secureCard/secureCard.png';
-import visaCard from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisa.png';
+import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.jpg';
+import masterCardS from '../../../assets/HomeComponentAssets/masterCard/masterCardS.png';
+import secureCardS from '../../../assets/HomeComponentAssets/secureCard/secureCardS.png';
+import visaCardS from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisaS.png';
+
 
 import './Footer.css';
 
@@ -22,16 +24,16 @@ export default function Footer() {
 
     const paySecurelyGatewayLinks = [
         { id: 1, path: "/", image: `` },
-        { id: 2, path: "/", image: `${masterCard}` },
-        { id: 3, path: "/", image: `${secureCard}` },
-        { id: 4, path: "/", image: `${visaCard}` }
+        { id: 2, path: "/", image: `${masterCardS}` },
+        { id: 3, path: "/", image: `${secureCardS}` },
+        { id: 4, path: "/", image: `${visaCardS}` }
     ];
 
     const footerIcons = [
-        { id: 1, path: "/", icon: "fab fa-facebook-f" },
-        { id: 2, path: "/", icon: "fab fa-twitter" },
-        { id: 3, path: "/", icon: "fab fa-instagram" },
-        { id: 4, path: "/", icon: "fab fa-youtube" }
+        { id: 1, path: "/", icon: "fab fa-facebook-f", size: "fa-lg" },
+        { id: 2, path: "/", icon: "fab fa-twitter", size: "fa-lg" },
+        { id: 3, path: "/", icon: "fab fa-instagram", size: "fa-lg" },
+        { id: 4, path: "/", icon: "fab fa-youtube", size: "fa-lg" }
     ]
 
     const footerLinks = [
@@ -47,7 +49,7 @@ export default function Footer() {
             <div className="Footer-box">
                 <div className="Footer-query-section">
                     <div className="Footer-query-section__logo">
-                        <img src="" alt="no_image" />
+                        <img src={freshmeatLogoS} alt="no_image" height="100" width="100" />
                     </div>
                     <p className="Footer-query-section__content">
                         In case you have any questions or reviews, wtite to us vie the e-mail or make a call! We are available 7 days a week.
@@ -123,7 +125,7 @@ export default function Footer() {
                         {footerIcons.map((item, index) => {
                             return (
                                 <Link to={item.path}>
-                                    <i key={index} className={item.icon}></i>
+                                    <i key={index} className={`${item.icon} ${item.size}`}></i>
                                 </Link>
                             )
                         })}

@@ -1,47 +1,48 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
+import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.jpg';
 
 import './Header.css';
 
 const Header = () => {
     const socialLinks = [
-        { id: 1, path: "/", icon: "fab fa-facebook-f" },
-        { id: 2, path: "/", icon: "fab fa-twitter" },
-        { id: 3, path: "/", icon: "fab fa-instagram" },
-        { id: 4, path: "/", icon: "fab fa-youtube" }
+        { id: 1, path: "/", icon: "fab fa-facebook-f", size: 'fa-sm' },
+        { id: 2, path: "/", icon: "fab fa-twitter", size: 'fa-sm' },
+        { id: 3, path: "/", icon: "fab fa-instagram", size: 'fa-sm' },
+        { id: 4, path: "/", icon: "fab fa-youtube", size: 'fa-sm' }
     ];
 
     const siteLinks = [
-        { id: 1, path: "/", icon: "fas fa-user" },
-        { id: 2, path: "/", icon: "fas fa-shopping-cart" },
-        { id: 3, path: "/", icon: "fas fa-search" }
+        { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
+        { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
+        { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' }
     ]
 
     return (
-        <div className="Header">
+        <div className="Header-container">
             <div className="Header-icons">
                 <div className="Header-icons__social">
-                    <span className="Header-icons__social-label">Follow us - </span>
+                    <p className="Header-icons__social-label">Follow Us - </p>
                     <Router className="Header-icons__social-router">
                         {socialLinks.map((item,index) => {
                             return (
                                 <Link key={index} className="Header-icons__social-link" to={item.path}>
-                                    <i className={item.icon}></i>
+                                    <i className={`${item.icon} ${item.size}`}></i>
                                 </Link>
                             )
                         })}
                     </Router>
                 </div>
                 <div className="Header-icons__main">
-                    <img src="" width="100" height="100" alt="no_image" />
+                    <img src={freshmeatLogoS} width="100" height="100" alt="no_image" />
                 </div>
                 <div className="Header-icons__site">
                     <Router className="Header-icons__site-router">
                         {siteLinks.map((item,index) => {
                             return (
                                 <Link key={index} className="Header-icons__site-link" to={item.path}>
-                                    <i className={item.icon}></i>
+                                    <i className={`${item.icon} ${item.size}`}></i>
                                 </Link>
                             )
                         })}

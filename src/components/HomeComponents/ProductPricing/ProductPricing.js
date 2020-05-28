@@ -81,7 +81,7 @@ export default function ProductPricing() {
         <div className="ProductPricing-container">
              <div className="ProductPricing-header">
                 <p className="ProductPricing-header__title">Our Store's</p>
-                <p className="ProductPricing-header__sub-title">POPULAR PRODUCTS</p>
+                <p className="ProductPricing-header__sub-title">PRODUCT PRICING</p>
             </div>
             <div className="ProductPricing-category-sort">
                 <button>CHICKEN</button>

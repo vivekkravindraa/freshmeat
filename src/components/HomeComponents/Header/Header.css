@@ -2,7 +2,7 @@
     background-image: url("../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png");
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow:inset 0 0 0 2000px #0000004d;
+    box-shadow: inset 0 0 0 2000px #0000004d;
 }
 
 .Header-container > img {

@@ -47,8 +47,12 @@
 }
 
 .PopularProducts-item-button {
-    visibility: hidden;
     padding: 50px;
+    visibility: hidden;
+}
+
+.showButton {
+    visibility: visible;
 }
 
 .PopularProducts-item__addToBagButton {
@@ -107,6 +111,7 @@
     justify-content: flex-end;
     align-items: center;
     color: #bd2c36;
+    background-color: #ffffff;
     padding: 10px;
     margin: 0;
     text-align: left;
@@ -115,12 +120,12 @@
     font-family: Montserrat;
     letter-spacing: 1.2px;
     opacity: 1;
+    border-top-left-radius: 14px;
 }
 
-.PopularProducts-item__price .selected {
+.selected {
     color: #ffffff;
     background-color: #bd2c36;
-    border-top-left-radius: 14px;
 }
 
 .PopularProducts-technologies {

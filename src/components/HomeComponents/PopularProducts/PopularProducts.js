@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import freshChickenS from '../../../assets/HomeComponentAssets/freshChicken/freshChickenS.png'; 
 import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
 import freshCatlaFishS from '../../../assets/HomeComponentAssets/freshCatlaFish/freshCatlaFishS.png';
@@ -8,6 +8,8 @@ import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/fresh
 import './PopularProducts.css';
 
 export default function PopularProducts() {
+    let [ selectedProduct, setSelectProduct ] = useState(0);
+
     let popularProductItems = [
         {
             productId: 1,
@@ -52,11 +54,11 @@ export default function PopularProducts() {
             <div className="PopularProducts-items">
                 {popularProductItems.map((item,index) => {
                     return (
-                        <div key={index} className="PopularProducts-item">
+                        <div key={index} className="PopularProducts-item" onClick={() => setSelectProduct(index + 1)}>
                             <div className="PopularProducts-item-image"
                                 style={{ backgroundImage: `url(${item.productImage})` }}
                             >
-                                <div className="PopularProducts-item-button">
+                                <div className={`PopularProducts-item-button ${index + 1 === selectedProduct ? `showButton` : null}`}>
                                     <button className="PopularProducts-item__addToBagButton">
                                         ADD TO BAG +
                                     </button>
@@ -71,7 +73,7 @@ export default function PopularProducts() {
                                 <p className="PopularProducts-item__know-more">
                                     Know more<i className="fas fa-arrow-right"></i>
                                 </p>
-                                <p className="PopularProducts-item__price">{item.productPrice}</p>
+                                <p className={`PopularProducts-item__price ${index + 1 === selectedProduct ? `selected` : null}`}>{item.productPrice}</p>
                             </div>
                         </div>
                     )

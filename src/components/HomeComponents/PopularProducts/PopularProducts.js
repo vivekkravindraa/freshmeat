@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import freshChickenS from '../../../assets/HomeComponentAssets/freshChicken/freshChickenS.png'; 
 import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
 import freshCatlaFishS from '../../../assets/HomeComponentAssets/freshCatlaFish/freshCatlaFishS.png';
-
-import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/freshmeatRaw.png';
+import temperatureS from '../../../assets/HomeComponentAssets/temperature/temperatureS.png';
+import microscopeS from '../../../assets/HomeComponentAssets/microscope/microscopeS.png';
+import certifiedS from '../../../assets/HomeComponentAssets/certified/certifiedS.png';
 
 import './PopularProducts.css';
 
@@ -54,7 +55,7 @@ export default function PopularProducts() {
             <div className="PopularProducts-items">
                 {popularProductItems.map((item,index) => {
                     return (
-                        <div key={index} className="PopularProducts-item" onClick={() => setSelectProduct(index + 1)}>
+                        <div key={index} className={`PopularProducts-item ${index + 1 === selectedProduct ? `addShadow` : null}`} onClick={() => setSelectProduct(index + 1)}>
                             <div className="PopularProducts-item-image"
                                 style={{ backgroundImage: `url(${item.productImage})` }}
                             >
@@ -91,15 +92,15 @@ export default function PopularProducts() {
                     <p className="PopularProducts-technologies__sub-title">Quality Monitoring</p>
                     <div className="PopularProducts-technologies__concepts">
                         <div className="PopularProducts-technologies__concept">
-                            <img className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img className="PopularProducts-technologies__concept-image" src={temperatureS} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Temperature Control</p>
                         </div>
                         <div className="PopularProducts-technologies__concept">
-                            <img  className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img  className="PopularProducts-technologies__concept-image" src={microscopeS} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Anti bacterial treatment</p>
                         </div>
                         <div className="PopularProducts-technologies__concept">
-                            <img  className="PopularProducts-technologies__concept-image" src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img  className="PopularProducts-technologies__concept-image" src={certifiedS} alt="no_image" width="80" height="80" />
                             <p className="PopularProducts-technologies__concept-title">Laboratory Testing</p>
                         </div>
                     </div>

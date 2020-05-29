@@ -5,6 +5,10 @@
     box-shadow:inset 0 0 0 2000px #0000004d;
 }
 
+.Header-container > img {
+    display: none;
+}
+
 .Header-icons {
     display: grid;
     grid-template-columns: repeat(3, 4fr);
@@ -20,6 +24,8 @@
 }
 
 .Header-icons__social-label {
+    display: flex;
+    align-items: baseline;
     text-align: left;
     font-size: 16px;
     font-weight: bold;
@@ -28,14 +34,14 @@
     opacity: 1;
 }
 
-.Header-icons__social span {
+.Header-icons__social-label span {
     display: flex;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10px;
 }
 
 .Header-icons__social-link {
     margin: 0 10px;
+    outline: none;
 }
 
 .Header-icons__social-link i {
@@ -96,9 +102,9 @@
 }
 
 .Header-content__info .title {
-    color: #4CAF50;
-    font-family: Brush Script MT;
-    font-size: 40px;
+    color: #4caf50;
+    font-family: Brush Script MT, sans-serif;
+    font-size: 46px;
     text-align: left;
     font-style: italic;
     margin: 45px 0 10px 0;
@@ -108,7 +114,7 @@
     color: #ffffff;
     font-size: 60px;
     text-align: left;
-    font-weight: SemiBold;
+    font-weight: bold;
     font-family: Montserrat;
     margin: 0 0 10px 0;
 }

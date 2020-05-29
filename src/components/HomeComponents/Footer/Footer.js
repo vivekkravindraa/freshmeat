@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
+import googlePlayS from '../../../assets/HomeComponentAssets/googlePlay/googlePlayS.png';
+import appStoreS from '../../../assets/HomeComponentAssets/appStore/appStoreS.png';
+import visaS from '../../../assets/HomeComponentAssets/visa/visaS.png';
 import masterCardS from '../../../assets/HomeComponentAssets/masterCard/masterCardS.png';
 import secureCardS from '../../../assets/HomeComponentAssets/secureCard/secureCardS.png';
 import verifiedByVisaS from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisaS.png';
@@ -17,12 +20,12 @@ export default function Footer() {
     ];
 
     const queryContentDownloadLinks = [
-        { id: 1, path: "/", image: "" },
-        { id: 2, path: "/", image: "" }
+        { id: 1, path: "/", image: `${googlePlayS}` },
+        { id: 2, path: "/", image: `${appStoreS}` }
     ];
 
     const paySecurelyGatewayLinks = [
-        { id: 1, path: "/", image: `` },
+        { id: 1, path: "/", image: `${visaS}` },
         { id: 2, path: "/", image: `${masterCardS}` },
         { id: 3, path: "/", image: `${secureCardS}` },
         { id: 4, path: "/", image: `${verifiedByVisaS}` }

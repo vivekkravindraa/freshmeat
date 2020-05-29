@@ -1,5 +1,8 @@
 import React from 'react';
-import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/freshmeatRaw.png';
+import healthS from '../../../assets/HomeComponentAssets/health/healthS.png';
+import cutleryS from '../../../assets/HomeComponentAssets/cutlery/cutleryS.png';
+import parcelS from '../../../assets/HomeComponentAssets/parcel/parcelS.png';
+import certifiedS from '../../../assets/HomeComponentAssets/certified/certifiedS.png';
 
 import './AboutUs.css';
 
@@ -27,19 +30,19 @@ export default function AboutUs() {
                 <div className="AboutUs-banner">
                     <div className="AboutUs-banner__items">
                         <div className="AboutUs-banner__item">
-                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img src={healthS} alt="no_image" width="80" height="80" />
                             <p>Nutritious Organic meat</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img src={parcelS} alt="no_image" width="80" height="80" />
                             <p>Convenient Vaccum Packaging</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img src={cutleryS} alt="no_image" width="80" height="80" />
                             <p>International Quality certificate</p>
                         </div>
                         <div className="AboutUs-banner__item">
-                            <img src={freshmeatRaw} alt="no_image" width="80" height="80" />
+                            <img src={certifiedS} alt="no_image" width="80" height="80" />
                             <p>Proffesional Meat cutting</p>
                         </div>
                     </div>

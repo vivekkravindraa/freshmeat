@@ -37,7 +37,13 @@
     display: grid;
     grid-template-columns: repeat(4, 3fr);
     column-gap: 25px;
-    padding: 50px; 
+    padding: 50px;
+}
+
+.showShadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
 }
 
 .PopularProducts-item-image {

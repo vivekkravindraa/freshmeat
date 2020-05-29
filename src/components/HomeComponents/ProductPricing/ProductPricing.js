@@ -10,6 +10,7 @@ import './ProductPricing.css';
 export default function ProductPricing() {
     const productPricingItems = [
         {
+            productId: 1,
             productImage: chickenFullS,
             productName: 'Chicken full',
             productType: 'with skin',
@@ -19,6 +20,7 @@ export default function ProductPricing() {
             productPrice: 'AED 3.00'
         },
         {
+            productId: 2,
             productImage: chickenFullS,
             productName: 'Chicken full',
             productType: 'with skin',
@@ -27,6 +29,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         },{
+            productId: 3,
             productImage: chickenThighS,
             productName: 'Chicken thigh',
             productType: 'without skin',
@@ -35,6 +38,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         },{
+            productId: 4,
             productImage: chickenThighS,
             productName: 'Chicken thigh',
             productType: 'without skin',
@@ -43,6 +47,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00 '
         },{
+            productId: 5,
             productImage: legPieceS,
             productName: 'Leg Piece',
             productType: 'with skin',
@@ -51,6 +56,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         },{
+            productId: 6,
             productImage: legPieceS,
             productName: 'Leg Piece',
             productType: 'with skin',
@@ -59,6 +65,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         },{
+            productId: 7,
             productImage: chickenBreastS,
             productName: 'Chicken Breast',
             productType: 'without skin',
@@ -67,6 +74,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         },{
+            productId: 8,
             productImage: chickenBreastS,
             productName: 'Chicken Breast',
             productType: 'without skin',
@@ -75,7 +83,7 @@ export default function ProductPricing() {
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
         }
-    ]
+    ];
 
     return (
         <div className="ProductPricing-container">

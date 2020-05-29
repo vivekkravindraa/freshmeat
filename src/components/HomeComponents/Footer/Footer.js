@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 import masterCardS from '../../../assets/HomeComponentAssets/masterCard/masterCardS.png';
 import secureCardS from '../../../assets/HomeComponentAssets/secureCard/secureCardS.png';
-import visaCardS from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisaS.png';
-
+import verifiedByVisaS from '../../../assets/HomeComponentAssets/verifiedByVisa/verifiedByVisaS.png';
 
 import './Footer.css';
 
@@ -26,7 +25,7 @@ export default function Footer() {
         { id: 1, path: "/", image: `` },
         { id: 2, path: "/", image: `${masterCardS}` },
         { id: 3, path: "/", image: `${secureCardS}` },
-        { id: 4, path: "/", image: `${visaCardS}` }
+        { id: 4, path: "/", image: `${verifiedByVisaS}` }
     ];
 
     const footerIcons = [

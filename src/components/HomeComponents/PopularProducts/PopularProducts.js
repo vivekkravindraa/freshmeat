@@ -10,6 +10,7 @@ import './PopularProducts.css';
 export default function PopularProducts() {
     let popularProductItems = [
         {
+            productId: 1,
             productImage: freshChickenS,
             productTitle: 'Fresh chicken',
             productType: 'curry Cut with skin',
@@ -17,6 +18,7 @@ export default function PopularProducts() {
             productPrice: 'AED 20.00'
         },
         {
+            productId: 2,
             productImage: goatAndLambS,
             productTitle: 'Fresh Mutton',
             productType: 'Halal cut',
@@ -24,6 +26,7 @@ export default function PopularProducts() {
             productPrice: 'AED 20.00'
         },
         {
+            productId: 3,
             productImage: freshCatlaFishS,
             productTitle: 'Fresh Catla Fish',
             productType: '3 Pieces',
@@ -31,13 +34,14 @@ export default function PopularProducts() {
             productPrice: 'AED 20.00'
         },
         {
+            productId: 4,
             productImage: freshChickenS,
             productTitle: 'Fresh chicken',
             productType: 'curry Cut with skin',
             productQuantity: '500gms',
             productPrice: 'AED 20.00'
         }
-    ]
+    ];
 
     return (
         <div className="PopularProducts-container">

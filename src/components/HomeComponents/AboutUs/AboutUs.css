@@ -4,7 +4,7 @@
 }
 
 .AboutUs-content {
-    padding: 50px;
+    padding: 50px 50px 100px 50px;
 }
 
 .AboutUs-content__title {
@@ -178,10 +178,21 @@
 .AboutUs-analytics__item-description {
     text-align: left;
     font-weight: SemiBold;
-    font-size: 16   px;
+    font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0.54px;
     color: #FFFF8D;
     opacity: 1;
     margin: 0;
+}
+
+.AboutUs-content__read-more {
+    outline: none;
+    text-align: center;
+    font-weight: SemiBold;
+    font-size: 16px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
 }

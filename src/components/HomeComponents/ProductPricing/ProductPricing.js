@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import chickenFullS from '../../../assets/HomeComponentAssets/chickenFull/chickenFullS.png';
 import chickenThighS from '../../../assets/HomeComponentAssets/chickenThigh/chickenThighS.png';
@@ -8,6 +8,8 @@ import chickenBreastS from '../../../assets/HomeComponentAssets/chickenBreast/ch
 import './ProductPricing.css';
 
 export default function ProductPricing() {
+    const [ quantity, setQuantity ] = useState(0);
+
     const productPricingItems = [
         {
             productId: 1,
@@ -85,6 +87,18 @@ export default function ProductPricing() {
         }
     ];
 
+    const decreaseQuantityHandler = () => {
+
+    }
+
+    const inputQuantityChangeHandler = () => {
+
+    }
+
+    const increaseQuantityHandler = () => {
+
+    }
+
     return (
         <div className="ProductPricing-container">
              <div className="ProductPricing-header">
@@ -112,17 +126,17 @@ export default function ProductPricing() {
                                 <p className="ProductPricing-quantity">{item.productQuantity}, {item.productPackage}</p>
                                 <p className="ProductPricing-description">{item.productDescription}</p>
                                 <div className="ProductPricing-cart-options">
-                                    <div>
-                                        <button className="ProductPricing-addToCartButton">
+                                    <div className="ProductPricing-cart-opertaions">
+                                        {index !== 2 && index !== 3 ? <button className="ProductPricing-addToCartButton">
                                             Add to Cart <span>+</span>
-                                        </button>
-                                        <div className="ProductPricing-quantityVariation">   
-                                            <button className="ProductPricing-decreaseButton">-</button>
-                                            <input type="text" />
-                                            <button className="ProductPricing-increaseButton">+</button>
-                                        </div>
+                                        </button> : null}
+                                        {index === 2 || index === 3 ? <div className="ProductPricing-quantityVariation">   
+                                            <button className="ProductPricing-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
+                                            <input className="ProductPricing-inputValue" type="text" onChange={(e) => inputQuantityChangeHandler()} />
+                                            <button className="ProductPricing-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
+                                        </div> : null}
                                     </div>
-                                    <div>
+                                    <div className="ProductPricing-cart-price">
                                         <p className="ProductPricing-price">{item.productPrice}</p>
                                     </div>
                                 </div>

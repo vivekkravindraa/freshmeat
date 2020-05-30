@@ -56,7 +56,7 @@ const Header = () => {
                 transition: 'transform ease-out 0.45s',
             }}>
                 {images.map((image, i) => (
-                    <div className="slide" style={{ backgroundImage : `url(${image})` }}>
+                    <div key={i} className="slide" style={{ backgroundImage : `url(${image})` }}>
                     </div>
                 ))}
                 <div className="Header-icons">

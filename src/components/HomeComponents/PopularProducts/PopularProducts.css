@@ -14,7 +14,7 @@
 .PopularProducts-header__title {
     text-align: left;
     font-style: Italic;
-    font-size: 50px;
+    font-size: 32px;
     font-family: Brush Script MT, sans-serif;
     letter-spacing: 0px;
     color: #bd2c36;
@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-.PopularProducts-header__sub-title p:after {
+.PopularProducts-header__sub-title:after {
     content: "";
     display: block;
     position: relative;

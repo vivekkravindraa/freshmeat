@@ -34,13 +34,13 @@ export default function Category() {
 
     return (
         <div className="Category-container">
-            <div className="Category-title">
-                <h1>EXPLORE BY CATEGORIES</h1>
+            <div className="Category-header">
+                <h1 className="Category-title">EXPLORE BY CATEGORIES</h1>
             </div>
             <div className="Category-items">
                 {categories.map((item, index) => {
                     return (
-                        <div key={index} className="Category-item" onClick={() => setId(index + 1)}>
+                        <div key={index} className={`Category-item ${index + 1 === id ? `showShadow` : null}`} onClick={() => setId(index + 1)}>
                             <div
                                 className="Category-image"
                                 style={{ backgroundImage: `url(${item.categoryImage})` }}>

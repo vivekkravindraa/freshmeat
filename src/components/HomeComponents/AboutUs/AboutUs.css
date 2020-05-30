@@ -4,7 +4,7 @@
 }
 
 .AboutUs-content {
-    padding: 50px 50px 100px 50px;
+    padding: 50px 50px 100px 75px;
 }
 
 .AboutUs-content__title {
@@ -20,7 +20,7 @@
 .AboutUs-content__sub-title {
     text-align: left;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 44px;
     font-family: Montserrat;
     letter-spacing: 0px;
     color: #212121;
@@ -30,7 +30,7 @@
 .AboutUs-content__description {
     text-align: left;
     font-style: Regular;
-    font-size: 16px;
+    font-size: 20px;
     font-family: Montserrat;
     letter-spacing: 0px;
     color: #000000;
@@ -41,27 +41,46 @@
 .AboutUs-content__phone {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    text-align: left;
-    font-style: Regular;
-    font-size: 16px;
-    font-family: Poppins;
-    letter-spacing: 0.65px;
     color: #bd2c36;
     opacity: 1;
     margin-bottom: 25px;
 }
 
+.AboutUs-content__phone i {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.AboutUs-content__phone p {
+    text-align: left;
+    font-style: Regular;
+    font-size: 20px;
+    font-family: Poppins;
+    letter-spacing: 0.65px;
+}
+
 .AboutUs-content__download {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    text-align: left;
-    font-style: Regular;
-    font-size: 16px;
-    font-family: Poppins;
-    letter-spacing: 0.54px;
     color: #bd2c36;
     opacity: 1;
     margin-bottom: 50px;
+}
+
+.AboutUs-content__download i {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.AboutUs-content__download p {
+    text-align: left;
+    font-style: Regular;
+    font-size: 20px;
+    font-family: Poppins;
+    letter-spacing: 0.54px;
 }
 
 .AboutUs-content__read-more {
@@ -84,14 +103,26 @@
     background-image: url("../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambL.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    position: relative;
+}
+
+.AboutUs-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(50%);
 }
 
 .AboutUs-banner__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 200px;
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    padding: 100px 100px;
+    column-gap: 100px;
 }
 
 .AboutUs-banner__item {
@@ -103,8 +134,8 @@
 
 .AboutUs-banner__item p {
     text-align: center;
-    font: SemiBold;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 18px;
     font-family: Montserrat;
     letter-spacing: 0.5px;
     color: #FFFFFF;
@@ -149,25 +180,25 @@
 .AboutUs-analytics__items {
     display: flex;
     background-color: #BD2C36;
-    padding: 60px;
+    padding: 50px;
     position: relative;
     top: -50px;
 }
 
 .AboutUs-analytics__item {
-    margin-right: 100px;
+    margin: 0px 50px;
 }
 
 .AboutUs-analytics__item:last-child {
-    margin-right: 0;
+    margin-left: 0;
 }
 
 .AboutUs-analytics__item-quantity {
     display: flex;
     align-items: flex-start;
     text-align: center;
-    font-weight: bolder;
-    font-size: 40px;
+    font-weight: 900;
+    font-size: 48px;
     font-family: Montserrat;
     letter-spacing: 1.44px;
     color: #FFFFFF;
@@ -178,7 +209,7 @@
 .AboutUs-analytics__item-description {
     text-align: left;
     font-weight: SemiBold;
-    font-size: 16px;
+    font-size: 20px;
     font-family: Montserrat;
     letter-spacing: 0.54px;
     color: #FFFF8D;

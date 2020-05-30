@@ -14,8 +14,8 @@
 .PopularProducts-header__title {
     text-align: left;
     font-style: Italic;
-    font-size: 32px;
-    font-family: Brush Script MT;
+    font-size: 50px;
+    font-family: Brush Script MT, sans-serif;
     letter-spacing: 0px;
     color: #bd2c36;
     opacity: 1;
@@ -24,13 +24,23 @@
 
 .PopularProducts-header__sub-title {
     text-align: left;
-    font-weight: SemiBold;
+    font-weight: bold;
     font-size: 28px;
     font-family: Montserrat;
     letter-spacing: 0px;
-    color: #2E1500;
+    color: #2e1500;
     opacity: 1;
     margin: 0;
+}
+
+.PopularProducts-header__sub-title p:after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 40%;
+    left: 80px;
+    padding-top: 20px;
+    border-bottom: 2px solid #bd2c36;
 }
 
 .PopularProducts-items {
@@ -40,21 +50,29 @@
     padding: 50px 50px 100px 50px;
 }
 
+.PopularProducts-item {
+    position: relative;
+}
+
 .showShadow {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 10px 10px 20px grey;
 }
 
 .PopularProducts-item-image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    height: 200px;
 }
 
 .PopularProducts-item-button {
-    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40%;
     visibility: hidden;
+    margin: auto;
 }
 
 .showButton {
@@ -121,8 +139,8 @@
     padding: 10px;
     margin: 0;
     text-align: left;
-    font-weight: SemiBold;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 1.2px;
     opacity: 1;
@@ -151,12 +169,12 @@
     position: absolute;
     bottom: 0;
     background-color: #bd2c36;
-    padding: 20px;
+    padding: 30px 25px;
 }
 
 .PopularProducts-technologies__quality-percentage {
-    font-weight: bold;
-    font-size: 28px;
+    font-weight: bolder;
+    font-size: 38px;
     font-family: Montserrat;
     letter-spacing: 1.08px;
     color: #ffffff;
@@ -166,7 +184,9 @@
 
 .PopularProducts-technologies__quality-standard {
     text-align: left;
-    font: SemiBold 30px/36px Montserrat;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Montserrat;
     letter-spacing: 0.54px;
     color: #FFFF8D;
     opacity: 1;
@@ -182,24 +202,27 @@
     text-align: left;
     font-style: Italic;
     font-size: 32px;
-    font-family: Brush Script MT;
+    font-family: Brush Script MT, sans-serif;
     letter-spacing: 0px;
     color: #BD2C36;
     opacity: 1;
+    margin: 0 0 10px 0;
 }
 
 .PopularProducts-technologies__sub-title {
     text-align: left;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 52px;
     font-family: Montserrat;
     letter-spacing: 0px;
     color: #212121;
     opacity: 1;
+    margin: 0 0 40px 0;
 }
 
 .PopularProducts-technologies__concepts {
     display: flex;
+    padding: 0 0 40px 0;
 }
 
 .PopularProducts-technologies__concept {
@@ -212,7 +235,7 @@
 .PopularProducts-technologies__concept-title {
     text-align: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     font-family: Montserrat;
     letter-spacing: 0.47px;
     color: #000000;
@@ -221,12 +244,13 @@
 
 .PopularProducts-technologies__description {
     text-align: left;
-    font-weight: SemiBold;
+    font-weight: Regular;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0px;
     color: #212121;
     opacity: 1;
+    margin: 0 0 40px 0;
 }
 
 .PopularProducts-technologies__button {
@@ -235,7 +259,7 @@
     opacity: 1;
     padding: 10px 40px;
     text-align: center;
-    font-weight: SemiBold;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0px;

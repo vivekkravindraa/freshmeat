@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Link
@@ -7,6 +7,8 @@ import {
 import './Navigation.css';
 
 export default function Navigation() {
+	let [ id, setId ] = useState(0);
+
 	let navigationItems = [
 		{
 			id: 1,
@@ -78,11 +80,11 @@ export default function Navigation() {
 					<ul className="Navigation-menu-items">
 						{navigationItems.map((item,index) => {
 							return (
-								<li key={index} className="Navigation-menu__item">
-									<Link className="Navigation-menu__item-link" to={item.path}>
-										<button>{item.content}<span> + </span></button>
+								<li key={index} className="Navigation-menu__item" onMouseEnter={() => setId(index + 1)} onMouseLeave={() => setId(0)}>
+									<Link to={item.path}>
+										<button className="Navigation-menu__item-link">{item.content}<span> + </span></button>
 									</Link>
-									<div className="Navigation-menu__subNavigation-dropdown">
+									<div className={`Navigation-menu__subNavigation-dropdown ${index + 1 === id ? `showDropdown` : null}`}>
 										<ul className="Navigation-menu__subNavigation-items">
 											{item.subNavigationItems.map((item, index) => {
 												return (

@@ -1,3 +1,10 @@
+.Header {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .Header-container {
     background-image: url("../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png");
     background-size: cover;
@@ -5,8 +12,8 @@
     box-shadow: inset 0 0 0 2000px #0000004d;
 }
 
-.Header-container > img {
-    display: none;
+.slide {
+    position: relative;
 }
 
 .Header-icons {
@@ -60,11 +67,31 @@
 }
 
 .Header-icons__site-link {
+    font-size: 1.7em;
     margin: 0 15px;
+    position: relative;
+    padding: 15px 15px;
 }
 
 .Header-icons__site-link i {
     color: white;
+}
+
+.Header-icons__site-link span {
+    background-color: #bd2c36;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .Header-content {

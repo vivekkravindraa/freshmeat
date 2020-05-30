@@ -27,7 +27,7 @@
     margin-right: 0;
 }
 
-.Navigation-menu__item-link button {
+.Navigation-menu__item-link {
     color: white;
     border: none;
     outline: none;
@@ -50,7 +50,7 @@
     background-color: #f5f5f5;
 }
 
-.Navigation-menu__item:hover > .Navigation-menu__subNavigation-dropdown {
+.showDropdown {
     display: block;
 }
 
@@ -71,4 +71,11 @@
 .Navigation-menu__subNavigation-item-link {
     text-decoration: none;
     color: black;
+    text-align: left;
+    font-weight: Medium;
+    font-size: 14px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
 }

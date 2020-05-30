@@ -172,6 +172,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80px;
+}
+
+.Footer-query-content__paySecurely-gateways > li > a > img {
+    width: 60px;
 }
 
 .Footer-social {

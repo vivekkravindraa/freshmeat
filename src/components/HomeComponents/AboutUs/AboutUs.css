@@ -121,7 +121,7 @@
 .AboutUs-banner__items {
     display: grid;
     grid-template-columns: repeat(4,3fr);
-    padding: 100px 100px;
+    padding: 125px 100px;
     column-gap: 100px;
 }
 
@@ -149,7 +149,7 @@
 }
 
 .AboutUs-data {
-    padding: 25px;
+    padding: 25px 50px;
     text-align: left;
     letter-spacing: 0.65px;
     opacity: 1;
@@ -166,7 +166,7 @@
 
 .AboutUs-description span {
     text-align: left;
-    font-weight: Medium;
+    font-weight: bold;
     font-size: 22px;
     font-family: Montserrat;
     letter-spacing: 0.65px;

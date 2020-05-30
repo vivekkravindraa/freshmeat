@@ -39,6 +39,7 @@
     display: grid;
     grid-template-columns: repeat(4, 3fr);
     column-gap: 30px;
+    padding-bottom: 50px;
 }
 
 .Category-item {

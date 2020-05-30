@@ -8,7 +8,7 @@ import chickenBreastS from '../../../assets/HomeComponentAssets/chickenBreast/ch
 import './ProductPricing.css';
 
 export default function ProductPricing() {
-    const [ quantity, setQuantity ] = useState(0);
+    const [ quantity, setQuantity ] = useState(3);
 
     const productPricingItems = [
         {
@@ -20,8 +20,7 @@ export default function ProductPricing() {
             productPackage: 'Vaccum package',
             productDescription: 'Lorem ipsum dolor sit amet, consectetur',
             productPrice: 'AED 3.00'
-        },
-        {
+        },{
             productId: 2,
             productImage: chickenFullS,
             productName: 'Chicken full',
@@ -88,15 +87,17 @@ export default function ProductPricing() {
     ];
 
     const decreaseQuantityHandler = () => {
-
+        if(quantity !== 0) {
+            setQuantity(quantity - 1);
+        }
     }
 
-    const inputQuantityChangeHandler = () => {
-
+    const inputQuantityChangeHandler = (e) => {
+        setQuantity(e.target.value);
     }
 
     const increaseQuantityHandler = () => {
-
+        setQuantity(quantity + 1);
     }
 
     return (
@@ -132,7 +133,7 @@ export default function ProductPricing() {
                                         </button> : null}
                                         {index === 2 || index === 3 ? <div className="ProductPricing-quantityVariation">   
                                             <button className="ProductPricing-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
-                                            <input className="ProductPricing-inputValue" type="text" onChange={(e) => inputQuantityChangeHandler()} />
+                                            <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={(e) => inputQuantityChangeHandler(e)} />
                                             <button className="ProductPricing-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
                                         </div> : null}
                                     </div>

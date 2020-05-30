@@ -15,8 +15,8 @@ export default function PopularProducts() {
         {
             productId: 1,
             productImage: freshChickenS,
-            productTitle: 'Fresh chicken',
-            productType: 'curry Cut with skin',
+            productTitle: 'Fresh chicken curry',
+            productType: 'Cut with skin',
             productQuantity: '500 gms',
             productPrice: 'AED 20.00'
         },
@@ -39,8 +39,8 @@ export default function PopularProducts() {
         {
             productId: 4,
             productImage: freshChickenS,
-            productTitle: 'Fresh chicken',
-            productType: 'curry Cut with skin',
+            productTitle: 'Fresh chicken curry',
+            productType: 'Cut with skin',
             productQuantity: '500gms',
             productPrice: 'AED 20.00'
         }

@@ -69,9 +69,9 @@ export default function Footer() {
                 </div>
                 <div className="Footer-query-content">
                     <div className="Footer-query-content__subscribe">
-                        <label className="Footer-query-content__label">
+                        <p className="Footer-query-content__label">
                             SIGNUP FOR LATEST NEWSLETTER AND INFO
-                        </label>
+                        </p>
                         <div className="Footer-query-content__input-button">
                             <input className="Footer-query-content__input" type="text" />
                             <button className="Footer-query-content__button">Sign up</button>

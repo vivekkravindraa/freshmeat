@@ -5,22 +5,23 @@
 }
 
 .Footer-query-section {
-    padding: 50px;
+    padding: 50px 0 50px 75px;
 }
 
 .Footer-query-section__content {
     text-align: left;
-    font-weight: Medium;
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 14px;
     font-family: Montserrat;
     letter-spacing: 0.4px;
     color: #424242;
     opacity: 1;
+    margin-bottom: 35px;
 }
 
 .Footer-query-section__writeToUs {
     text-align: left;
-    font-weight: Medium;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0.43px;
@@ -35,7 +36,7 @@
 .Footer-query-section__mail span {
     text-align: left;
     text-decoration: underline;
-    font-weight: Medium;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0.43px;
@@ -45,7 +46,7 @@
 
 .Footer-query-section__callUs {
     text-align: left;
-    font-weight: Medium;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 0.43px;
@@ -66,7 +67,7 @@
 }
 
 .Footer-query-content {
-    padding: 50px;
+    padding: 50px 50px 50px 25px;
 }
 
 .Footer-query-content__subscribe {
@@ -75,9 +76,9 @@
     margin-bottom: 80px;
 }
 
-.Footer-query-content__subscribe label {
+.Footer-query-content__subscribe p {
     text-align: left;
-    font: bold;
+    font-weight: bolder;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 1.3px;
@@ -123,8 +124,8 @@
 .Footer-query-content__download-header,
 .Footer-query-content__paySecurely-header {
     text-align: left;
-    font-weight: bold;
-    font-size: 12px;
+    font-weight: bolder;
+    font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 1.3px;
     color: #424242;
@@ -140,7 +141,7 @@
 .Footer-query-content__link {
     text-decoration: none;
     text-align: left;
-    font-style: Medium;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     letter-spacing: 1.2px;
@@ -149,15 +150,16 @@
 }
 
 .Footer-query-content__download {
-    display:  flex;
+    display: flex;
     flex-direction: column;
 }
 
 .Footer-query-content__download img {
     background: #ffffff 0% 0% no-repeat padding-box;
     margin-bottom: 20px;
-    width: fit-content;
+    width: 144px;
     opacity: 1;
+    border-radius: 6px;
 }
 
 .Footer-query-content__paySecurely-gateways {
@@ -182,12 +184,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0px 50px 50px;
+    padding: 0px 50px 50px 75px;
 }
 
 .Footer-social__icons i {
     color: #757575;
     margin-right: 20px;
+    font-size: 1.7em;
 }
 
 .Footer-social__links {
@@ -205,7 +208,7 @@
 .Footer-social__link {
     text-decoration: none;
     color: #424242;
-    font-weight: Medium;
+    font-weight: bold;
     font-size: 16px;
     font-family: Montserrat;
     text-align: left;

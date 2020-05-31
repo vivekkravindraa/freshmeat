@@ -56,10 +56,12 @@ const Header = () => {
                 transition: 'transform ease-out 0.45s',
             }}>
                 {images.map((image, i) => (
-                    <div key={i} className="slide" style={{ backgroundImage : `url(${image})` }}>
-                    </div>
-                ))}
-                <div className="Header-icons">
+                    <div key={i} className="slide" style={{
+                        backgroundImage : `url(${image})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
+                        <div className="Header-icons">
                     <div className="Header-icons__social">
                         <p className="Header-icons__social-label">Follow Us<span>-</span></p>
                         <Router className="Header-icons__social-router">
@@ -113,6 +115,8 @@ const Header = () => {
                 <div className="Header-readmore__button">
                     <button>Read More +</button>
                 </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

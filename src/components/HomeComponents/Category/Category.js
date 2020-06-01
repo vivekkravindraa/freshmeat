@@ -7,7 +7,7 @@ import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAn
 import './Category.css';
 
 export default function Category() {
-    const [ id, setId ] = useState(0);
+    const [ id, setId ] = useState(1);
 
     const categories = [
         {
@@ -33,24 +33,26 @@ export default function Category() {
     ];
 
     return (
-        <div className="Category-container">
-            <div className="Category-header">
-                <h1 className="Category-title">EXPLORE BY CATEGORIES</h1>
-            </div>
-            <div className="Category-items">
-                {categories.map((item, index) => {
-                    return (
-                        <div key={index} className={`Category-item ${index + 1 === id ? `showShadow` : null}`} onClick={() => setId(index + 1)}>
-                            <div
-                                className="Category-image"
-                                style={{ backgroundImage: `url(${item.categoryImage})` }}>
+        <div className="Category">
+            <div className="Category-container">
+                <div className="Category-header">
+                    <b className="Category-title">EXPLORE BY CATEGORIES</b>
+                </div>
+                <div className="Category-items">
+                    {categories.map((item, index) => {
+                        return (
+                            <div key={index} className={`Category-item ${index + 1 === id ? `showShadow` : null}`} onClick={() => setId(index + 1)}>
+                                <div
+                                    className="Category-image"
+                                    style={{ backgroundImage: `url(${item.categoryImage})` }}>
+                                </div>
+                                <div className={`Category-name ${index + 1 === id ? `selected`: null}`}>
+                                    {item.categoryName.toUpperCase()}
+                                </div>
                             </div>
-                            <div className={`Category-name ${index + 1 === id ? `selected`: null}`}>
-                                {item.categoryName.toUpperCase()}
-                            </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         </div>
     );

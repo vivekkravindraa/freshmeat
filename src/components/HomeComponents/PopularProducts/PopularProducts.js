@@ -9,7 +9,7 @@ import certifiedS from '../../../assets/HomeComponentAssets/certified/certifiedS
 import './PopularProducts.css';
 
 export default function PopularProducts() {
-    let [ selectedProduct, setSelectProduct ] = useState(0);
+    let [ selectedProduct, setSelectProduct ] = useState(1);
 
     let popularProductItems = [
         {

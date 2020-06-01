@@ -11,11 +11,15 @@
 
 .Navigation-menu__item {
     position: relative;
+    margin-right: 30px;
+}
+
+.Navigation-menu__item:last-child {
+    margin-right: 0px;
 }
 
 .Navigation-menu__item-link {
     padding: 10px;
-    margin-right: 25px;
     text-decoration: none;
 }
 
@@ -35,7 +39,7 @@
     cursor: pointer;
     text-align: left;
     font-weight: Bold;
-    font-size: 16px;
+    font-size: 17px;
     font-family: Nunito;
     letter-spacing: 0px;
     color: #FFFFFF;

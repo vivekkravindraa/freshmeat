@@ -62,59 +62,59 @@ const Header = () => {
                         backgroundRepeat: 'no-repeat'
                     }}>
                         <div className="Header-icons">
-                    <div className="Header-icons__social">
-                        <p className="Header-icons__social-label">Follow Us<span>-</span></p>
-                        <Router className="Header-icons__social-router">
-                            {socialLinks.map((item,index) => {
-                                return (
-                                    <Link key={index} className="Header-icons__social-link" to={item.path}>
-                                        <i className={`${item.icon} ${item.size}`}></i>
-                                    </Link>
-                                )
-                            })}
-                        </Router>
-                    </div>
-                    <div className="Header-icons__main">
-                        <img src={freshmeatLogoS} width="100" height="100" alt="no_image" />
-                    </div>
-                    <div className="Header-icons__site">
-                        <Router className="Header-icons__site-router">
-                            {siteLinks.map((item,index) => {
-                                return (
-                                    <Link key={index} className="Header-icons__site-link" to={item.path}>
-                                        <i className={`${item.icon} ${item.size}`}></i>
-                                        {item.cartQuantity ? <span>{item.cartQuantity}</span> : null}
-                                    </Link>
-                                )
-                            })}
-                        </Router>
-                    </div>
-                </div>
-                <Navigation />
-                <div className="Header-content">
-                    <div className="Header-content__left-icon" onClick={() => goToPrevSlide()}>
-                        <span><i className="fas fa-long-arrow-left"></i></span>
-                    </div>
-                    <div className="Header-content__info">
-                        <p className="title">
-                            Organic Products
-                        </p>
-                        <p className="header">
-                            Raw Meat Farm
-                        </p>
-                        <p className="description">
-                            We at Farm Meat believe in a way of life that recognizes and honours the diversity and interdependencies of all life.<br />
-                            We believe that each one of us makes a difference in the world.
-                        </p>
-                    </div>
-                    {currentIndex === images.length - 1 ? null :
-                        <div className="Header-content__right-icon" onClick={() => goToNextSlide()}>
-                        <span><i className="fas fa-long-arrow-right"></i></span>
-                    </div>}
-                </div>
-                <div className="Header-readmore__button">
-                    <button>Read More +</button>
-                </div>
+                            <div className="Header-icons__social">
+                                <p className="Header-icons__social-label">Follow Us<span>-</span></p>
+                                <Router className="Header-icons__social-router">
+                                    {socialLinks.map((item,index) => {
+                                        return (
+                                            <Link key={index} className="Header-icons__social-link" to={item.path}>
+                                                <i className={`${item.icon} ${item.size}`}></i>
+                                            </Link>
+                                        )
+                                    })}
+                                </Router>
+                            </div>
+                            <div className="Header-icons__main">
+                                <img src={freshmeatLogoS} width="115" height="115" alt="no_image" />
+                            </div>
+                            <div className="Header-icons__site">
+                                <Router className="Header-icons__site-router">
+                                    {siteLinks.map((item,index) => {
+                                        return (
+                                            <Link key={index} className="Header-icons__site-link" to={item.path}>
+                                                <i className={`${item.icon} ${item.size}`}></i>
+                                                {item.cartQuantity ? <span>{item.cartQuantity}</span> : null}
+                                            </Link>
+                                        )
+                                    })}
+                                </Router>
+                            </div>
+                        </div>
+                        <Navigation />
+                        <div className="Header-content">
+                            <div className="Header-content__left-icon" onClick={() => goToPrevSlide()}>
+                                <span><i className="fas fa-long-arrow-left"></i></span>
+                            </div>
+                            <div className="Header-content__info">
+                                <p className="title">
+                                    Organic Products
+                                </p>
+                                <p className="header">
+                                    Raw Meat Farm
+                                </p>
+                                <p className="description">
+                                    We at Fresh Meat believe in a way of life that recognizes and honours the diversity and interdependencies of all life.<br />
+                                    We believe that each one of us makes a difference in the world.
+                                </p>
+                            </div>
+                            {currentIndex === images.length - 1 ? null :
+                                <div className="Header-content__right-icon" onClick={() => goToNextSlide()}>
+                                <span><i className="fas fa-long-arrow-right"></i></span>
+                            </div>}
+                        </div>
+                        <div className="Header-readmore__button">
+                            <button>Read More +</button>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -210,3 +210,18 @@
     padding: 10px 40px;
     opacity: 1;
 }
+
+.Header-cart-popup {
+    display: none;
+}
+
+.showCartPopup {
+    display: block;
+    height: auto;
+    width: auto;
+    border: 1px solid black;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

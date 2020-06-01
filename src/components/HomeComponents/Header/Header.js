@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import MyCart from '../../CartComponents/MyCart/MyCart';
 import Navigation from '../Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
@@ -14,6 +15,7 @@ const Header = () => {
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg"
     ]);
+    const [ isCartTouched, setIsCartTouched ] = useState(false);
 
     const goToPrevSlide = () => {
         if(currentIndex === 0) {
@@ -81,7 +83,7 @@ const Header = () => {
                                 <Router className="Header-icons__site-router">
                                     {siteLinks.map((item,index) => {
                                         return (
-                                            <Link key={index} className="Header-icons__site-link" to={item.path}>
+                                            <Link key={index} className="Header-icons__site-link" to={item.path} onClick={() => item.icon === "fas fa-shopping-cart" ? setIsCartTouched(true) : null}>
                                                 <i className={`${item.icon} ${item.size}`}></i>
                                                 {item.cartQuantity ? <span>{item.cartQuantity}</span> : null}
                                             </Link>
@@ -114,6 +116,9 @@ const Header = () => {
                         </div>
                         <div className="Header-readmore__button">
                             <button>Read More +</button>
+                        </div>
+                        <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+                            <MyCart closeCart={() => setIsCartTouched(false)} />
                         </div>
                     </div>
                 ))}

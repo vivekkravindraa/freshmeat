@@ -60,7 +60,10 @@
 
 .showDropdown {
     display: block;
-    background-color: transparent;
+}
+
+.hideDropdown {
+    display: none;
 }
 
 .Navigation-menu__subNavigation-items {

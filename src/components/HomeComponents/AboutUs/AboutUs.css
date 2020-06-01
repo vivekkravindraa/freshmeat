@@ -4,13 +4,13 @@
 }
 
 .AboutUs-content {
-    padding: 50px 50px 100px 75px;
+    padding: 35px 50px 100px 75px;
 }
 
 .AboutUs-content__title {
     text-align: left;
     font-style: Italic;
-    font-size: 42px;
+    font-size: 44px;
     font-family: Brush Script MT, sans-serif;
     letter-spacing: 0px;
     color: #bd2c36;
@@ -19,7 +19,7 @@
 
 .AboutUs-content__sub-title {
     text-align: left;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 44px;
     font-family: Montserrat;
     letter-spacing: 0px;
@@ -29,8 +29,8 @@
 
 .AboutUs-content__description {
     text-align: left;
-    font-style: Regular;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 18px;
     font-family: Montserrat;
     letter-spacing: 0px;
     color: #000000;
@@ -50,12 +50,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-size: 52px;
 }
 
 .AboutUs-content__phone p {
     text-align: left;
-    font-style: Regular;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 22px;
     font-family: Poppins;
     letter-spacing: 0.65px;
 }
@@ -72,19 +73,27 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    font-size: 52px;
 }
 
 
 .AboutUs-content__download p {
     text-align: left;
-    font-style: Regular;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 21px;
     font-family: Poppins;
     letter-spacing: 0.54px;
 }
 
 .AboutUs-content__read-more {
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Montserrat;
+    letter-spacing: 0px;
     color: #ffffff;
+    opacity: 1;
     background: #bd2c36 0% 0% no-repeat padding-box;
     border-radius: 29px;
     opacity: 1;
@@ -94,9 +103,11 @@
 
 .AboutUs-image {
     background-image: url("../../../assets/HomeComponentAssets/aboutUsSideImage/aboutUsSideImageS.png");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
+    top: -60px;
 }
 
 .AboutUs-banner {
@@ -104,17 +115,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(50%);
     position: relative;
-}
-
-.AboutUs-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     filter: brightness(50%);
 }
 
@@ -215,15 +216,4 @@
     color: #FFFF8D;
     opacity: 1;
     margin: 0;
-}
-
-.AboutUs-content__read-more {
-    outline: none;
-    text-align: center;
-    font-weight: SemiBold;
-    font-size: 16px;
-    font-family: Montserrat;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
 }

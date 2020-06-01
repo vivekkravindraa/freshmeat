@@ -6,7 +6,7 @@ import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/fr
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ images ] = useState([
@@ -47,7 +47,7 @@ const Header = () => {
 
     const siteLinks = [
         { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
-        { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg', cartQuantity: 4 },
+        { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
         { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' }
     ];
 
@@ -85,7 +85,7 @@ const Header = () => {
                                         return (
                                             <Link key={index} className="Header-icons__site-link" to={item.path} onClick={() => item.icon === "fas fa-shopping-cart" ? setIsCartTouched(true) : null}>
                                                 <i className={`${item.icon} ${item.size}`}></i>
-                                                {item.cartQuantity ? <span>{item.cartQuantity}</span> : null}
+                                                {item.icon === "fas fa-shopping-cart" ? <span>{props.quantity ? props.quantity : 0}</span> : null}
                                             </Link>
                                         )
                                     })}

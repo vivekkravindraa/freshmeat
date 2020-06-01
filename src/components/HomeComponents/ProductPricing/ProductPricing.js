@@ -8,7 +8,7 @@ import chickenBreastS from '../../../assets/HomeComponentAssets/chickenBreast/ch
 import './ProductPricing.css';
 
 export default function ProductPricing() {
-    const [ quantity, setQuantity ] = useState(3);
+    const [ quantity, setQuantity ] = useState(0);
 
     const productPricingItems = [
         {
@@ -128,14 +128,14 @@ export default function ProductPricing() {
                                 <p className="ProductPricing-description">{item.productDescription}</p>
                                 <div className="ProductPricing-cart-options">
                                     <div className="ProductPricing-cart-opertaions">
-                                        {index !== 2 && index !== 3 ? <button className="ProductPricing-addToCartButton">
+                                        <button className="ProductPricing-addToCartButton" onClick={() => setQuantity(quantity + 1)}>
                                             Add to Cart <span>+</span>
-                                        </button> : null}
-                                        {index === 2 || index === 3 ? <div className="ProductPricing-quantityVariation">   
+                                        </button>
+                                        <div className="ProductPricing-quantityVariation">   
                                             <button className="ProductPricing-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
                                             <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={(e) => inputQuantityChangeHandler(e)} />
                                             <button className="ProductPricing-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
-                                        </div> : null}
+                                        </div>
                                     </div>
                                     <div className="ProductPricing-cart-price">
                                         <p className="ProductPricing-price">{item.productPrice}</p>

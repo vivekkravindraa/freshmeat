@@ -1,7 +1,7 @@
 import React, {
     // useState 
 } from 'react';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import chickenFullS from '../../../assets/ProductComponentAssets/chickenFull/chickenFullS.png';
 import chickenThighS from '../../../assets/ProductComponentAssets/chickenThigh/chickenThighS.png';
 import legPieceS from '../../../assets/ProductComponentAssets/legPiece/legPieceS.png';
@@ -10,8 +10,6 @@ import chickenBreastS from '../../../assets/ProductComponentAssets/chickenBreast
 import './ProductPricing.css';
 
 function ProductPricing(props) {
-    // const [ quantity, setQuantity ] = useState(0);
-
     const productPricingItems = [
         {
             productId: 1,
@@ -88,6 +86,11 @@ function ProductPricing(props) {
         }
     ];
 
+    const quantity = useSelector(state => state);
+    const dispatch = useDispatch();
+
+    // const [ quantity, setQuantity ] = useState(0);
+
     // const decreaseQuantityHandler = () => {
     //     if(quantity !== 0) {
     //         setQuantity(quantity - 1);
@@ -102,9 +105,8 @@ function ProductPricing(props) {
     //     setQuantity(quantity + 1);
     // }
 
-    const addToCart = () => {
-        props.setQuantity(props.quantity + 1)
-    }
+    const increment = () => dispatch({ type: 'INCREMENT' })
+    const decrement = () => dispatch({ type: 'DECREMENT' })
 
     return (
         <div className="ProductPricing-container">
@@ -135,10 +137,9 @@ function ProductPricing(props) {
                                 <div className="ProductPricing-cart-options">
                                     <div className="ProductPricing-cart-opertaions">
                                     {
-                                        1 ?
+                                        0 ?
                                             <button className="ProductPricing-addToCartButton"
                                                 // onClick={() => setQuantity(quantity + 1)}
-                                                onClick={() => addToCart()}
                                             >
                                                 Add to Cart <span>+</span>
                                             </button>
@@ -146,12 +147,14 @@ function ProductPricing(props) {
                                             <div className="ProductPricing-quantityVariation">   
                                                 <button className="ProductPricing-decreaseButton" 
                                                     // onClick={() => decreaseQuantityHandler()}
+                                                    onClick={quantity === 0 ? null : decrement}
                                                 >-</button>
-                                                <input className="ProductPricing-inputValue" value={props.quantity.quantity} type="text"
+                                                <input className="ProductPricing-inputValue" value={quantity} type="text"
                                                     // onChange={(e) => inputQuantityChangeHandler(e)}
                                                 />
                                                 <button className="ProductPricing-increaseButton"
                                                     // onClick={() => increaseQuantityHandler()}
+                                                    onClick={increment}
                                                 >+</button>
                                             </div>
                                     }
@@ -168,19 +171,5 @@ function ProductPricing(props) {
         </div>
     )
 }
-
-function mapStateToProps(state) {
-    return {
-        quantity: state.quantity
-    }
-}
   
-function mapDispatchToProps(dispatch) {
-    return {
-        setQuantity: (quantityObj) => {
-            dispatch({ type: "SET_QUANTITY", payload: quantityObj })
-        }
-    }
-}
-  
-export default connect(mapStateToProps, mapDispatchToProps)(ProductPricing);
+export default ProductPricing;

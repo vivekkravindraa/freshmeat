@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import MyCart from '../../CartComponents/MyCart/MyCart';
 import Navigation from '../../CommonComponents/Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
@@ -10,6 +11,8 @@ import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
 import './Header.css';
 
 const Header = (props) => {
+    const quantity = useSelector(state => state);
+
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ images ] = useState([
@@ -88,7 +91,7 @@ const Header = (props) => {
                                         return (
                                             <Link key={index} className="Header-icons__site-link" to={item.path} onClick={() => item.icon === "fas fa-shopping-cart" ? setIsCartTouched(true) : null}>
                                                 <i className={`${item.icon} ${item.size}`}></i>
-                                                {item.icon === "fas fa-shopping-cart" ? <span>{props.quantity ? props.quantity : 0}</span> : null}
+                                                {item.icon === "fas fa-shopping-cart" ? <span>{quantity ? quantity : 0}</span> : null}
                                             </Link>
                                         )
                                     })}

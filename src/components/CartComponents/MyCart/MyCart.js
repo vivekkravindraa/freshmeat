@@ -5,6 +5,7 @@ import chickenFullS from '../../../assets/ProductComponentAssets/chickenFull/chi
 import './MyCart.css';
 
 export default function MyCart(props) {
+    const [ quantity, setQuantity ] = useState(0);
     const [ subtotal ] = useState('30.00');
 
     const myCartItems = [
@@ -25,6 +26,20 @@ export default function MyCart(props) {
             currencyType: 'AED'
         }
     ];
+
+    const decreaseQuantityHandler = () => {
+        if(quantity !== 0) {
+            setQuantity(quantity - 1);
+        }
+    }
+
+    const inputQuantityChangeHandler = (e) => {
+        setQuantity(e.target.value);
+    }
+
+    const increaseQuantityHandler = () => {
+        setQuantity(quantity + 1);
+    }
 
     return (
         <div className="MyCart-container">
@@ -71,9 +86,9 @@ export default function MyCart(props) {
                         </div>
                         <div className="MyCart-item__quantity">
                             <div className="MyCart-quantityVariation">   
-                                <button className="MyCart-decreaseButton">-</button>
-                                <input className="MyCart-inputValue" value={0} type="text" />
-                                <button className="MyCart-increaseButton">+</button>
+                                <button className="MyCart-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
+                                <input className="MyCart-inputValue" value={quantity} type="text" onClick={() => inputQuantityChangeHandler()} />
+                                <button className="MyCart-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
                             </div>
                         </div>
                         <div className="MyCart-item__subtotal">

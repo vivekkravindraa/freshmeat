@@ -5,7 +5,7 @@ import './OrderSummary.css';
 export default function OrderSummary() {
     return (
         <div>
-            
+            OrderSummary
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import chickenS from '../../../assets/HomeComponentAssets/chicken/chickenS.png';
 import seafoodS from '../../../assets/HomeComponentAssets/seafood/seafoodS.png';
 import beefS from '../../../assets/HomeComponentAssets/beef/beefS.png';
-import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
+import goatAndLambS from '../../../assets/ProductComponentAssets/goatAndLamb/goatAndLambS.png';
 
 import './Category.css';
 

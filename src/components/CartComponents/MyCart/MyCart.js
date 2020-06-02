@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import chickenFullS from '../../../assets/HomeComponentAssets/chickenFull/chickenFullS.png';
+import chickenFullS from '../../../assets/ProductComponentAssets/chickenFull/chickenFullS.png';
 
 import './MyCart.css';
 

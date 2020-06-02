@@ -2,8 +2,8 @@ import React from 'react';
 import Header from './Header/Header';
 import Category from './Category/Category';
 import AboutUs from './AboutUs/AboutUs';
-import PopularProducts from './PopularProducts/PopularProducts';
-import PopularPricing from './ProductPricing/ProductPricing';
+import PopularProducts from '../ProductComponents/PopularProducts/PopularProducts';
+import PopularPricing from '../ProductComponents/PopularProducts/PopularProducts';
 import Footer from './Footer/Footer';
 
 export default function HomeComponent() {

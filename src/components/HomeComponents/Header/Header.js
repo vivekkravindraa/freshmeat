@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import MyCart from '../../CartComponents/MyCart/MyCart';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../../CommonComponents/Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
 import freshmeatBannerS from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png";

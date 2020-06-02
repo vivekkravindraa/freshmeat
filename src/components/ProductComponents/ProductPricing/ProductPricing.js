@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import chickenFullS from '../../../assets/HomeComponentAssets/chickenFull/chickenFullS.png';
-import chickenThighS from '../../../assets/HomeComponentAssets/chickenThigh/chickenThighS.png';
-import legPieceS from '../../../assets/HomeComponentAssets/legPiece/legPieceS.png';
-import chickenBreastS from '../../../assets/HomeComponentAssets/chickenBreast/chickenBreastS.png';
+import chickenFullS from '../../../assets/ProductComponentAssets/chickenFull/chickenFullS.png';
+import chickenThighS from '../../../assets/ProductComponentAssets/chickenThigh/chickenThighS.png';
+import legPieceS from '../../../assets/ProductComponentAssets/legPiece/legPieceS.png';
+import chickenBreastS from '../../../assets/ProductComponentAssets/chickenBreast/chickenBreastS.png';
 
 import './ProductPricing.css';
 

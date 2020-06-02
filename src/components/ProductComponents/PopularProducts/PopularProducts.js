@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import freshChickenS from '../../../assets/HomeComponentAssets/freshChicken/freshChickenS.png'; 
-import goatAndLambS from '../../../assets/HomeComponentAssets/goatAndLamb/goatAndLambS.png';
-import freshCatlaFishS from '../../../assets/HomeComponentAssets/freshCatlaFish/freshCatlaFishS.png';
+import freshChickenS from '../../../assets/ProductComponentAssets/freshChicken/freshChickenS.png'; 
+import goatAndLambS from '../../../assets/ProductComponentAssets/goatAndLamb/goatAndLambS.png';
+import freshCatlaFishS from '../../../assets/ProductComponentAssets/freshCatlaFish/freshCatlaFishS.png';
 
 import './PopularProducts.css';
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import freshmeatRaw from '../../../assets/HomeComponentAssets/freshmeatRaw/freshmeatRaw.png';
 
 import './OrderSummary.css';
 
@@ -22,7 +23,7 @@ export default function OrderSummary() {
             <div className="OrderSummary-shoppingCart">
                 <div className="OrderSummary-shoppingCart__activeCart">
                     <div className="OrderSummary-shoppingCart__activeCart-image">
-                        <img alt="no_image" />
+                        <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
                     </div>
                     <div className="OrderSummary-shoppingCart__activeCart-content">
                         <p className="OrderSummary-shoppingCart__activeCart-title">Shopping Cart</p>
@@ -31,7 +32,7 @@ export default function OrderSummary() {
                 </div>
                 <div className="OrderSummary-shoppingCart__userAccess">
                     <div className="OrderSummary-shoppingCart__userAccess-image">
-                        <img alt="no_image" />
+                        <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
                     </div>
                     <div className="OrderSummary-shoppingCart__userAccess-content">
                         <p className="OrderSummary-shoppingCart__userAccess-title">Login/signup</p>
@@ -42,7 +43,7 @@ export default function OrderSummary() {
                 </div>
                 <div className="OrderSummary-shoppingCart__userPayment">
                     <div className="OrderSummary-shoppingCart__userPayment-image">
-                        <img alt="no_image" />
+                        <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
                     </div>
                     <div className="OrderSummary-shoppingCart__userPayment-content">
                         <p className="OrderSummary-shoppingCart__userPayment-title">Delivery/payment</p>
@@ -55,11 +56,12 @@ export default function OrderSummary() {
 
             <div className="OrderSummary-content">
                 <div className="OrderSummary-content__shoppingBasket">
-                    <p className="OrderSummary-content__shoppingBasket-title">Shopping Basket <span>4 items</span></p>
+                    <p className="OrderSummary-content__shoppingBasket-title">Shopping Basket <span>(4 items)</span></p>
                     <div className="OrderSummary-content__shoppingBasket-items">
+
                         <div className="OrderSummary-content__shoppingBasket-item">
                             <div className="OrderSummary-content__shoppingBasket-image">
-                                <img src="" alt="no_image" />
+                                <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
                             </div>
                             <div className="OrderSummary-content__shoppingBasket-item-content">
                                 <p className="OrderSummary-content__shoppingBasket-item-title">FRESH CHICKEN CURRY CUT</p>
@@ -79,6 +81,76 @@ export default function OrderSummary() {
                                 </Router>
                             </div>
                         </div>
+
+                        <div className="OrderSummary-content__shoppingBasket-item">
+                            <div className="OrderSummary-content__shoppingBasket-image">
+                                <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-content">
+                                <p className="OrderSummary-content__shoppingBasket-item-title">FRESH CHICKEN CURRY CUT</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-quantity">500g, Vaccum package</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-price">AED 30.00</p>
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-variations">
+                                <div className="OrderSummary-content__shoppingBasket-item-quantityVariation">   
+                                    <button className="OrderSummary-content__shoppingBasket-item-decreaseButton">-</button>
+                                    <input className="OrderSummary-content__shoppingBasket-item-inputValue" defaultValue={0} type="text" />
+                                    <button className="OrderSummary-content__shoppingBasket-item-increaseButton">+</button>
+                                </div>
+                                <Router>
+                                    <Link to="/" className="OrderSummary-content__shoppingBasket-item-linkToRemove">
+                                        <p>Remove</p>
+                                    </Link>
+                                </Router>
+                            </div>
+                        </div>
+
+                        <div className="OrderSummary-content__shoppingBasket-item">
+                            <div className="OrderSummary-content__shoppingBasket-image">
+                                <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-content">
+                                <p className="OrderSummary-content__shoppingBasket-item-title">FRESH CHICKEN CURRY CUT</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-quantity">500g, Vaccum package</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-price">AED 30.00</p>
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-variations">
+                                <div className="OrderSummary-content__shoppingBasket-item-quantityVariation">   
+                                    <button className="OrderSummary-content__shoppingBasket-item-decreaseButton">-</button>
+                                    <input className="OrderSummary-content__shoppingBasket-item-inputValue" defaultValue={0} type="text" />
+                                    <button className="OrderSummary-content__shoppingBasket-item-increaseButton">+</button>
+                                </div>
+                                <Router>
+                                    <Link to="/" className="OrderSummary-content__shoppingBasket-item-linkToRemove">
+                                        <p>Remove</p>
+                                    </Link>
+                                </Router>
+                            </div>
+                        </div>
+
+                        <div className="OrderSummary-content__shoppingBasket-item">
+                            <div className="OrderSummary-content__shoppingBasket-image">
+                                <img src={freshmeatRaw} alt="no_image" width="50" height="50" />
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-content">
+                                <p className="OrderSummary-content__shoppingBasket-item-title">FRESH CHICKEN CURRY CUT</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-quantity">500g, Vaccum package</p>
+                                <p className="OrderSummary-content__shoppingBasket-item-price">AED 30.00</p>
+                            </div>
+                            <div className="OrderSummary-content__shoppingBasket-item-variations">
+                                <div className="OrderSummary-content__shoppingBasket-item-quantityVariation">   
+                                    <button className="OrderSummary-content__shoppingBasket-item-decreaseButton">-</button>
+                                    <input className="OrderSummary-content__shoppingBasket-item-inputValue" defaultValue={0} type="text" />
+                                    <button className="OrderSummary-content__shoppingBasket-item-increaseButton">+</button>
+                                </div>
+                                <Router>
+                                    <Link to="/" className="OrderSummary-content__shoppingBasket-item-linkToRemove">
+                                        <p>Remove</p>
+                                    </Link>
+                                </Router>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -86,19 +158,18 @@ export default function OrderSummary() {
                     <div className="OrderSummary-content__priceDetails">
                         <p className="OrderSummary-content__priceDetails-title">Price Details</p>
                         <div className="OrderSummary-content__priceDetails-content">
-                            <p className="OrderSummary-content__priceDetails-priceTitle">
-                                Price Details <span>(26 Items)</span>
-                            </p>
-                            <p className="OrderSummary-content__priceDetails-priceValue">AED 30.00</p>
-                            <p className="OrderSummary-content__priceDetails-taxesTitle">
-                                Taxes & Charges
-                            </p>
-                            <p className="OrderSummary-content__priceDetails-taxesValue">AED 10.00</p>
-
-                            <p className="OrderSummary-content__priceDetails-deliveryTitle">
-                                Delivery fee
-                            </p>
-                            <p className="OrderSummary-content__priceDetails-deliveryValue">FREE</p>
+                            <div className="OrderSummary-content__priceDetails-price">
+                                <p className="OrderSummary-content__priceDetails-priceTitle">Price Details (26 Items)</p>
+                                <p className="OrderSummary-content__priceDetails-priceValue">AED 30.00</p>
+                            </div>
+                            <div className="OrderSummary-content__priceDetails-taxes">
+                                <p className="OrderSummary-content__priceDetails-taxesTitle">Taxes & Charges</p>
+                                <p className="OrderSummary-content__priceDetails-taxesValue">AED 10.00</p>
+                            </div>
+                            <div className="OrderSummary-content__priceDetails-delivery">
+                                <p className="OrderSummary-content__priceDetails-deliveryTitle">Delivery fee</p>
+                                <p className="OrderSummary-content__priceDetails-deliveryValue">FREE</p>
+                            </div>
                         </div>
                         <div className="OrderSummary-content__priceDetails-total">
                             <p className="OrderSummary-content__priceDetails-totalTitle">Total Payable</p>
@@ -111,7 +182,9 @@ export default function OrderSummary() {
                             <i className="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div className="OrderSummary-content__advertisement"></div>
+                    <div className="OrderSummary-content__advertisement">
+                        <img src={freshmeatRaw} alt="no_image" />
+                    </div>
                 </div>
             </div>
         </div>

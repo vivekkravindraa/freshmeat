@@ -3,13 +3,17 @@
         display: grid;
         grid-template-columns: 8fr 4fr;
         border-bottom: 25px solid #f5f5f5;
+    }
+
+    .OrderSummary-notification__message {
         border-right: 1px solid #f5f5f5;
+        padding: 25px;
     }
     
     .OrderSummary-notification__orderStatus {
         text-align: left;
-        font-weight: Bold;
-        font-size: 30px;
+        font-weight: 900;
+        font-size: 32px;
         font-family: Montserrat;
         letter-spacing: 0.9px;
         color: #bd2c36;
@@ -20,7 +24,7 @@
     .OrderSummary-notification__amountStatus {
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #424242;
@@ -31,7 +35,7 @@
     .OrderSummary-notification__deliveryStatus {
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #424242;
@@ -43,16 +47,20 @@
     .OrderSummary-notification__deliveryStatus > span {
         text-align: left;
         font-weight: Bold;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #424242;
+    }
+
+    .OrderSummary-notification__contact {
+        padding: 25px;
     }
     
     .OrderSummary-notification__helpTitle {
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #000000;
@@ -63,7 +71,7 @@
     .OrderSummary-notification__helpDescription {
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #000000;
@@ -74,7 +82,7 @@
     .OrderSummary-notification__helpContact {
         text-align: left;
         font-weight: Medium;
-        font-size: 50px;
+        font-size: 42px;
         font-family: Poppins;
         letter-spacing: 0.9px;
         color: #bd2c36;
@@ -85,6 +93,7 @@
     .OrderSummary-shoppingCart {
         display: grid;
         grid-template-columns: 4fr 4fr 4fr;
+        grid-gap: 50px;
         border-bottom: 25px solid #f5f5f5;
     }
     
@@ -94,6 +103,10 @@
         display: grid;
         grid-template-columns: 1fr 3fr;
     }
+
+    .OrderSummary-shoppingCart__activeCart {
+        border-right: 1px solid #f5f5f5;
+    }
     
     .OrderSummary-shoppingCart__activeCart-image,
     .OrderSummary-shoppingCart__userAccess-image,
@@ -102,12 +115,23 @@
         justify-content: center;
         align-items: center;
     }
+
+    .OrderSummary-shoppingCart__activeCart-content,
+    .OrderSummary-shoppingCart__userAccess-content,
+    .OrderSummary-shoppingCart__userPayment-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        padding: 25px 0;
+        margin: 0 auto;
+    }
     
     .OrderSummary-shoppingCart__activeCart-title {
         border-bottom: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Bold;
-        font-size: 30px;
+        font-size: 24px;
         font-family: Montserrat;
         letter-spacing: 0.54px;
         color: #BD2C36;
@@ -118,7 +142,7 @@
     .OrderSummary-shoppingCart__activeCart-description {
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #BD2C36;
@@ -129,7 +153,7 @@
     .OrderSummary-shoppingCart__userAccess-title {
         text-align: left;
         font-weight: Medium;
-        font-size: 30px;
+        font-size: 24px;
         font-family: Poppins;
         letter-spacing: 0.54px;
         color: #757575;
@@ -141,7 +165,7 @@
         border-top: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-family: Poppins;
         letter-spacing: 0.36px;
         color: #424242;
@@ -152,7 +176,7 @@
     .OrderSummary-shoppingCart__userPayment-title {
         text-align: left;
         font-weight: Medium;
-        font-size: 30px;
+        font-size: 24px;
         font-family: Poppins;
         letter-spacing: 0.54px;
         color: #757575;
@@ -164,7 +188,7 @@
         border-top: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-family: Poppins;
         letter-spacing: 0.36px;
         color: #424242;
@@ -175,6 +199,7 @@
     .OrderSummary-content {
         display: grid;
         grid-template-columns: 8fr 3fr;
+        border-right: 10px solid #f5f5f5;
     }
     
     .OrderSummary-content__shoppingBasket {
@@ -183,22 +208,30 @@
         border-right: 25px solid #f5f5f5;
         border-bottom: 25px solid #f5f5f5;
     }
+
+    .OrderSummary-content__shoppingBasket-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
     .OrderSummary-content__shoppingBasket-title {
+        border-bottom: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Bold;
-        font-size: 32px/38px;
+        font-size: 24px;
         font-family: Montserrat;
         letter-spacing: 0.58px;
         color: #424242;
         opacity: 1;
         margin: 0;
+        padding: 10px 20px;
     }
     
     .OrderSummary-content__shoppingBasket-title > span {
         text-align: left;
         font-weight: Medium;
-        font-size: 24px;
+        font-size: 12px;
         font-family: Poppins;
         letter-spacing: 0.43px;
         color: #424242;
@@ -213,12 +246,18 @@
     .OrderSummary-content__shoppingBasket-item {
         display: grid;
         grid-template-columns: 2fr 4fr 2fr;
+        border-bottom: 1px solid #f5f5f5;
+        padding: 45px 25px;
+    }
+
+    .OrderSummary-content__shoppingBasket-item:nth-last-child(-n + 1) {
+        border-bottom: none;
     }
     
     .OrderSummary-content__shoppingBasket-item-title {
         text-align: left;
         font-weight: Bold;
-        font-size: 26px;
+        font-size: 20px;
         font-family: Montserrat;
         letter-spacing: 0.47px;
         color: #000000;
@@ -229,7 +268,7 @@
     .OrderSummary-content__shoppingBasket-item-quantity {
         text-align: left;
         font-weight: Bold;
-        font-size: 22px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -240,12 +279,18 @@
     .OrderSummary-content__shoppingBasket-item-price {
         text-align: left;
         font-weight: Bold;
-        font-size: 22px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.4px;
         color: #BD2C36;
         opacity: 1;
         margin: 0;
+    }
+
+    .OrderSummary-content__shoppingBasket-item-variations {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     .OrderSummary-content__shoppingBasket-item-quantityVariation {
@@ -296,9 +341,6 @@
         letter-spacing: 0.36px;
         color: #E53935;
         opacity: 1;
-    }
-    
-    .OrderSummary-content__shoppingBasket-item-linkToRemove {
         text-decoration: none;
         margin: 0;
     }
@@ -308,16 +350,22 @@
         flex-direction: column;
         border-bottom: 25px solid #f5f5f5;
     }
+
+    .OrderSummary-content__priceDetails-content {
+        padding: 25px 0;
+    }
     
     .OrderSummary-content__priceDetails-title {
         border-bottom: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Bold;
-        font-size: 28px;
+        font-size: 24px;
         font-family: Montserrat;
         letter-spacing: 0.5px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 10px 20px;
     }
     
     .OrderSummary-content__priceDetails-priceTitle {
@@ -326,11 +374,13 @@
         align-items: center;
         text-align: left;
         font-weight: Bold;
-        font-size: 24px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 0 0 0 20px;
     }
     
     .OrderSummary-content__priceDetails-taxesTitle {
@@ -339,11 +389,13 @@
         align-items: center;
         text-align: left;
         font-weight: Medium;
-        font-size: 24px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 0 0 0 20px;
     }
     
     .OrderSummary-content__priceDetails-deliveryTitle {
@@ -352,11 +404,13 @@
         align-items: center;
         text-align: left;
         font-weight: Medium;
-        font-size: 24px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 0 0 0 20px;
     }
     
     .OrderSummary-content__priceDetails-priceValue {
@@ -365,11 +419,13 @@
         align-items: center;
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 0 20px 0 0;
     }
     
     .OrderSummary-content__priceDetails-taxesValue {
@@ -378,11 +434,13 @@
         align-items: center;
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #000000;
         opacity: 1;
+        margin: 0;
+        padding: 0 20px 0 0;
     }
     
     .OrderSummary-content__priceDetails-deliveryValue {
@@ -391,23 +449,32 @@
         align-items: center;
         text-align: left;
         font-weight: Medium;
-        font-size: 20px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.36px;
         color: #4CAF50;
         opacity: 1;
+        margin: 0;
+        padding: 0 20px 0 0;
     }
     
     .OrderSummary-content__priceDetails-content {
         display: grid;
-        grid-template-columns: 2fr 2fr;
-        border-bottom: 25px solid #f5f5f5;
+        grid-template-rows: 2fr 2fr 2fr;
+        border-bottom: 1px solid #f5f5f5;
     }
     
+    .OrderSummary-content__priceDetails-price,
+    .OrderSummary-content__priceDetails-taxes,
+    .OrderSummary-content__priceDetails-delivery,
     .OrderSummary-content__priceDetails-total {
         display: grid;
         grid-template-columns: 2fr 2fr;
+    }
+
+    .OrderSummary-content__priceDetails-total {
         border-bottom: 25px solid #f5f5f5;
+        padding: 0 20px;
     }
     
     .OrderSummary-content__proceedToPaymentButton {
@@ -426,6 +493,8 @@
         letter-spacing: 0.51px;
         color: #FFFFFF;
         opacity: 1;
+        padding: 10px;
+        border-bottom: 25px solid #f5f5f5;
     }
     
     .OrderSummary-content__proceedToPaymentButton > i {
@@ -435,7 +504,7 @@
     .OrderSummary-content__priceDetails-totalTitle {
         text-align: left;
         font-weight: Bold;
-        font-size: 24px;
+        font-size: 20px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #000000;
@@ -452,5 +521,9 @@
         font-family: Montserrat;
         color: #000000;
         opacity: 1;
+    }
+
+    .OrderSummary-content__advertisement > img {
+        height: 350px;
     }
 } 

@@ -49,12 +49,10 @@ export default function MyCart(props) {
                     <p className="MyCart-header__lengthOfCartItems">26 items</p>
                 </div>
                 <div className="MyCart-header__closeCart">
-                    <Router>
-                        <Link className="MyCart-header__closeCartLink" onClick={() => props.closeCart()}>
-                            <span className="MyCart-header__closeCartIndicator"><span>x</span></span>
-                            <p className="MyCart-header__closeCartText">Close</p>
-                        </Link>
-                    </Router>
+                    <button className="MyCart-header__closeCartLink" onClick={() => props.closeCart()}>
+                        <span className="MyCart-header__closeCartIndicator"><span>x</span></span>
+                        <p className="MyCart-header__closeCartText">Close</p>
+                    </button>
                 </div>
             </div>
             <div className="MyCart-header__divider"></div>
@@ -66,7 +64,7 @@ export default function MyCart(props) {
                     <p className="MyCart-items__title-subtotal">SUBTOTAL</p>
                 </div>
                 {myCartItems.map((cartItem, index) => (
-                    <div className="MyCart-item">
+                    <div className="MyCart-item" key={index}>
                         <div className="MyCart-item__data">
                             <div className="MyCart-item__image">
                                 <img src={cartItem.productImage} alt="no_image" width={82} height={64} />
@@ -76,7 +74,7 @@ export default function MyCart(props) {
                                 <div className="MyCart-item__details">
                                     <p className="MyCart-item__quantity">{cartItem.productQuantity}</p>
                                     <Router>
-                                        <Link><p className="MyCart-item__linkToRemoveItem">Remove</p></Link>
+                                        <Link to="/"><p className="MyCart-item__linkToRemoveItem">Remove</p></Link>
                                     </Router>
                                 </div>
                             </div>
@@ -87,7 +85,7 @@ export default function MyCart(props) {
                         <div className="MyCart-item__quantity">
                             <div className="MyCart-quantityVariation">   
                                 <button className="MyCart-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
-                                <input className="MyCart-inputValue" value={quantity} type="text" onClick={() => inputQuantityChangeHandler()} />
+                                <input className="MyCart-inputValue" defaultValue={quantity} type="text" onClick={() => inputQuantityChangeHandler()} />
                                 <button className="MyCart-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
                             </div>
                         </div>
@@ -99,7 +97,7 @@ export default function MyCart(props) {
             </div>
             <div className="MyCart-items__divider">
                 <span><i className="fas fa-angle-double-down"></i></span>
-                <Router><Link><p className="MyCart-items__linkToViewAll">View All</p></Link></Router>
+                <Router><Link to="/"><p className="MyCart-items__linkToViewAll">View All</p></Link></Router>
             </div>
             <div className="MyCart-summary">
                 <div className="MyCart-summary__subtotal">

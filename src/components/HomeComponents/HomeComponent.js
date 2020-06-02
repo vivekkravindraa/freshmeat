@@ -7,7 +7,7 @@ import Technologies from './Technologies/Technologies';
 import PopularPricing from '../ProductComponents/ProductPricing/ProductPricing';
 import Footer from './Footer/Footer';
 
-export default function HomeComponent() {
+export default function HomeComponent(props) {
     return (
         <div>
             <Header />

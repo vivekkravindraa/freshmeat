@@ -5,7 +5,8 @@ import chickenFullS from '../../../assets/HomeComponentAssets/chickenFull/chicke
 import './MyCart.css';
 
 export default function MyCart(props) {
-    const [ subtotal, setSubtotal ] = useState('30.00');
+    const [ subtotal ] = useState('30.00');
+
     const myCartItems = [
         {
             productId: 1,
@@ -71,7 +72,7 @@ export default function MyCart(props) {
                         <div className="MyCart-item__quantity">
                             <div className="MyCart-quantityVariation">   
                                 <button className="MyCart-decreaseButton">-</button>
-                                <input className="MyCart-inputValue" value={3} type="text" />
+                                <input className="MyCart-inputValue" value={0} type="text" />
                                 <button className="MyCart-increaseButton">+</button>
                             </div>
                         </div>

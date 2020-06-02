@@ -128,14 +128,18 @@ export default function ProductPricing() {
                                 <p className="ProductPricing-description">{item.productDescription}</p>
                                 <div className="ProductPricing-cart-options">
                                     <div className="ProductPricing-cart-opertaions">
-                                        <button className="ProductPricing-addToCartButton" onClick={() => setQuantity(quantity + 1)}>
-                                            Add to Cart <span>+</span>
-                                        </button>
-                                        <div className="ProductPricing-quantityVariation">   
-                                            <button className="ProductPricing-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
-                                            <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={(e) => inputQuantityChangeHandler(e)} />
-                                            <button className="ProductPricing-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
-                                        </div>
+                                    {
+                                        !quantity ?
+                                            <button className="ProductPricing-addToCartButton" onClick={() => setQuantity(quantity + 1)}>
+                                                Add to Cart <span>+</span>
+                                            </button>
+                                        :
+                                            <div className="ProductPricing-quantityVariation">   
+                                                <button className="ProductPricing-decreaseButton" onClick={() => decreaseQuantityHandler()}>-</button>
+                                                <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={(e) => inputQuantityChangeHandler(e)} />
+                                                <button className="ProductPricing-increaseButton" onClick={() => increaseQuantityHandler()}>+</button>
+                                            </div>
+                                    }
                                     </div>
                                     <div className="ProductPricing-cart-price">
                                         <p className="ProductPricing-price">{item.productPrice}</p>

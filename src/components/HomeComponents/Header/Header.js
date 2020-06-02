@@ -4,16 +4,19 @@ import MyCart from '../../CartComponents/MyCart/MyCart';
 import Navigation from '../Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
+import freshmeatBannerS from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png";
+import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
+
 import './Header.css';
 
 const Header = (props) => {
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ images ] = useState([
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
-        "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg"
+        freshmeatBannerS,
+        beefL,
+        freshmeatBannerS,
+        beefL
     ]);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
 
@@ -55,13 +58,13 @@ const Header = (props) => {
         <div className="Header">
             <div className="Header-container" style={{
                 transform: `translateX(${translateValue}px)`,
-                transition: 'transform ease-out 0.45s',
             }}>
                 {images.map((image, i) => (
                     <div key={i} className="slide" style={{
                         backgroundImage : `url(${image})`,
                         backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat'
+                        backgroundRepeat: 'no-repeat',
+                        // filter: `brightness(50%)`
                     }}>
                         <div className="Header-icons">
                             <div className="Header-icons__social">

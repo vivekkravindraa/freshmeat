@@ -76,7 +76,7 @@
 }
 
 .Header-icons__site-link {
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 0 15px 0 0;
     position: relative;
     padding: 15px 15px;
@@ -161,9 +161,10 @@
 
 .Header-content__info .description {
     color: #ffffff;
-    font-family: Montserrat;
     font-size: 16px;
     text-align: center;
+    font-weight: 600;
+    font-family: Montserrat;
     margin: 5px 0 50px 0;
 }
 

@@ -8,7 +8,7 @@ export default function OrderSummary() {
         <div className="OrderSummary-container">
             <div className="OrderSummary-notification">
                 <div className="OrderSummary-notification__message">
-                    <p className="OrderSummary-notification__messageStatus">Your Order is ready to be placed!</p>
+                    <p className="OrderSummary-notification__orderStatus">Your Order is ready to be placed!</p>
                     <p className="OrderSummary-notification__amountStatus">Your total cart amount is <span>AED 230.00</span></p>
                     <p className="OrderSummary-notification__deliveryStatus">Your order can be delivered by <span>Wed, Dec 18th ‘19</span></p>
                 </div>
@@ -33,7 +33,7 @@ export default function OrderSummary() {
                     <div className="OrderSummary-shoppingCart__userAccess-image">
                         <img alt="no_image" />
                     </div>
-                    <div classNamae="OrderSummary-shoppingCart__userAccess-content">
+                    <div className="OrderSummary-shoppingCart__userAccess-content">
                         <p className="OrderSummary-shoppingCart__userAccess-title">Login/signup</p>
                         <p className="OrderSummary-shoppingCart__userAccess-description">
                             Login or signup for amazing deals and discounts
@@ -44,7 +44,7 @@ export default function OrderSummary() {
                     <div className="OrderSummary-shoppingCart__userPayment-image">
                         <img alt="no_image" />
                     </div>
-                    <div classNamae="OrderSummary-shoppingCart__userPayment-content">
+                    <div className="OrderSummary-shoppingCart__userPayment-content">
                         <p className="OrderSummary-shoppingCart__userPayment-title">Delivery/payment</p>
                         <p className="OrderSummary-shoppingCart__userPayment-description">
                             We accept all types of payments
@@ -69,11 +69,13 @@ export default function OrderSummary() {
                             <div className="OrderSummary-content__shoppingBasket-item-variations">
                                 <div className="OrderSummary-content__shoppingBasket-item-quantityVariation">   
                                     <button className="OrderSummary-content__shoppingBasket-item-decreaseButton">-</button>
-                                    <input className="OrderSummary-content__shoppingBasket-item-inputValue" value={0} type="text" />
+                                    <input className="OrderSummary-content__shoppingBasket-item-inputValue" defaultValue={0} type="text" />
                                     <button className="OrderSummary-content__shoppingBasket-item-increaseButton">+</button>
                                 </div>
                                 <Router>
-                                    <p className="OrderSummary-content__shoppingBasket-item-linkToRemove"><Link>Remove</Link></p>
+                                    <Link to="/" className="OrderSummary-content__shoppingBasket-item-linkToRemove">
+                                        <p>Remove</p>
+                                    </Link>
                                 </Router>
                             </div>
                         </div>

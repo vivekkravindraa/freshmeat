@@ -3,9 +3,10 @@
         display: grid;
         grid-template-columns: 8fr 4fr;
         border-bottom: 25px solid #f5f5f5;
+        border-right: 1px solid #f5f5f5;
     }
     
-    .OrderSummary-notification__messageStatus {
+    .OrderSummary-notification__orderStatus {
         text-align: left;
         font-weight: Bold;
         font-size: 30px;
@@ -13,6 +14,7 @@
         letter-spacing: 0.9px;
         color: #bd2c36;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-notification__amountStatus {
@@ -23,6 +25,7 @@
         letter-spacing: 0.36px;
         color: #424242;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-notification__deliveryStatus {
@@ -33,6 +36,7 @@
         letter-spacing: 0.36px;
         color: #424242;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-notification__amountStatus > span,
@@ -53,6 +57,7 @@
         letter-spacing: 0.36px;
         color: #000000;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-notification__helpDescription {
@@ -63,6 +68,7 @@
         letter-spacing: 0.36px;
         color: #000000;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-notification__helpContact {
@@ -73,6 +79,7 @@
         letter-spacing: 0.9px;
         color: #bd2c36;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart {
@@ -97,6 +104,7 @@
     }
     
     .OrderSummary-shoppingCart__activeCart-title {
+        border-bottom: 1px solid #f5f5f5;
         text-align: left;
         font-weight: Bold;
         font-size: 30px;
@@ -104,6 +112,7 @@
         letter-spacing: 0.54px;
         color: #BD2C36;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart__activeCart-description {
@@ -114,6 +123,7 @@
         letter-spacing: 0.36px;
         color: #BD2C36;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart__userAccess-title {
@@ -124,6 +134,7 @@
         letter-spacing: 0.54px;
         color: #757575;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart__userAccess-description {
@@ -135,16 +146,18 @@
         letter-spacing: 0.36px;
         color: #424242;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart__userPayment-title {
         text-align: left;
-        font-size: Medium;
-        font-weight: 30px;
+        font-weight: Medium;
+        font-size: 30px;
         font-family: Poppins;
         letter-spacing: 0.54px;
         color: #757575;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-shoppingCart__userPayment-description {
@@ -156,6 +169,7 @@
         letter-spacing: 0.36px;
         color: #424242;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-content {
@@ -178,6 +192,7 @@
         letter-spacing: 0.58px;
         color: #424242;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-content__shoppingBasket-title > span {
@@ -208,6 +223,7 @@
         letter-spacing: 0.47px;
         color: #000000;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-content__shoppingBasket-item-quantity {
@@ -218,6 +234,7 @@
         letter-spacing: 0px;
         color: #bd2c36;
         opacity: 1;
+        margin: 0;
     }
     
     .OrderSummary-content__shoppingBasket-item-price {
@@ -227,6 +244,47 @@
         font-family: Montserrat;
         letter-spacing: 0.4px;
         color: #BD2C36;
+        opacity: 1;
+        margin: 0;
+    }
+
+    .OrderSummary-content__shoppingBasket-item-quantityVariation {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .OrderSummary-content__shoppingBasket-item-decreaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .OrderSummary-content__shoppingBasket-item-inputValue {
+        outline: none;
+        border: none;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 4px #0000001F;
+        opacity: 1;
+        max-width: 40px;
+        text-align: center;
+    }
+    
+    .OrderSummary-content__shoppingBasket-item-increaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
         opacity: 1;
     }
     
@@ -240,8 +298,9 @@
         opacity: 1;
     }
     
-    .OrderSummary-content__shoppingBasket-item-linkToRemove > a {
+    .OrderSummary-content__shoppingBasket-item-linkToRemove {
         text-decoration: none;
+        margin: 0;
     }
     
     .OrderSummary-content__shoppingDetails {

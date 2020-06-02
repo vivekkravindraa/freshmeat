@@ -1,110 +1,14 @@
-import React, {
-    // useState 
-} from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import chickenFullS from '../../../assets/ProductComponentAssets/chickenFull/chickenFullS.png';
-import chickenThighS from '../../../assets/ProductComponentAssets/chickenThigh/chickenThighS.png';
-import legPieceS from '../../../assets/ProductComponentAssets/legPiece/legPieceS.png';
-import chickenBreastS from '../../../assets/ProductComponentAssets/chickenBreast/chickenBreastS.png';
+import { productPricingItems } from './ProductPricingJsonData';
 
 import './ProductPricing.css';
 
 function ProductPricing(props) {
-    const productPricingItems = [
-        {
-            productId: 1,
-            productImage: chickenFullS,
-            productName: 'Chicken full',
-            productType: 'with skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 2,
-            productImage: chickenFullS,
-            productName: 'Chicken full',
-            productType: 'with skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 3,
-            productImage: chickenThighS,
-            productName: 'Chicken thigh',
-            productType: 'without skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 4,
-            productImage: chickenThighS,
-            productName: 'Chicken thigh',
-            productType: 'without skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00 '
-        },{
-            productId: 5,
-            productImage: legPieceS,
-            productName: 'Leg Piece',
-            productType: 'with skin',
-            productQuantity: '6 Pieces',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 6,
-            productImage: legPieceS,
-            productName: 'Leg Piece',
-            productType: 'with skin',
-            productQuantity: '6 Pieces',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 7,
-            productImage: chickenBreastS,
-            productName: 'Chicken Breast',
-            productType: 'without skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        },{
-            productId: 8,
-            productImage: chickenBreastS,
-            productName: 'Chicken Breast',
-            productType: 'without skin',
-            productQuantity: '500g',
-            productPackage: 'Vaccum package',
-            productDescription: 'Lorem ipsum dolor sit amet, consectetur',
-            productPrice: 'AED 3.00'
-        }
-    ];
-
     const quantity = useSelector(state => state);
     const dispatch = useDispatch();
 
-    // const [ quantity, setQuantity ] = useState(0);
-
-    // const decreaseQuantityHandler = () => {
-    //     if(quantity !== 0) {
-    //         setQuantity(quantity - 1);
-    //     }
-    // }
-
-    // const inputQuantityChangeHandler = (e) => {
-    //     setQuantity(e.target.value);
-    // }
-
-    // const increaseQuantityHandler = (e) => {
-    //     setQuantity(quantity + 1);
-    // }
-
+    const addToCart = () => dispatch({ type: 'INCREMENT' })
     const increment = () => dispatch({ type: 'INCREMENT' })
     const decrement = () => dispatch({ type: 'DECREMENT' })
 
@@ -137,25 +41,15 @@ function ProductPricing(props) {
                                 <div className="ProductPricing-cart-options">
                                     <div className="ProductPricing-cart-opertaions">
                                     {
-                                        0 ?
-                                            <button className="ProductPricing-addToCartButton"
-                                                // onClick={() => setQuantity(quantity + 1)}
-                                            >
+                                        !quantity ?
+                                            <button className="ProductPricing-addToCartButton" onClick={addToCart}>
                                                 Add to Cart <span>+</span>
                                             </button>
                                         :
                                             <div className="ProductPricing-quantityVariation">   
-                                                <button className="ProductPricing-decreaseButton" 
-                                                    // onClick={() => decreaseQuantityHandler()}
-                                                    onClick={quantity === 0 ? null : decrement}
-                                                >-</button>
-                                                <input className="ProductPricing-inputValue" value={quantity} type="text"
-                                                    // onChange={(e) => inputQuantityChangeHandler(e)}
-                                                />
-                                                <button className="ProductPricing-increaseButton"
-                                                    // onClick={() => increaseQuantityHandler()}
-                                                    onClick={increment}
-                                                >+</button>
+                                                <button className="ProductPricing-decreaseButton" onClick={quantity === 0 ? null : decrement}>-</button>
+                                                <input className="ProductPricing-inputValue" value={quantity} type="text" />
+                                                <button className="ProductPricing-increaseButton" onClick={increment}>+</button>
                                             </div>
                                     }
                                     </div>

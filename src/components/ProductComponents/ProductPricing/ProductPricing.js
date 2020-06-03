@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { productPricingItems } from './ProductPricingJsonData';
 
@@ -8,9 +8,18 @@ function ProductPricing(props) {
     const quantity = useSelector(state => state);
     const dispatch = useDispatch();
 
-    const addToCart = () => dispatch({ type: 'INCREMENT' })
-    const increment = () => dispatch({ type: 'INCREMENT' })
-    const decrement = () => dispatch({ type: 'DECREMENT' })
+    const addToCart = () => dispatch({ type: 'INCREMENT' });
+    const increment = () => dispatch({ type: 'INCREMENT' });
+    const decrement = () => dispatch({ type: 'DECREMENT' });
+
+    const [ filteredProducts, setFilteredProducts ] = useState([]);
+
+    const filterProducts = (e) => {
+        let prodcutsFilteredByCategory = productPricingItems.filter((product) => {
+            return e.target.value === product.category.categoryName;
+        });
+        setFilteredProducts(prodcutsFilteredByCategory);
+    }
 
     return (
         <div className="ProductPricing-container">
@@ -19,13 +28,13 @@ function ProductPricing(props) {
                 <p className="ProductPricing-header__sub-title">PRODUCT PRICING</p>
             </div>
             <div className="ProductPricing-category-sort">
-                <button>CHICKEN</button>
-                <button>SEAFOOD</button>
-                <button>BEEF</button>
-                <button>GOAT &amp; LAMB</button>
+                <button onClick={(e) => filterProducts(e)} value="chicken">CHICKEN</button>
+                <button onClick={(e) => filterProducts(e)} value="seafood">SEAFOOD</button>
+                <button onClick={(e) => filterProducts(e)} value="beef">BEEF</button>
+                <button onClick={(e) => filterProducts(e)} value="goat">GOAT &amp; LAMB</button>
             </div>
             <div className="ProductPricing-items">
-                {productPricingItems.map((item, index) => {
+                {(!filteredProducts.length ? productPricingItems.slice(0,8) : filteredProducts).map((item, index) => {
                     return (
                         <div key={index} className="ProductPricing-item">
                             <div className="ProductPricing-image"

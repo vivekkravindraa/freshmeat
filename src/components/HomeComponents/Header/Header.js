@@ -18,7 +18,6 @@ const Header = (props) => {
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
-    const [ isNavigationTouched, setIsNavigationTouched ] = useState(false);
 
     const goToPrevSlide = () => {
         if(currentIndex === 0) {
@@ -95,10 +94,10 @@ const Header = (props) => {
                                 </Router>
                             </div>
                             <div className="Header-icons__navigation">
-                                <i className="fas fa-bars fa-2x" onClick={() => setIsNavigationTouched(!isNavigationTouched)}></i>
+                                <i className="fas fa-bars fa-2x"></i>
                             </div>
                         </div>
-                        {/* <Navigation /> */}
+                        <Navigation />
                         <div className="Header-content">
                             <div className="Header-content__left-icon" onClick={() => goToPrevSlide()}>
                                 <span><i className="fas fa-long-arrow-left"></i></span>

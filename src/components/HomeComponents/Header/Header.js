@@ -120,9 +120,9 @@ const Header = (props) => {
                     </div>
                 ))}
             </div>
-            {/* <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+            <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
                 <MyCart closeCart={() => setIsCartTouched(false)} />
-            </div> */}
+            </div>
         </div>
     );
 };

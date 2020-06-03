@@ -13,11 +13,10 @@ import './Header.css';
 const Header = (props) => {
     const quantity = useSelector(state => state);
 
+    const images = [ freshmeatBannerL, beefL ];
+
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
-    const [ images ] = useState([
-        freshmeatBannerL
-    ]);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
 
     const goToPrevSlide = () => {
@@ -111,7 +110,7 @@ const Header = (props) => {
                                     We believe that each one of us makes a difference in the world.
                                 </p>
                             </div>
-                            {currentIndex === images.length - 1 ? null :
+                            {currentIndex === images.length - 1 && images.length ? null :
                                 <div className="Header-content__right-icon" onClick={() => goToNextSlide()}>
                                 <span><i className="fas fa-long-arrow-right"></i></span>
                             </div>}

@@ -6,7 +6,7 @@ import Navigation from '../../CommonComponents/Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
 import freshmeatBannerL from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerL.png";
-import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
+// import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
 
 import './Header.css';
 
@@ -120,9 +120,9 @@ const Header = (props) => {
                     </div>
                 ))}
             </div>
-            <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+            {/* <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
                 <MyCart closeCart={() => setIsCartTouched(false)} />
-            </div>
+            </div> */}
         </div>
     );
 };

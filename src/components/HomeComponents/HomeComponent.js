@@ -15,8 +15,8 @@ export default function HomeComponent(props) {
             <AboutUs />
             <PopularProducts />
             <Technologies />
-            <PopularPricing />
-            <Footer />
+            {/* <PopularPricing />
+            <Footer /> */}
         </div>
     )
 }

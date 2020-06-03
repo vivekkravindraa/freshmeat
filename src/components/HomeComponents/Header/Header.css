@@ -1,9 +1,16 @@
 @media (min-width: 380px) and (max-width: 464px) {
+    .Header {
+        position: relative;
+        overflow: hidden;
+    }
+    
     .Header-container {
-        background-image: url("../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: inset 0 0 0 2000px #0000004d;
+        position: relative;
+    }
+    
+    .slide {
+        display: inline-block;
+        width: 100%;
     }
 
     .Header-icons {

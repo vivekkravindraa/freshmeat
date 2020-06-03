@@ -13,11 +13,12 @@ import './Header.css';
 const Header = (props) => {
     const quantity = useSelector(state => state);
 
-    const images = [ freshmeatBannerL, beefL ];
+    const images = [ freshmeatBannerL ];
 
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
+    const [ isNavigationTouched, setIsNavigationTouched ] = useState(false);
 
     const goToPrevSlide = () => {
         if(currentIndex === 0) {
@@ -94,10 +95,10 @@ const Header = (props) => {
                                 </Router>
                             </div>
                             <div className="Header-icons__navigation">
-                                <i className="fas fa-bars fa-2x"></i>
+                                <i className="fas fa-bars fa-2x" onClick={() => setIsNavigationTouched(!isNavigationTouched)}></i>
                             </div>
                         </div>
-                        <Navigation />
+                        {/* <Navigation /> */}
                         <div className="Header-content">
                             <div className="Header-content__left-icon" onClick={() => goToPrevSlide()}>
                                 <span><i className="fas fa-long-arrow-left"></i></span>
@@ -110,17 +111,16 @@ const Header = (props) => {
                                     We believe that each one of us makes a difference in the world.
                                 </p>
                             </div>
-                            {currentIndex === images.length - 1 && images.length ? null :
-                                <div className="Header-content__right-icon" onClick={() => goToNextSlide()}>
+                            <div className="Header-content__right-icon" onClick={() => (images.length > 1 && currentIndex !== images.length - 1) ? goToNextSlide() : null}>
                                 <span><i className="fas fa-long-arrow-right"></i></span>
-                            </div>}
+                            </div>
                         </div>
                         <div className="Header-readmore__button">
                             <button>Read More +</button>
                         </div>
-                        <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+                        {/* <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
                             <MyCart closeCart={() => setIsCartTouched(false)} />
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>

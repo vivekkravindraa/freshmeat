@@ -11,12 +11,12 @@ export default function HomeComponent(props) {
     return (
         <div>
             <Header />
-            <Category />
+            {/* <Category />
             <AboutUs />
             <PopularProducts />
             <Technologies />
             <PopularPricing />
-            <Footer />
+            <Footer /> */}
         </div>
     )
 }

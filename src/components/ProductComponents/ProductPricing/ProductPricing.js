@@ -57,7 +57,7 @@ function ProductPricing(props) {
                                         :
                                             <div className="ProductPricing-quantityVariation">   
                                                 <button className="ProductPricing-decreaseButton" onClick={quantity === 0 ? null : decrement}>-</button>
-                                                <input className="ProductPricing-inputValue" value={quantity} type="text" />
+                                                <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={() => {}} />
                                                 <button className="ProductPricing-increaseButton" onClick={increment}>+</button>
                                             </div>
                                     }

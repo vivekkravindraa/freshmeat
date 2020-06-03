@@ -362,10 +362,8 @@
         width: auto;
         background: #ffffff;
         position: absolute;
-        top: 0px;
-        right: 0;
-        z-index: 1;
-        overflow-y: visible;
+        top: 120px;
+        right: 2px;
         border-bottom-left-radius: 12px;
     }    
 }

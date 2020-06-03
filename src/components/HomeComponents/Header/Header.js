@@ -117,11 +117,11 @@ const Header = (props) => {
                         <div className="Header-readmore__button">
                             <button>Read More +</button>
                         </div>
-                        {/* <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
-                            <MyCart closeCart={() => setIsCartTouched(false)} />
-                        </div> */}
                     </div>
                 ))}
+            </div>
+            <div className={`Header-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+                <MyCart closeCart={() => setIsCartTouched(false)} />
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 .MyCart-container {
     position: relative;
+    z-index: 1;
 }
 
 .MyCart-header {

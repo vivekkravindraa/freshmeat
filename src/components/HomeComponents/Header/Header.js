@@ -5,7 +5,7 @@ import MyCart from '../../CartComponents/MyCart/MyCart';
 import Navigation from '../../CommonComponents/Navigation/Navigation';
 import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
-import freshmeatBannerS from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerS.png";
+import freshmeatBannerL from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerL.png";
 import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
 
 import './Header.css';
@@ -16,10 +16,7 @@ const Header = (props) => {
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ images ] = useState([
-        freshmeatBannerS,
-        beefL,
-        freshmeatBannerS,
-        beefL
+        freshmeatBannerL
     ]);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
 
@@ -66,8 +63,8 @@ const Header = (props) => {
                     <div key={i} className="slide" style={{
                         backgroundImage : `url(${image})`,
                         backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        // filter: `brightness(50%)`
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
                     }}>
                         <div className="Header-icons">
                             <div className="Header-icons__social">
@@ -97,6 +94,9 @@ const Header = (props) => {
                                     })}
                                 </Router>
                             </div>
+                            <div className="Header-icons__navigation">
+                                <i className="fas fa-bars fa-2x"></i>
+                            </div>
                         </div>
                         <Navigation />
                         <div className="Header-content">
@@ -104,13 +104,9 @@ const Header = (props) => {
                                 <span><i className="fas fa-long-arrow-left"></i></span>
                             </div>
                             <div className="Header-content__info">
-                                <p className="title">
-                                    Organic Products
-                                </p>
-                                <p className="header">
-                                    Raw Meat Farm
-                                </p>
-                                <p className="description">
+                                <p className="Header-content__title">Organic Products</p>
+                                <p className="Header-content__subtitle">Raw Meat Farm</p>
+                                <p className="Header-content__description">
                                     We at Fresh Meat believe in a way of life that recognizes and honours the diversity and interdependencies of all life.<br />
                                     We believe that each one of us makes a difference in the world.
                                 </p>

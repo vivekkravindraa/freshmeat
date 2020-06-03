@@ -394,8 +394,12 @@
     background: #f5f5f5;
 }
 
-.MyCart-checkout__button {
-    width: -webkit-fill-available;
+.MyCart-checkout > a {
+    text-decoration: none;
+}
+
+.MyCart-checkout__link {
+    width: -webkit-fill-available;  
     outline: none;
     border: none;
     background: #bd2c36 0% 0% no-repeat padding-box;
@@ -411,7 +415,7 @@
     margin: 20px;
 }
 
-.MyCart-checkout__button > i {
+.MyCart-checkout__link > i {
     margin-left: 25px;
 }
 

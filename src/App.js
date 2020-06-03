@@ -1,14 +1,21 @@
 import React from 'react';
-// import HomeComponent from './components/HomeComponents/HomeComponent';
+import {
+	BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
+import HomeComponent from './components/HomeComponents/HomeComponent';
 import OrderDetailComponent from './components/OrderDetailComponents/OrderDetailComponent';
 
 import './App.css';
 
 export default function App() {
   return (
-      <div className="App-container">
-        {/* <HomeComponent /> */}
-        <OrderDetailComponent />
-      </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomeComponent}></Route>
+        <Route path="/order_details" component={OrderDetailComponent}></Route>
+      </Switch>
+    </Router>
   );
 };

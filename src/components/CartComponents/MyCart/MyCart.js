@@ -114,7 +114,7 @@ export default function MyCart(props) {
                 </div>
             </div>
             <div className="MyCart-checkout">
-                <button className="MyCart-checkout__button">Checkout<i className="fas fa-arrow-right"></i></button>
+                <Link to="/order_details" className="MyCart-checkout__link">Checkout<i className="fas fa-arrow-right"></i></Link>
             </div>
         </div>
     )

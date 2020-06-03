@@ -1,208 +1,419 @@
-.ProductPricing-container {
-    display: flex;
-    flex-direction: column;
+@media (min-width: 380px) and (max-width: 464px) {
+    .ProductPricing-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ProductPricing-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0 60px 0;
+    }
+    
+    .ProductPricing-header__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 38px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 10px 0;
+    }
+    
+    .ProductPricing-header__sub-title {
+        text-align: left;
+        font-weight: bolder;
+        font-size: 28px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #2e1500;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .ProductPricing-header__sub-title:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 60%;
+        left: 50px;
+        padding-top: 20px;
+        border-bottom: 2px solid #bd2c36;
+    }
+    
+    .ProductPricing-category-sort {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .ProductPricing-category-sort button {
+        border-radius: 22px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        color: #bd2c36;
+        border: 1px solid #bd2c36;
+    }
+    
+    .ProductPricing-category-sort button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+    
+    .ProductPricing-category-sort button:last-child {
+        margin-right: 0;
+    }
+    
+    .ProductPricing-items {
+        display: grid;
+        grid-template-rows: repeat(4, 12fr);
+        column-gap: 50px;
+        row-gap: 10px;
+    }
+    
+    .ProductPricing-item {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        padding: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .ProductPricing-item:nth-last-child(-n + 1) {
+        border-bottom: none;
+    }
+    
+    .ProductPricing-content {
+        padding: 0 0 0 25px;
+    }
+    
+    .ProductPricing-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .ProductPricing-name {
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Montserrat;
+    }
+    
+    .ProductPricing-quantity {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        color: #bd2c36;
+    }
+    
+    .ProductPricing-description {
+        text-align: left;
+        font-weight: Medium;
+        font-size: 16px;
+        font-family: Montserrat;
+    }
+    
+    .ProductPricing-cart-options {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    
+    .ProductPricing-addToCartButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 4px #0000001F;
+        border-radius: 17px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 10px;
+        text-align: center;
+        font-weight: Medium;
+        font-size: 12px;
+        font-family: Montserrat;
+        letter-spacing: 1.1px;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-quantityVariation {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .ProductPricing-decreaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-inputValue {
+        outline: none;
+        border: none;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 4px #0000001F;
+        opacity: 1;
+        max-width: 40px;
+        text-align: center;
+    }
+    
+    .ProductPricing-increaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 1.2px;
+        color: #bd2c36;
+        opacity: 1;
+    }
 }
 
-.ProductPricing-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0 60px 0;
-}
-
-.ProductPricing-header__title {
-    text-align: left;
-    font-style: Italic;
-    font-size: 38px;
-    font-family: Brush Script MT, sans-serif;
-    letter-spacing: 0px;
-    color: #bd2c36;
-    opacity: 1;
-    margin: 0 0 10px 0;
-}
-
-.ProductPricing-header__sub-title {
-    text-align: left;
-    font-weight: bolder;
-    font-size: 28px;
-    font-family: Montserrat;
-    letter-spacing: 0px;
-    color: #2e1500;
-    opacity: 1;
-    margin: 0;
-}
-
-.ProductPricing-header__sub-title:after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 60%;
-    left: 50px;
-    padding-top: 20px;
-    border-bottom: 2px solid #bd2c36;
-}
-
-.ProductPricing-category-sort {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.ProductPricing-category-sort button {
-    margin-right: 100px;
-    border-radius: 22px;
-    opacity: 1;
-    outline: none;
-    border: none;
-    padding: 2px 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: Montserrat;
-    letter-spacing: 0px;
-    opacity: 1;
-    background-color: #ffffff;
-    color: #bd2c36;
-    border: 1px solid #bd2c36;
-}
-
-.ProductPricing-category-sort button:hover {
-    background: #bd2c36 0% 0% no-repeat padding-box;
-    color: #ffffff;
-}
-
-.ProductPricing-category-sort button:last-child {
-    margin-right: 0;
-}
-
-.ProductPricing-items {
-    display: grid;
-    grid-template-columns: repeat(2, 6fr);
-    padding: 50px 50px 100px 50px;
-    column-gap: 50px;
-    row-gap: 10px;
-}
-
-.ProductPricing-item {
-    display: grid;
-    grid-template-columns: 2fr 4fr;
-    padding: 25px;
-    border-bottom: 1px solid lightgray;
-}
-
-.ProductPricing-item:nth-last-child(-n + 2) {
-    border-bottom: none;
-}
-
-.ProductPricing-content {
-    padding: 0 0 0 25px;
-}
-
-.ProductPricing-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.ProductPricing-name {
-    text-align: left;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Montserrat;
-}
-
-.ProductPricing-quantity {
-    text-align: left;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: Montserrat;
-    color: #bd2c36;
-}
-
-.ProductPricing-description {
-    text-align: left;
-    font-weight: Medium;
-    font-size: 16px;
-    font-family: Montserrat;
-}
-
-.ProductPricing-cart-options {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-}
-
-.ProductPricing-addToCartButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #bd2c36 0% 0% no-repeat padding-box;
-    box-shadow: 0px 4px 4px #0000001F;
-    border-radius: 17px;
-    opacity: 1;
-    outline: none;
-    border: none;
-    padding: 2px 10px;
-    text-align: center;
-    font-weight: Medium;
-    font-size: 12px;
-    font-family: Montserrat;
-    letter-spacing: 1.1px;
-    color: #ffffff;
-    opacity: 1;
-}
-
-.ProductPricing-quantityVariation {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.ProductPricing-decreaseButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    border-radius: 10px 0 0 10px;
-    background: #bd2c36 0% 0% no-repeat padding-box;
-    color: #ffffff;
-    opacity: 1;
-}
-
-.ProductPricing-inputValue {
-    outline: none;
-    border: none;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 4px 4px #0000001F;
-    opacity: 1;
-    max-width: 40px;
-    text-align: center;
-}
-
-.ProductPricing-increaseButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    border-radius: 0 10px 10px 0;
-    background: #bd2c36 0% 0% no-repeat padding-box;
-    color: #ffffff;
-    opacity: 1;
-}
-
-.ProductPricing-price {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: Montserrat;
-    letter-spacing: 1.2px;
-    color: #bd2c36;
-    opacity: 1;
+@media (min-width: 1025px) and (max-width: 3000px) {
+    .ProductPricing-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ProductPricing-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0 60px 0;
+    }
+    
+    .ProductPricing-header__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 38px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 10px 0;
+    }
+    
+    .ProductPricing-header__sub-title {
+        text-align: left;
+        font-weight: bolder;
+        font-size: 28px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #2e1500;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .ProductPricing-header__sub-title:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 60%;
+        left: 50px;
+        padding-top: 20px;
+        border-bottom: 2px solid #bd2c36;
+    }
+    
+    .ProductPricing-category-sort {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .ProductPricing-category-sort button {
+        margin-right: 100px;
+        border-radius: 22px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        color: #bd2c36;
+        border: 1px solid #bd2c36;
+    }
+    
+    .ProductPricing-category-sort button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+    
+    .ProductPricing-category-sort button:last-child {
+        margin-right: 0;
+    }
+    
+    .ProductPricing-items {
+        display: grid;
+        grid-template-columns: repeat(2, 6fr);
+        padding: 50px 50px 100px 50px;
+        column-gap: 50px;
+        row-gap: 10px;
+    }
+    
+    .ProductPricing-item {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        padding: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .ProductPricing-item:nth-last-child(-n + 2) {
+        border-bottom: none;
+    }
+    
+    .ProductPricing-content {
+        padding: 0 0 0 25px;
+    }
+    
+    .ProductPricing-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .ProductPricing-name {
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Montserrat;
+    }
+    
+    .ProductPricing-quantity {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        color: #bd2c36;
+    }
+    
+    .ProductPricing-description {
+        text-align: left;
+        font-weight: Medium;
+        font-size: 16px;
+        font-family: Montserrat;
+    }
+    
+    .ProductPricing-cart-options {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+    
+    .ProductPricing-addToCartButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 4px #0000001F;
+        border-radius: 17px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 10px;
+        text-align: center;
+        font-weight: Medium;
+        font-size: 12px;
+        font-family: Montserrat;
+        letter-spacing: 1.1px;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-quantityVariation {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .ProductPricing-decreaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 10px 0 0 10px;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-inputValue {
+        outline: none;
+        border: none;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 4px #0000001F;
+        opacity: 1;
+        max-width: 40px;
+        text-align: center;
+    }
+    
+    .ProductPricing-increaseButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .ProductPricing-price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 1.2px;
+        color: #bd2c36;
+        opacity: 1;
+    }    
 }

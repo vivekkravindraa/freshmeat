@@ -52,20 +52,33 @@ export default function Footer() {
                 <div className="Footer-query-section">
                     <div className="Footer-query-section__logo">
                         <img src={freshmeatLogoS} alt="no_image" height="100" width="100" />
+                        <div className="Footer-query-content__download-store-mobile">
+                            <Router>
+                                {queryContentDownloadLinks.map((item, index) => {
+                                    return (
+                                        <Link key={index} to={item.path}>
+                                            <img className="Footer-query-content__download-store" src={item.image} alt="no_image" />
+                                        </Link>
+                                    )
+                                })}
+                            </Router>
+                        </div>
                     </div>
-                    <p className="Footer-query-section__content">
-                        In case you have any questions or reviews, wtite to us vie the e-mail or make a call! We are available 7 days a week.
-                    </p>
-                    <p className="Footer-query-section__writeToUs">
-                        Write to us at
-                    </p>
-                    <p className="Footer-query-section__mail">
-                        <Router>
-                            <Link to="/"><span>Abcdefgh@gmail.com</span></Link>
-                        </Router>
-                    </p>
-                    <p className="Footer-query-section__callUs">Got queries? Call Us!</p>
-                    <p className="Footer-query-section__phoneNumber">+1800 753 23 56</p>
+                    <div className="Footer-query-section__info">
+                        <p className="Footer-query-section__content">
+                            In case you have any questions or reviews, wtite to us vie the e-mail or make a call! We are available 7 days a week.
+                        </p>
+                        <p className="Footer-query-section__writeToUs">
+                            Write to us at
+                        </p>
+                        <p className="Footer-query-section__mail">
+                            <Router>
+                                <Link to="/"><span>Abcdefgh@gmail.com</span></Link>
+                            </Router>
+                        </p>
+                        <p className="Footer-query-section__callUs">Got queries? Call Us!</p>
+                        <p className="Footer-query-section__phoneNumber">+1800 753 23 56</p>
+                    </div>
                 </div>
                 <div className="Footer-query-content">
                     <div className="Footer-query-content__subscribe">

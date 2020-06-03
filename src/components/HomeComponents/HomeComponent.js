@@ -4,7 +4,7 @@ import Category from './Category/Category';
 import AboutUs from './AboutUs/AboutUs';
 import PopularProducts from '../ProductComponents/PopularProducts/PopularProducts';
 import Technologies from './Technologies/Technologies';
-import PopularPricing from '../ProductComponents/ProductPricing/ProductPricing';
+import ProductPricing from '../ProductComponents/ProductPricing/ProductPricing';
 import Footer from './Footer/Footer';
 
 export default function HomeComponent(props) {
@@ -15,8 +15,8 @@ export default function HomeComponent(props) {
             <AboutUs />
             <PopularProducts />
             <Technologies />
-            {/* <PopularPricing />
-            <Footer /> */}
+            <ProductPricing />
+            <Footer />
         </div>
     )
 }

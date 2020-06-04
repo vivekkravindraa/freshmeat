@@ -46,15 +46,15 @@
     }
     
     .PopularProducts-items {
-        display: grid;
-        grid-template-columns: repeat(2, 6fr);
-        column-gap: 25px;
-        row-gap: 25px;
+        display: flex;
+        overflow-x: scroll;
         padding: 25px 25px;
     }
     
     .PopularProducts-item {
         position: relative;
+        min-width: 180px;
+        margin-right: 25px;
     }
     
     .showShadow {
@@ -222,7 +222,7 @@
         justify-content: flex-end;
         align-items: center;
         color: #bd2c36;
-        padding: 10px;
+        padding-right: 10px;
         margin: 0 0 0 10px;
         text-align: left;
         font-weight: bold;

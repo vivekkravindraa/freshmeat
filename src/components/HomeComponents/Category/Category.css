@@ -1,18 +1,28 @@
 @media (min-width: 380px) and (max-width: 464px) {
     .Category {
         position: relative;
+        padding: 25px;
     }
-    
-    .Category-container {
-        padding: 50px 20px 100px 20px;
+
+    .Category:after {
         content: "";
         display: block;
+        position: relative;
+        width: 85%;
         margin: 0 auto;
         padding-top: 20px;
         border-bottom: 1px solid lightgray;
     }
     
+    .Category-container {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    
     .Category-header {
+        display: flex;
+        flex-direction: column;
         padding-top: 50px;
         display: flex;
         justify-content: center;
@@ -43,10 +53,11 @@
     
     .Category-items {
         display: grid;
-        grid-template-columns: repeat(2, 6fr);
-        column-gap: 20px;
-        row-gap: 100px;
-        padding-bottom: 50px;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 30px;
+        padding: 50px 0;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
     
     .Category-item {
@@ -59,11 +70,12 @@
     }
     
     .Category-image {
+        display: flex;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         background-color: #db2c36;
-        width: auto;
+        width: 200px;
         height: 200px;
     }
      
@@ -71,7 +83,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px 0 25px 0;
+        padding: 25px 0 25px 0;
         background-color: transparent;
         text-align: center;
         font-weight: 600;
@@ -184,5 +196,5 @@
         color: #ffffff;
         background-color: #db2c36;
         box-shadow: 10px 10px 20px lightgray;
-    }    
+    }
 }

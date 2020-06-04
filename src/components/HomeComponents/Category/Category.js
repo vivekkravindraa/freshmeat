@@ -37,7 +37,7 @@ export default function Category() {
             <div className="Category-container">
                 <div className="Category-header">
                     <b className="Category-title">EXPLORE BY CATEGORIES</b>
-                </div>
+                </div>         
                 <div className="Category-items">
                     {categories.map((item, index) => {
                         return (
@@ -52,6 +52,14 @@ export default function Category() {
                             </div>
                         )
                     })}
+                </div>
+                <div className="Category-content__icons">
+                    <div className="Category-content__left-icon-mobile">
+                        <span><i className="fas fa-long-arrow-left"></i></span>
+                    </div> 
+                    <div className="Category-content__right-icon-mobile">
+                        <span><i className="fas fa-long-arrow-right"></i></span>
+                    </div>
                 </div>
             </div>
         </div>

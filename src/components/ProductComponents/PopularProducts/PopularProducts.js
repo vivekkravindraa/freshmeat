@@ -86,6 +86,14 @@ export default function PopularProducts() {
                     )
                 })}
             </div>
+            <div className="PopularProducts-content__icons">
+                <div className="PopularProducts-content__left-icon-mobile">
+                    <span><i className="fas fa-long-arrow-left"></i></span>
+                </div> 
+                <div className="PopularProducts-content__right-icon-mobile">
+                    <span><i className="fas fa-long-arrow-right"></i></span>
+                </div>
+            </div>
         </div>
     )
 }

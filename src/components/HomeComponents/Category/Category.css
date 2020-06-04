@@ -23,11 +23,10 @@
     .Category-header {
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
+        padding: 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 75px;
     }
     
     .Category-title {
@@ -58,6 +57,7 @@
         padding: 50px 0;
         overflow-x: scroll;
         overflow-y: hidden;
+        position: relative;
     }
     
     .Category-item {
@@ -101,6 +101,57 @@
         color: #ffffff;
         background-color: #db2c36;
         box-shadow: 10px 10px 20px lightgray;
+    }
+
+    .Category-content__icons {
+        display: grid;
+        grid-template-columns: repeat(2, 6fr);
+        position: relative;
+        top: -150px;
+    }
+
+    .Category-content__left-icon-mobile {
+        display: flex;
+        justify-content: flex-start;
+        color: gray;
+        position: relative;
+        left: -15px;
+    }
+    
+    .Category-content__left-icon-mobile > span {
+        display: inline-block;
+        background: #ffffff;
+        border: 1px solid gray;
+        border-radius: 50px;
+        padding: 15px;
+    }
+    
+    .Category-content__left-icon-mobile > span > i {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .Category-content__right-icon-mobile {
+        display: flex;
+        justify-content: flex-end;
+        color: gray;
+        position: relative;
+        right: -15px;
+    }
+    
+    .Category-content__right-icon-mobile > span {
+        display: inline-block;
+        background: #ffffff;
+        border: 1px solid gray;
+        border-radius: 50px;
+        padding: 15px;
+    }
+    
+    .Category-content__right-icon-mobile > span > i {
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 }
 
@@ -147,6 +198,10 @@
         width: 42%;
         padding-top: 15px;
         border-bottom: 2px solid #db2c36;
+    }
+
+    .Category-content__icons {
+        display: none;
     }
     
     .Category-items {

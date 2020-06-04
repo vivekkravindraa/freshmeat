@@ -1,4 +1,4 @@
-@media (min-width: 330px) and (max-width: 464px) {
+@media (max-width: 464px) {
     .Navigation-container {
         position: absolute;
         top: 0;
@@ -7,7 +7,7 @@
         background: #ffffff;
         padding: 15px;
         width: 300px;
-        height: 300px;
+        height: 320px;
         z-index: 1;
     }
 
@@ -35,6 +35,11 @@
         grid-template-columns: 6fr 6fr;
         position: relative;
         padding: 10px;
+        border-top: 1px solid #f5f5f5;
+    }
+
+    .Navigation-menu__item:first-child {
+        border-top: none;
     }
 
     .Navigation-menu__item:last-child {

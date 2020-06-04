@@ -1,4 +1,4 @@
-@media (min-width: 330px) and (max-width: 464px) {
+@media (max-width: 464px) {
     .Header {
         position: relative;
         overflow: hidden;
@@ -130,6 +130,22 @@
 
     .Header-readmore__button {
         display: none;
+    }
+
+    .Header-cart-popup {
+        display: none;
+    }
+    
+    .showCartPopup {
+        display: block;
+        height: auto;
+        width: auto;
+        background: #ffffff;
+        position: absolute;
+        top: 118px;
+        right: 2px;
+        left: 2px;
+        border-bottom-left-radius: 12px;
     }
 }
 

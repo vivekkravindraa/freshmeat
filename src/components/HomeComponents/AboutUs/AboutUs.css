@@ -1,4 +1,4 @@
-@media (min-width: 330px) and (max-width: 464px) {
+@media (max-width: 464px) {
     .AboutUs-container__top {
         display: flex;
         flex-direction: column-reverse;

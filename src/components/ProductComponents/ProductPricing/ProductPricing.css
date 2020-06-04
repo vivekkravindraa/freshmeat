@@ -1,4 +1,4 @@
-@media (min-width: 380px) and (max-width: 464px) {
+@media (min-width: 375px) and (max-width: 464px) {
     .ProductPricing-container {
         display: flex;
         flex-direction: column;

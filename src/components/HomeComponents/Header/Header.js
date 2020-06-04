@@ -93,9 +93,6 @@ const Header = (props) => {
                                     })}
                                 </Router>
                             </div>
-                            <div className="Header-icons__navigation">
-                                <i className="fas fa-bars fa-2x"></i>
-                            </div>
                         </div>
                         <Navigation />
                         <div className="Header-content">

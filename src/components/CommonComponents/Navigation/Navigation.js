@@ -8,6 +8,7 @@ import './Navigation.css';
 
 export default function Navigation() {
 	let [ id, setId ] = useState(0);
+	let [ navMenuDisplay, setNavMenuDisplay ] = useState(false);
 
 	let navigationItems = [
 		{
@@ -75,7 +76,7 @@ export default function Navigation() {
 
 	return (
 		<Router>
-			<div className="Navigation-container">
+			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`}`}>
 				<nav className="Navigation-menu">
 					<ul className="Navigation-menu-items">
 						{navigationItems.map((item,index) => {
@@ -103,6 +104,9 @@ export default function Navigation() {
 						})}
 					</ul>
 				</nav>
+			</div>
+			<div className="Navigation-menu__icon-mobile">
+				<i className="fas fa-bars fa-2x" onClick={() => setNavMenuDisplay(true)}></i>
 			</div>
 		</Router>
 	)

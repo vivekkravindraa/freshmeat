@@ -6,8 +6,17 @@
         margin: 0;
         background: #ffffff;
         padding: 15px;
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+    }
+
+    .showNavMenu {
+        display: block;
+    }
+
+    .hideNavMenu {
+        display: none;
     }
     
     .Navigation-container ul {
@@ -22,7 +31,10 @@
     }
 
     .Navigation-menu__item {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
         position: relative;
+        padding: 10px;
     }
 
     .Navigation-menu__item:last-child {
@@ -30,11 +42,16 @@
     }
     
     .Navigation-menu__item-link {
+        display: flex;
+        justify-content: flex-start;
         padding: 10px;
         text-decoration: none;
     }
 
-    .Navigation-menu__item-link span {
+    .Navigation-menu__item > span {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         color: #4caf50;
     }
     
@@ -114,6 +131,16 @@
         color: #000000;
         opacity: 1;
     }
+
+    .Navigation-menu__icon-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 40px;
+        left: right;
+        right: 25px;
+    }
 }
 
 @media
@@ -149,7 +176,7 @@
         text-decoration: none;
     }
     
-    .Navigation-menu__item-link span {
+    .Navigation-menu__item > span {
         color: #4caf50;
     }
     
@@ -170,10 +197,6 @@
         letter-spacing: 0px;
         color: #FFFFFF;
         opacity: 1;
-    }
-    
-    .Navigation-menu__item-link > span {
-        margin-left: 5px;
     }
     
     .Navigation-menu__subNavigation-dropdown {
@@ -230,5 +253,9 @@
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
+    }
+
+    .Navigation-menu__icon-mobile {
+        display: none;
     }
 }

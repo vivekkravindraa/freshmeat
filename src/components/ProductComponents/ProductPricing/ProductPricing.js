@@ -5,10 +5,15 @@ import { productPricingItems } from './ProductPricingJsonData';
 import './ProductPricing.css';
 
 function ProductPricing(props) {
+    const [ idx, setIndex] = useState(0);
+
     const quantity = useSelector(state => state);
     const dispatch = useDispatch();
 
-    const addToCart = () => dispatch({ type: 'INCREMENT' });
+    const addToCart = (index) => {
+        setIndex(index + 1);
+        dispatch({ type: 'INCREMENT' });
+    }
     const increment = () => dispatch({ type: 'INCREMENT' });
     const decrement = () => dispatch({ type: 'DECREMENT' });
 
@@ -51,15 +56,20 @@ function ProductPricing(props) {
                                     <div className="ProductPricing-cart-opertaions">
                                     {
                                         !quantity ?
-                                            <button className="ProductPricing-addToCartButton" onClick={addToCart}>
+                                            <button className="ProductPricing-addToCartButton" onClick={() => addToCart(index)}>
                                                 Add to Cart <span>+</span>
                                             </button>
                                         :
-                                            <div className="ProductPricing-quantityVariation">   
-                                                <button className="ProductPricing-decreaseButton" onClick={quantity === 0 ? null : decrement}>-</button>
-                                                <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={() => {}} />
-                                                <button className="ProductPricing-increaseButton" onClick={increment}>+</button>
-                                            </div>
+                                            idx === item.productId ?
+                                                <div className="ProductPricing-quantityVariation">   
+                                                    <button className="ProductPricing-decreaseButton" onClick={quantity === 0 ? null : decrement}>-</button>
+                                                    <input className="ProductPricing-inputValue" value={quantity} type="text" onChange={() => {}} />
+                                                    <button className="ProductPricing-increaseButton" onClick={increment}>+</button>
+                                                </div>
+                                            :
+                                                <button className="ProductPricing-addToCartButton" onClick={() => addToCart(index)}>
+                                                    Add to Cart <span>+</span>
+                                                </button>
                                     }
                                     </div>
                                     <div className="ProductPricing-cart-price">

@@ -244,7 +244,9 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 3000px) {
+@media
+(min-width: 669px) and (max-width:1024px),
+(min-width: 1025px) and (max-width: 3000px) {
     .Footer-box {
         display: grid;
         grid-template-columns: 4fr 8fr;

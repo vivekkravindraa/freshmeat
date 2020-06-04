@@ -285,7 +285,9 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 3000px) {
+@media
+(min-width: 669px) and (max-width: 1024px),
+(min-width: 1025px) and (max-width: 3000px) {
     .PopularProducts-container {
         display: flex;
         flex-direction: column;

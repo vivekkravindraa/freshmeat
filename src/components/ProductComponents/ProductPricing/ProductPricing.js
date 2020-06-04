@@ -36,7 +36,7 @@ function ProductPricing(props) {
                 <button onClick={(e) => filterProducts(e)} value="chicken">CHICKEN</button>
                 <button onClick={(e) => filterProducts(e)} value="seafood">SEAFOOD</button>
                 <button onClick={(e) => filterProducts(e)} value="beef">BEEF</button>
-                <button onClick={(e) => filterProducts(e)} value="goat">GOAT &amp; LAMB</button>
+                <button onClick={(e) => filterProducts(e)} value="goat">GOAT &#38; LAMB</button>
             </div>
             <div className="ProductPricing-items">
                 {(!filteredProducts.length ? productPricingItems.slice(0,8) : filteredProducts).map((item, index) => {

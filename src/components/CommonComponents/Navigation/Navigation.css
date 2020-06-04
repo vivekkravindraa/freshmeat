@@ -1,4 +1,4 @@
-@media (min-width: 375px) and (max-width: 464px) {
+@media (min-width: 330px) and (max-width: 464px) {
     .Navigation-container {
         position: absolute;
         top: 0;
@@ -6,6 +6,8 @@
         margin: 0;
         background: #ffffff;
         padding: 15px;
+        width: 250px;
+        height: 250px;
     }
     
     .Navigation-container ul {

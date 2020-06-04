@@ -81,9 +81,10 @@ export default function Navigation() {
 						{navigationItems.map((item,index) => {
 							return (
 								<li key={index} className="Navigation-menu__item" onMouseEnter={() => setId(index + 1)} onMouseLeave={() => setId(0)}>
-									<Link to={item.path}>
-									<button className="Navigation-menu__item-link">{item.content}{index + 1 === id ? <span>-</span> : <span>+</span>}</button>
+									<Link className="Navigation-menu__item-link" to={item.path}>
+										{item.content}
 									</Link>
+									{index + 1 === id ? <span>-</span> : <span>+</span>}
 									<div className={`Navigation-menu__subNavigation-dropdown ${index + 1 === id ? `showDropdown` : `hideDropdown`}`}>
 										<ul className="Navigation-menu__subNavigation-items">
 											{item.subNavigationItems.map((item, index) => {

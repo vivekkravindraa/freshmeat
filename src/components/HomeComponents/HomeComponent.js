@@ -6,6 +6,7 @@ import PopularProducts from '../ProductComponents/PopularProducts/PopularProduct
 import Technologies from './Technologies/Technologies';
 import ProductPricing from '../ProductComponents/ProductPricing/ProductPricing';
 import Footer from './Footer/Footer';
+import Filter from '../CommonComponents/Filter/Filter';
 
 export default function HomeComponent(props) {
     return (
@@ -17,6 +18,7 @@ export default function HomeComponent(props) {
             <Technologies />
             <ProductPricing />
             <Footer />
+            <Filter />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-@media (max-width: 464px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .Footer-box {
         display: flex;
         flex-direction: column;
@@ -244,9 +244,253 @@
     }
 }
 
-@media
-(min-width: 669px) and (max-width:1024px),
-(min-width: 1025px) and (max-width: 3000px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    .Footer-box {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 4fr 8fr; */
+        background-color: #eeeeee;
+    }
+    
+    .Footer-query-section {
+        display: flex;
+        flex-direction: row;
+        padding: 25px;
+    }
+
+    .Footer-query-section-logo {
+        height: 160px;
+        width: 160px;
+    }
+
+    .Footer-query-section__info {
+        padding: 0 15px;
+    }
+    
+    .Footer-query-section__content {
+        text-align: left;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: Montserrat;
+        letter-spacing: 0.4px;
+        color: #424242;
+        opacity: 1;
+        margin-bottom: 35px;
+    }
+    
+    .Footer-query-section__writeToUs {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #424242;
+        opacity: 1;
+    }
+    
+    .Footer-query-section__mail {
+        margin-bottom: 50px;
+    }
+    
+    .Footer-query-section__mail span {
+        text-align: left;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #424242;
+        opacity: 1;
+    }
+    
+    .Footer-query-section__callUs {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #424242;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .Footer-query-section__phoneNumber {
+        text-align: left;
+        font-style: Regular;
+        font-size: 22px;
+        font-family: Poppins;
+        letter-spacing: 0.9px;
+        color: #424242;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .Footer-query-content {
+        padding: 25px;
+    }
+    
+    .Footer-query-content__subscribe {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        border-top: 1px solid #ffffff   ;
+        border-bottom: 1px solid #ffffff;
+    }
+    
+    .Footer-query-content__subscribe p {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-weight: bolder;
+        font-size: 10px;
+        font-family: Montserrat;
+        letter-spacing: 1.3px;
+        color: #424242;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+    
+    .Footer-query-content__subscribe input {
+        background: #fafafa 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-style: none;
+        opacity: 1;
+        padding: 15px 20px 15px 20px;
+        outline: none;
+    }
+
+    .Footer-query-content__label {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Footer-query-content__input-button {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .Footer-query-content__input-button button {
+        background: #db2c36 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-style: none;
+        padding: 14px 25px 15px 25px;
+        outline: none;
+        text-align: left;
+        font-weight: Medium;
+        font-size: 14px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #ffffff;
+        opacity: 1;
+    }
+    
+    .Footer-query-content__links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Footer-query-content__links-list {
+        padding: 50px 0;
+    }
+    
+    .Footer-query-content__links-header,
+    .Footer-query-content__download-header,
+    .Footer-query-content__paySecurely-header {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        font-weight: bolder;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 1.3px;
+        color: #424242;
+        opacity: 1;
+        margin-bottom: 25px;
+    }
+    
+    .Footer-query-content__links-list li {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-bottom: 25px;    
+    }
+    
+    .Footer-query-content__link {
+        text-decoration: none;
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 1.2px;
+        color: #424242;
+        opacity: 1;
+    }
+
+    .Footer-query-content__download {
+        display: none;
+    }
+    
+    .Footer-query-content__download-store {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        margin: 10px auto;
+        width: 120px;
+        opacity: 1;
+        border-radius: 6px;
+    }
+
+    .Footer-query-content__paySecurely {
+        padding: 50px 0;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+    }
+    
+    .Footer-query-content__paySecurely-gateways {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        row-gap: 40px;
+    }
+    
+    .Footer-query-content__paySecurely-gateways li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Footer-query-content__paySecurely-gateways > li > a > img {
+        width: 60px;
+    }
+    
+    .Footer-social {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0 50px 0;
+        background-color: #eeeeee;
+    }
+    
+    .Footer-social__icons {
+        display: flex;
+    }
+    
+    .Footer-social__icons i {
+        color: #757575;
+        margin-right: 20px;
+        font-size: 1.7em;
+    }
+    
+    .Footer-social__links {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 4000px) {
     .Footer-box {
         display: grid;
         grid-template-columns: 4fr 8fr;

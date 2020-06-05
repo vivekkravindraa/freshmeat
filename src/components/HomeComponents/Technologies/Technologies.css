@@ -1,4 +1,4 @@
-@media (max-width: 464px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .Technologies {
         display: flex;
         flex-direction: column;
@@ -124,9 +124,133 @@
     }
 }
 
-@media
-(min-width: 669px) and (max-width: 1024px),
-(min-width: 1025px) and (max-width: 3000px) {
+@media (min-width: 768px) and (max-width: 992px) {
+    .Technologies {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Technologies__image {
+        display: grid;
+        background-image: url("../../../assets/HomeComponentAssets/popularProductsSideImage/popularProductsSideImageS.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    
+    .Technologies__quality {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        background-color: #bd2c36;
+        padding: 30px 25px;
+    }
+    
+    .Technologies__quality-percentage {
+        font-weight: bolder;
+        font-size: 38px;
+        font-family: Montserrat;
+        letter-spacing: 1.08px;
+        color: #ffffff;
+        opacity: 1;
+        margin: 0 0 0 5px;
+    }
+
+    .Technologies__quality-standard {
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Montserrat;
+        letter-spacing: 0.54px;
+        color: #ffff8d;
+        opacity: 1;
+        margin: 0 0 0 5px;
+    }
+
+    .Technologies__content {
+        background-color: #fff8e1;
+        padding: 50px;
+    }
+    
+    .Technologies__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 32px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 10px 0;
+    }
+    
+    .Technologies__sub-title {
+        text-align: left;
+        font-weight: bold;
+        font-size: 52px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #212121;
+        opacity: 1;
+        margin: 0 0 40px 0;
+    }
+    
+    .Technologies__concepts {
+        display: flex;
+        padding: 0 0 40px 0;
+    }
+    
+    .Technologies__concept {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Technologies__concept-image {
+        margin: 0 auto;
+    }
+    
+    .Technologies__concept-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16x;
+        font-family: Montserrat;
+        letter-spacing: 0.47px;
+        color: #000000;
+        opacity: 1;
+    }
+    
+    .Technologies__description {
+        text-align: left;
+        font-weight: Regular;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #212121;
+        opacity: 1;
+        margin: 0 0 40px 0;
+    }
+    
+    .Technologies__button {
+        background: #8D6E63 0% 0% no-repeat padding-box;
+        border-radius: 29px;
+        opacity: 1;
+        padding: 10px 40px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        outline: none;
+        border: none;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 4000px) {
     .Technologies {
         display: grid;
         grid-template-columns: repeat(2, 6fr);

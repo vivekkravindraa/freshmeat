@@ -15,7 +15,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={HomeComponent}></Route>
-        <Route path="/order_details" component={OrderDetailComponent}></Route>
+        <Route path="/order_detail" component={OrderDetailComponent}></Route>
         <Route path="/product_list" component={ProductList}></Route>
       </Switch>
     </Router>

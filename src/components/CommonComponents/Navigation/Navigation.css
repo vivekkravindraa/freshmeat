@@ -300,6 +300,7 @@
 
 @media (min-width: 992px) and (max-width: 4000px) {
     .Navigation-container {
+        position: relative;
         margin-bottom: 75px;
     }
     
@@ -411,4 +412,12 @@
     .Navigation-menu__icon-mobile {
         display: none;
     }
+
+    /* 
+        .sticky {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+    */
 }

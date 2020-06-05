@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import {
-	BrowserRouter as Router,
-	Link
-} from "react-router-dom";
+import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import './Navigation.css';
 
 export default function Navigation() {
 	let [ id, setId ] = useState(0);
 	let [ navMenuDisplay, setNavMenuDisplay ] = useState(false);
+	const [ isSticky, setSticky ] = useState(false);
+    const ref = useRef(null);
 
 	let navigationItems = [
 		{
@@ -72,12 +71,25 @@ export default function Navigation() {
 			content: "AboutUs",
 			subNavigationItems: []
 		}
-	]
+	];
+
+	const handleScroll = () => {
+		if (ref && ref.current && ref.current.getBoundingClientRect()) {
+			setSticky(ref.current.getBoundingClientRect().top <= 0);
+		}
+	};
+	
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', () => handleScroll);
+        };
+	}, []);
 
 	return (
 		<Router>
-			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`}`}>
-				<nav className="Navigation-menu">
+			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`} ${isSticky && `sticky`}`} ref={ref}>
+				<nav className={`Navigation-menu ${isSticky && `sticky`}`}>
 					<ul className="Navigation-menu-items">
 						{navigationItems.map((item,index) => {
 							return (

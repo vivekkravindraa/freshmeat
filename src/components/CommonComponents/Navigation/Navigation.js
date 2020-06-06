@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import './Navigation.css';
 
 export default function Navigation() {
-	let [ id, setId ] = useState(0);
-	let [ navMenuDisplay, setNavMenuDisplay ] = useState(false);
+	const [ id, setId ] = useState(0);
+	const [ navMenuDisplay, setNavMenuDisplay ] = useState(false);
 	const [ isSticky, setSticky ] = useState(false);
     const ref = useRef(null);
 
@@ -88,8 +88,8 @@ export default function Navigation() {
 
 	return (
 		<Router>
-			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`} ${isSticky && `sticky`}`} ref={ref}>
-				<nav className={`Navigation-menu ${isSticky && `sticky`}`}>
+			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`} ${isSticky ? `sticky` : ``}`} ref={ref}>
+				<nav className={`Navigation-menu`}>
 					<ul className="Navigation-menu-items">
 						{navigationItems.map((item,index) => {
 							return (

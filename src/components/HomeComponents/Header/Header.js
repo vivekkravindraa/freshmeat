@@ -11,7 +11,7 @@ import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
 import './Header.css';
 
 const Header = (props) => {
-    const images = [ freshmeatBannerL, beefL ];
+    const images = [ freshmeatBannerL, beefL, freshmeatBannerL, beefL ];
 
     const socialLinks = [
         { id: 1, path: "/", icon: "fab fa-facebook-f", size: 'fa-sm' },
@@ -23,7 +23,8 @@ const Header = (props) => {
     const siteLinks = [
         { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
         { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
-        { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' }
+        { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' },
+        { id: 4, path: "/", icon: "fas fa-bars", size: 'fa-lg' }
     ];
 
     const quantity = useSelector(state => state);
@@ -113,6 +114,10 @@ const Header = (props) => {
                         </div>
                         <div className="Header-readmore__button">
                             <button>Read More +</button>
+                        </div>
+                        <div className="Header-slideHolder-items">
+                            <div className="Header-slideHolder-item" onClick={() => goToPrevSlide()}>-</div>
+                            <div className="Header-slideHolder-item" onClick={() => (images.length > 1 && currentIndex !== images.length - 1) ? goToNextSlide() : null}>-</div>
                         </div>
                     </div>
                 ))}

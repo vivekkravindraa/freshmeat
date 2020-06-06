@@ -42,10 +42,7 @@ export default function Category() {
                     {categories.map((item, index) => {
                         return (
                             <div key={index} className={`Category-item ${index + 1 === id ? `showShadow` : `hideShadow`}`} onClick={() => setId(index + 1)}>
-                                <div
-                                    className="Category-image"
-                                    style={{ backgroundImage: `url(${item.categoryImage})` }}>
-                                </div>
+                                <div className="Category-image" style={{ backgroundImage: `url(${item.categoryImage})` }}></div>
                                 <div className={`Category-name ${index + 1 === id ? `selected`: `notSelected`}`}>
                                     {item.categoryName.toUpperCase()}
                                 </div>

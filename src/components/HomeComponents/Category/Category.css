@@ -57,7 +57,6 @@
         padding: 50px 0;
         overflow-x: scroll;
         overflow-y: hidden;
-        position: relative;
         -ms-overflow-style: none;
     }
 
@@ -78,8 +77,8 @@
         display: flex;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        background-color: #db2c36;
+        background-position: center;
+        position: relative;
         width: 200px;
         height: 200px;
     }
@@ -240,9 +239,8 @@
         display: flex;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        background-color: #db2c36;
-        width: 200px;
+        background-position: center;
+        width: auto;
         height: 200px;
     }
      
@@ -388,10 +386,10 @@
     }
     
     .Category-image {
+        display: flex;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        background-color: #db2c36;
+        background-position: center;
         width: auto;
         height: 200px;
     }

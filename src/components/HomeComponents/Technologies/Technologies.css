@@ -147,13 +147,16 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        height: 250px;
+        width: auto;
         position: relative;
     }
     
     .Technologies__quality {
-        position: relative;
+        position: absolute;
         width: 100px;
-        height: 100px;
+        height: 80px;
+        left: 50px;
         bottom: 0;
         background-color: #bd2c36;
         padding: 30px 25px;

@@ -1,15 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import './Navigation.css';
 
-export default function Navigation() {
+export default function Navigation(props) {
 	const [ id, setId ] = useState(0);
-	const [ navMenuDisplay, setNavMenuDisplay ] = useState(false);
-	const [ isSticky, setSticky ] = useState(false);
-    const ref = useRef(null);
 
-	let navigationItems = [
+	const navigationItems = [
 		{
 			id: 1,
 			path: "/",
@@ -73,22 +70,9 @@ export default function Navigation() {
 		}
 	];
 
-	const handleScroll = () => {
-		if (ref && ref.current && ref.current.getBoundingClientRect()) {
-			setSticky(ref.current.getBoundingClientRect().top <= 0);
-		}
-	};
-	
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', () => handleScroll);
-        };
-	}, []);
-
 	return (
 		<Router>
-			<div className={`Navigation-container ${navMenuDisplay ? `showNavMenu` : `hideNavMenu`} ${isSticky ? `sticky` : ``}`} ref={ref}>
+			<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
 				<nav className={`Navigation-menu`}>
 					<ul className="Navigation-menu-items">
 						{navigationItems.map((item,index) => {
@@ -116,9 +100,6 @@ export default function Navigation() {
 						})}
 					</ul>
 				</nav>
-			</div>
-			<div className="Navigation-menu__icon-mobile">
-				<i className="fas fa-bars fa-2x" onClick={() => setNavMenuDisplay(true)}></i>
 			</div>
 		</Router>
 	)

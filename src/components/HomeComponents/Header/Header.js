@@ -32,6 +32,7 @@ const Header = (props) => {
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
     const [ isCartTouched, setIsCartTouched ] = useState(false);
+    const [ isNavigationTouched, setIsNavigationTouched ] = useState(false);
 
     const goToPrevSlide = () => {
         if(currentIndex === 0) {
@@ -86,7 +87,14 @@ const Header = (props) => {
                                 <Router className="Header-icons__site-router">
                                     {siteLinks.map((item,index) => {
                                         return (
-                                            <Link key={index} className="Header-icons__site-link" to={item.path} onClick={() => item.icon === "fas fa-shopping-cart" ? setIsCartTouched(true) : null}>
+                                            <Link key={index} className="Header-icons__site-link" to={item.path}
+                                                onClick={() => item.icon === "fas fa-shopping-cart"
+                                                ? setIsCartTouched(true)
+                                                : 
+                                                    item.icon === "fas fa-bars"
+                                                    ? setIsNavigationTouched(true)
+                                                    : null}
+                                            >
                                                 <i className={`${item.icon} ${item.size}`}></i>
                                                 {item.icon === "fas fa-shopping-cart" ? <span>{quantity ? quantity : 0}</span> : null}
                                             </Link>
@@ -95,7 +103,7 @@ const Header = (props) => {
                                 </Router>
                             </div>
                         </div>
-                        <Navigation />
+                        <Navigation isNavigationTouched={isNavigationTouched} setIsNavigationTouched={setIsNavigationTouched} />
                         <div className="Header-content">
                             <div className="Header-content__left-icon" onClick={() => goToPrevSlide()}>
                                 <span><i className="fas fa-long-arrow-left"></i></span>

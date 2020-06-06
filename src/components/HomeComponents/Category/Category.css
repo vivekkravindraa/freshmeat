@@ -58,6 +58,11 @@
         overflow-x: scroll;
         overflow-y: hidden;
         position: relative;
+        -ms-overflow-style: none;
+    }
+
+    .Catergory-items::-webkit-scrollbar {
+        display: none;
     }
     
     .Category-item {
@@ -215,6 +220,11 @@
         overflow-x: scroll;
         overflow-y: hidden;
         position: relative;
+        -ms-overflow-style: none;
+    }
+
+    .Category-items::-webkit-scrollbar {
+        display: none;
     }
     
     .Category-item {

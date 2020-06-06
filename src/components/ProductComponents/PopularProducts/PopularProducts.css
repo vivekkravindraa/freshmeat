@@ -50,6 +50,11 @@
         display: flex;
         overflow-x: scroll;
         padding: 25px 0px;
+        -ms-overflow-style: none;
+    }
+
+    .PopularProducts-items::-webkit-scrollbar {
+        display: none;
     }
     
     .PopularProducts-item {
@@ -337,6 +342,11 @@
         display: flex;
         overflow-x: scroll;
         padding: 25px 0px;
+        -ms-overflow-style: none;
+    }
+
+    .PopularProducts-items::-webkit-scrollbar {
+        display: none;
     }
     
     .PopularProducts-item {

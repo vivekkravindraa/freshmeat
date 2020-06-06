@@ -60,7 +60,7 @@
         -ms-overflow-style: none;
     }
 
-    .Catergory-items::-webkit-scrollbar {
+    .Category-items::-webkit-scrollbar {
         display: none;
     }
     
@@ -79,8 +79,8 @@
         background-size: cover;
         background-position: center;
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
      
     .Category-name {
@@ -241,7 +241,7 @@
         background-size: cover;
         background-position: center;
         width: auto;
-        height: 200px;
+        height: 160px;
     }
      
     .Category-name {

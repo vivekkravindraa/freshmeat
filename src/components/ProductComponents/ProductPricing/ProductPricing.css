@@ -2,6 +2,7 @@
     .ProductPricing-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 75px;
     }
     
     .ProductPricing-header {
@@ -46,7 +47,6 @@
     
     .ProductPricing-category-sort {
         display: flex;
-        justify-content: center;
         align-items: center;
         overflow-x: scroll;
         -ms-overflow-style: none;
@@ -264,7 +264,6 @@
         justify-content: center;
         align-items: center;
         overflow-x: scroll;
-
     }
     
     .ProductPricing-category-sort button {

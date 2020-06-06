@@ -134,7 +134,7 @@
     .AboutUs-banner__items {
         display: grid;
         grid-template-columns: repeat(4, 3fr);
-        padding: 50px 25px;
+        padding: 50px 0px;
     }
     
     .AboutUs-banner__item {
@@ -152,7 +152,7 @@
     .AboutUs-banner__item p {
         text-align: center;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 0.5px;
         color: #FFFFFF;
@@ -206,7 +206,7 @@
     }
     
     .AboutUs-analytics__item {
-        margin: 0px 50px;
+        margin: 0px 25px;
     }
     
     .AboutUs-analytics__item:last-child {
@@ -218,7 +218,7 @@
         align-items: flex-start;
         text-align: center;
         font-weight: 900;
-        font-size: 48px;
+        font-size: 32px;
         font-family: Montserrat;
         letter-spacing: 1.44px;
         color: #ffffff;
@@ -229,7 +229,7 @@
     .AboutUs-analytics__item-description {
         text-align: left;
         font-weight: SemiBold;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.54px;
         color: #ffff8d;
@@ -375,6 +375,7 @@
         display: grid;
         grid-template-columns: repeat(4, 3fr);
         padding: 50px 25px;
+        column-gap: 25px;
     }
     
     .AboutUs-banner__item {
@@ -392,7 +393,7 @@
     .AboutUs-banner__item p {
         text-align: center;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 0.5px;
         color: #FFFFFF;

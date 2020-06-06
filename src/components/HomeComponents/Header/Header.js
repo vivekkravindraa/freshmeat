@@ -3,17 +3,30 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import MyCart from '../../CartComponents/MyCart/MyCart';
 import Navigation from '../../CommonComponents/Navigation/Navigation';
-import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 
+import freshmeatLogoS from '../../../assets/HomeComponentAssets/freshmeatLogo/freshmeatLogoS.png';
 import freshmeatBannerL from "../../../assets/HomeComponentAssets/freshmeatBanner/freshmeatBannerL.png";
-// import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
+import beefL from '../../../assets/HomeComponentAssets/beef/beefL.png';
 
 import './Header.css';
 
 const Header = (props) => {
-    const quantity = useSelector(state => state);
+    const images = [ freshmeatBannerL, beefL ];
 
-    const images = [ freshmeatBannerL ];
+    const socialLinks = [
+        { id: 1, path: "/", icon: "fab fa-facebook-f", size: 'fa-sm' },
+        { id: 2, path: "/", icon: "fab fa-twitter", size: 'fa-sm' },
+        { id: 3, path: "/", icon: "fab fa-instagram", size: 'fa-sm' },
+        { id: 4, path: "/", icon: "fab fa-youtube", size: 'fa-sm' }
+    ];
+
+    const siteLinks = [
+        { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
+        { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
+        { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' }
+    ];
+
+    const quantity = useSelector(state => state);
 
     const [ currentIndex, setCurrentIndex ] = useState(0);
     const [ translateValue, setTranslateValue ] = useState(0);
@@ -39,19 +52,6 @@ const Header = (props) => {
     const slideWidth = () => {
        return document.querySelector('.slide').clientWidth;
     }
-
-    const socialLinks = [
-        { id: 1, path: "/", icon: "fab fa-facebook-f", size: 'fa-sm' },
-        { id: 2, path: "/", icon: "fab fa-twitter", size: 'fa-sm' },
-        { id: 3, path: "/", icon: "fab fa-instagram", size: 'fa-sm' },
-        { id: 4, path: "/", icon: "fab fa-youtube", size: 'fa-sm' }
-    ];
-
-    const siteLinks = [
-        { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
-        { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
-        { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' }
-    ];
 
     return (
         <div className="Header">

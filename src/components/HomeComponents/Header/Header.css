@@ -3,6 +3,7 @@
     .Header {
         position: relative;
         overflow: hidden;
+        white-space: nowrap;    
     }
     
     .Header-container {
@@ -118,6 +119,7 @@
     }
 
     .Header-content__description {
+        white-space: normal;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -155,6 +157,7 @@
     .Header {
         position: relative;
         overflow: hidden;
+        white-space: nowrap;
     }
     
     .Header-container {
@@ -270,6 +273,7 @@
     }
 
     .Header-content__description {
+        white-space: normal;
         display: flex;
         justify-content: center;
         align-items: center;

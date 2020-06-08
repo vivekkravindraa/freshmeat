@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
     .Category {
         position: relative;
-        padding: 25px 15px;
+        padding: 25px 10px;
     }
 
     .Category:after {
@@ -17,7 +17,7 @@
     .Category-container {
         display: flex;
         flex-direction: column;
-        padding: 50px 0 0 0;
+        padding: 25px 0 0 0;
     }
     
     .Category-header {
@@ -31,7 +31,7 @@
     .Category-title {
         text-align: left;
         font-weight: bolder;
-        font-size: 16px;
+        font-size: 14px;
         font-family: Montserrat;
         color: #2E1500;
         opacity: 1;
@@ -89,13 +89,12 @@
         background-color: transparent;
         text-align: center;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 10px;
         font-family: Montserrat;
-        letter-spacing: 0px;
-        color: #BD2C36;
+        color: #db2c36;
         opacity: 1;
         position: absolute;
-        bottom: -60px;
+        bottom: -50px;
         width: -webkit-fill-available;
     }
     
@@ -109,21 +108,20 @@
         display: grid;
         grid-template-columns: repeat(2, 6fr);
         position: relative;
-        top: -150px;
+        top: -135px;
     }
 
     .Category-content__left-icon-mobile {
         display: flex;
         justify-content: flex-start;
-        color: gray;
+        color: #db2c36;
         position: relative;
-        left: -15px;
+        left: -10px;
     }
     
     .Category-content__left-icon-mobile > span {
         display: inline-block;
         background: #ffffff;
-        border: 1px solid gray;
         border-radius: 50px;
         padding: 15px;
     }
@@ -137,15 +135,14 @@
     .Category-content__right-icon-mobile {
         display: flex;
         justify-content: flex-end;
-        color: gray;
+        color: #db2c36;
         position: relative;
-        right: -15px;
+        right: -10px;
     }
     
     .Category-content__right-icon-mobile > span {
         display: inline-block;
         background: #ffffff;
-        border: 1px solid gray;
         border-radius: 50px;
         padding: 15px;
     }

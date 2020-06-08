@@ -2,7 +2,7 @@
     .PopularProducts-container {
         display: flex;
         flex-direction: column;
-        padding: 25px;
+        padding: 25px 10px 0 10px;
     }
     
     .PopularProducts-header {
@@ -49,6 +49,7 @@
         display: flex;
         overflow-x: scroll;
         -ms-overflow-style: none;
+        padding: 0 0 25px 0;
     }
 
     .PopularProducts-items::-webkit-scrollbar {
@@ -240,21 +241,20 @@
         display: grid;
         grid-template-columns: repeat(2, 6fr);
         position: relative;
-        top: -150px;
+        top: -235px;
     }
 
     .PopularProducts-content__left-icon-mobile {
         display: flex;
         justify-content: flex-start;
-        color: gray;
+        color: #bd2c36;
         position: relative;
-        left: -15px;
+        left: -5px;
     }
     
     .PopularProducts-content__left-icon-mobile > span {
         display: inline-block;
         background: #ffffff;
-        border: 1px solid gray;
         border-radius: 50px;
         padding: 15px;
     }
@@ -268,15 +268,14 @@
     .PopularProducts-content__right-icon-mobile {
         display: flex;
         justify-content: flex-end;
-        color: gray;
+        color: #bd2c36;
         position: relative;
-        right: -15px;
+        right: -5px;
     }
     
     .PopularProducts-content__right-icon-mobile > span {
         display: inline-block;
         background: #ffffff;
-        border: 1px solid gray;
         border-radius: 50px;
         padding: 15px;
     }

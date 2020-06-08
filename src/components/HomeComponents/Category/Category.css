@@ -173,13 +173,12 @@
     .Category-container {
         display: flex;
         flex-direction: column;
-        padding: 50px 0;
+        padding: 25px 0 0 0;
     }
     
     .Category-header {
         display: flex;
         flex-direction: column;
-        padding: 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;

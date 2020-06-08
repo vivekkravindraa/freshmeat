@@ -65,7 +65,7 @@
     .Technologies__sub-title {
         text-align: left;
         font-weight: bold;
-        font-size: 28px;
+        font-size: 24px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #212121;
@@ -148,7 +148,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 250px;
+        height: 300px;
         width: auto;
         position: relative;
     }

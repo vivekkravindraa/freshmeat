@@ -10,7 +10,7 @@
     .ProductList-header__title {
         text-align: left;
         font-style: Italic;
-        font-size: 32px;
+        font-size: 16px;
         font-family: Brush Script MT, sans-serif;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -21,7 +21,7 @@
     .ProductList-header__sub-title {
         text-align: left;
         font-weight: bold;
-        font-size: 28px;
+        font-size: 18px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #2e1500;
@@ -43,11 +43,18 @@
         display: flex;
         align-items: center;
         padding: 50px 0 0 0;
+        margin-left: 25px;
         overflow-y: auto;
+        -ms-overflow-style: none;
+    }
+
+    .ProductList-categorySortItems::-webkit-scrollbar {
+        display: none;
     }
     
     .ProductList-categorySortItems button {
-        margin-right: 100px;
+        white-space: pre;
+        margin-right: 25px;
         border-radius: 22px;
         opacity: 1;
         outline: none;
@@ -75,11 +82,10 @@
     
     .ProductList-popularProductItems {
         display: grid;
-        grid-template-columns: repeat(2, 6fr);
+        grid-template-columns: 50% 50%;
         column-gap: 25px;
         row-gap: 25px;
         padding: 25px;
-        overflow-y: auto;
     }
 }
 

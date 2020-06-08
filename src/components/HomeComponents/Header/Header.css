@@ -19,7 +19,7 @@
         background-color: #f5f5f5;
         display: grid;
         grid-template-columns: 4fr 6fr 2fr;
-        padding: 25px;
+        padding: 15px 25px;
     }
 
     .Header-icons__social {
@@ -108,7 +108,7 @@
         justify-content: center;
         align-items: center;
         color: #4caf50;
-        font-size: 24px;
+        font-size: 16px;
         text-align: left;
         font-style: italic;
         font-family: Brush Script MT, sans-serif;
@@ -120,7 +120,7 @@
         justify-content: center;
         align-items: center;
         color: #ffffff;
-        font-size: 32px;
+        font-size: 20px;
         text-align: left;
         font-weight: 600;
         font-family: Montserrat;
@@ -133,11 +133,22 @@
         justify-content: center;
         align-items: center;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 10px;
         text-align: center;
-        font-weight: 600;
         font-family: Montserrat;
         margin: 0;
+    }
+
+    .Header-content__additional-description {
+        white-space: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 10px;
+        text-align: center;
+        font-family: Montserrat;
+        margin: 10px 0 0 0;
     }
 
     .Header-readmore__button {
@@ -190,6 +201,7 @@
         background-color: #f5f5f5;
         display: grid;
         grid-template-columns: 4fr 6fr 2fr;
+        padding: 25px;
     }
 
     .Header-icons__social {
@@ -202,6 +214,11 @@
         align-items: center;
         position: relative;
         left: 0;
+    }
+
+    .Header-icons__main > img {
+        height: 100px;
+        width: 100px;
     }
 
     .Header-icons__site {
@@ -293,6 +310,19 @@
     }
 
     .Header-content__description {
+        white-space: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        font-family: Montserrat;
+        margin: 0 0 20px 0;
+    }
+
+    .Header-content__additional-description {
         white-space: normal;
         display: flex;
         justify-content: center;
@@ -505,6 +535,10 @@
         font-weight: 600;
         font-family: Montserrat;
         margin: 5px 0 50px 0;
+    }
+
+    .Header-content__additional-description {
+        display: none;
     }
     
     .Header-content__right-icon {

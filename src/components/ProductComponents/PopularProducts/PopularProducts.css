@@ -299,8 +299,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 50px 0 0 0;
-        margin-top: 100px;
+        margin: 75px 0 25px 0;
     }
     
     .PopularProducts-header__title {
@@ -531,7 +530,7 @@
         display: grid;
         grid-template-columns: repeat(2, 6fr);
         position: relative;
-        top: -150px;
+        top: -235px;
     }
 
     .PopularProducts-content__left-icon-mobile {

@@ -115,6 +115,9 @@ const Header = (props) => {
                                     We at Fresh Meat believe in a way of life that recognizes and honours the diversity and interdependencies of all life.<br />
                                     We believe that each one of us makes a difference in the world.
                                 </p>
+                                <p className="Header-content__additional-description">
+                                    And we live this belief throughout our ecosystem. We care for the planet, for the animals, for you!
+                                </p>
                             </div>
                             <div className="Header-content__right-icon" onClick={() => (images.length > 1 && currentIndex !== images.length - 1) ? goToNextSlide() : null}>
                                 <span><i className="fas fa-long-arrow-right"></i></span>

@@ -215,7 +215,7 @@
     
     .ProductPricing-price {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         margin: 0;
         text-align: center;
@@ -240,13 +240,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 100px 0 60px 0;
+        padding: 50px 0 50px 0;
     }
     
     .ProductPricing-header__title {
         text-align: left;
         font-style: Italic;
-        font-size: 38px;
+        font-size: 28px;
         font-family: Brush Script MT, sans-serif;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -280,6 +280,7 @@
         justify-content: center;
         align-items: center;
         overflow-x: scroll;
+        margin-bottom: 25px;
     }
     
     .ProductPricing-category-sort button {
@@ -314,7 +315,12 @@
         grid-template-rows: repeat(4, 12fr);
         column-gap: 50px;
         row-gap: 10px;
+        padding: 25px;
         -ms-overflow-style: none;
+    }
+
+    .ProductPricing-item:first-child {
+        border-top: 1px solid lightgray;
     }
 
     .ProductPricing-category-sort::-webkit-scrollbar {
@@ -333,6 +339,9 @@
     }
     
     .ProductPricing-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 0 0 0 25px;
     }
     
@@ -347,6 +356,7 @@
         font-weight: bold;
         font-size: 20px;
         font-family: Montserrat;
+        margin: 0 0 10px 0;
     }
     
     .ProductPricing-quantity {
@@ -355,6 +365,7 @@
         font-size: 16px;
         font-family: Montserrat;
         color: #bd2c36;
+        margin: 0 0 10px 0;
     }
     
     .ProductPricing-description {
@@ -362,6 +373,7 @@
         font-weight: Medium;
         font-size: 16px;
         font-family: Montserrat;
+        margin: 0 0 10px 0;
     }
     
     .ProductPricing-cart-options {

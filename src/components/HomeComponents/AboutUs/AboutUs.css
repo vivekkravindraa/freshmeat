@@ -250,9 +250,9 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
     .AboutUs-container__top {
-        display: flex;
-        flex-direction: column-reverse;
-        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 6fr);
+        padding: 25px 0 50px 0;
     }
     
     .AboutUs-content {
@@ -362,7 +362,7 @@
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
-        height: 200px;
+        height: auto;
         margin: 50px 0;
     }
 
@@ -378,6 +378,7 @@
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
+        height: auto;
         filter: brightness(50%);
     }
     
@@ -416,8 +417,9 @@
     }
     
     .AboutUs-data {
+        width: 100%;
         padding: 25px 50px;
-        text-align: left;
+        text-align: center;
         letter-spacing: 0.65px;
         opacity: 1;
         position: relative;
@@ -448,7 +450,7 @@
     
     .AboutUs-analytics__items {
         display: flex;
-        padding: 15px;
+        padding: 35px 0 35px 35px;
         background-color: #bd2c36;
         position: absolute;
         top: -50px;

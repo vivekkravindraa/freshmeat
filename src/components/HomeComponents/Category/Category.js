@@ -32,13 +32,21 @@ export default function Category() {
         }
     ];
 
+    const scrollToLeft = () => {
+        document.getElementById('scrollable').scrollLeft += 100;
+    }
+
+    const scrollToRight = () => {
+        document.getElementById('scrollable').scrollLeft -= 100;
+    }
+
     return (
         <div className="Category">
             <div className="Category-container">
                 <div className="Category-header">
                     <b className="Category-title">EXPLORE BY CATEGORIES</b>
                 </div>         
-                <div className="Category-items">
+                <div className="Category-items" id="scrollable">
                     {categories.map((item, index) => {
                         return (
                             <div key={index} className={`Category-item ${index + 1 === id ? `showShadow` : `hideShadow`}`} onClick={() => setId(index + 1)}>
@@ -52,10 +60,10 @@ export default function Category() {
                 </div>
                 <div className="Category-content__icons">
                     <div className="Category-content__left-icon-mobile">
-                        <span><i className="fas fa-long-arrow-left"></i></span>
+                        <span onClick={() => scrollToRight()}><i className="fas fa-long-arrow-left"></i></span>
                     </div> 
                     <div className="Category-content__right-icon-mobile">
-                        <span><i className="fas fa-long-arrow-right"></i></span>
+                        <span onClick={() => scrollToLeft()}><i className="fas fa-long-arrow-right"></i></span>
                     </div>
                 </div>
             </div>

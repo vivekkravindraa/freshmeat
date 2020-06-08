@@ -25,13 +25,13 @@ function ProductPricing(props) {
     const decrement = () => dispatch({ type: 'DECREMENT' });
 
     const filterProducts = (e) => {
-        let prodcutsFilteredByCategory = productPricingItems.filter((product) => {
+        const prodcutsFilteredByCategory = productPricingItems.filter((product) => {
             return e.target.value === product.category.categoryName;
         });
         setCategory(e.target.value);
         setFilteredProducts(prodcutsFilteredByCategory);
     }
-
+ 
     return (
         <div className="ProductPricing-container">
              <div className="ProductPricing-header">

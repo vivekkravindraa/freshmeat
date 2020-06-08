@@ -319,10 +319,6 @@
         -ms-overflow-style: none;
     }
 
-    .ProductPricing-item:first-child {
-        border-top: 1px solid lightgray;
-    }
-
     .ProductPricing-category-sort::-webkit-scrollbar {
         display: none;
     }
@@ -333,7 +329,11 @@
         padding: 25px;
         border-bottom: 1px solid lightgray;
     }
-    
+
+    .ProductPricing-item:first-child {
+        border-top: 1px solid lightgray;
+    }
+
     .ProductPricing-item:nth-last-child(-n + 1) {
         border-bottom: none;
     }

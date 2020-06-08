@@ -3,7 +3,7 @@
     .Header {
         position: relative;
         overflow: hidden;
-        white-space: nowrap;    
+        white-space: nowrap;
     }
     
     .Header-container {
@@ -19,6 +19,7 @@
         background-color: #f5f5f5;
         display: grid;
         grid-template-columns: 4fr 6fr 2fr;
+        padding: 25px;
     }
 
     .Header-icons__social {
@@ -31,6 +32,11 @@
         align-items: center;
         position: relative;
         left: 0;
+    }
+
+    .Header-icons__main > img {
+        width: 80px;
+        height: 80px;
     }
 
     .Header-icons__site {

@@ -13,7 +13,7 @@
     .AboutUs-content__title {
         text-align: left;
         font-style: Italic;
-        font-size: 44px;
+        font-size: 24px;
         font-family: Brush Script MT, sans-serif;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -24,7 +24,7 @@
     .AboutUs-content__sub-title {
         text-align: left;
         font-weight: 900;
-        font-size: 44px;
+        font-size: 28px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #212121;
@@ -33,13 +33,14 @@
     
     .AboutUs-content__description {
         text-align: left;
-        font-weight: bold;
-        font-size: 18px;
+        font-weight: Medium;
+        font-size: 11px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
-        margin-bottom: 50px;
+        margin-bottom: 15px;
+        line-height: 1.5;
     }
     
     .AboutUs-content__phone {
@@ -47,23 +48,22 @@
         grid-template-columns: 1fr 5fr;
         color: #bd2c36;
         opacity: 1;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     
     .AboutUs-content__phone i {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        font-size: 52px;
+        font-size: 32px;
     }
     
     .AboutUs-content__phone p {
         text-align: left;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 16px;
         font-family: Poppins;
         letter-spacing: 0.65px;
-        margin-left: 20px;
     }
     
     .AboutUs-content__download {
@@ -71,31 +71,29 @@
         grid-template-columns: 1fr 5fr;
         color: #bd2c36;
         opacity: 1;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     
     .AboutUs-content__download i {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        font-size: 52px;
+        font-size: 32px;
     }
-    
     
     .AboutUs-content__download p {
         text-align: left;
         font-weight: 400;
-        font-size: 21px;
+        font-size: 14px;
         font-family: Poppins;
         letter-spacing: 0.54px;
-        margin-left: 20px;
     }
     
     .AboutUs-content__read-more {
         outline: none;
         text-align: center;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #ffffff;
@@ -104,7 +102,7 @@
         border-radius: 29px;
         opacity: 1;
         border: 0;
-        padding: 10px 40px;
+        padding: 5px 25px;
     }
     
     .AboutUs-image {
@@ -114,7 +112,7 @@
         background-repeat: no-repeat;
         position: relative;
         height: 200px;
-        margin: 50px 0;
+        margin: 0 50px;
     }
 
     .AboutUs-container__bottom {

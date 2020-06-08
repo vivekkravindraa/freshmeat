@@ -1,7 +1,7 @@
 @media (min-width: 320px) and (max-width: 767px) {
     .Category {
         position: relative;
-        padding: 25px;
+        padding: 25px 15px;
     }
 
     .Category:after {
@@ -17,13 +17,12 @@
     .Category-container {
         display: flex;
         flex-direction: column;
-        padding: 50px 0;
+        padding: 50px 0 0 0;
     }
     
     .Category-header {
         display: flex;
         flex-direction: column;
-        padding: 50px 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,7 +52,7 @@
     .Category-items {
         display: grid;
         grid-template-columns: repeat(4, 3fr);
-        column-gap: 30px;
+        column-gap: 15px;
         padding: 50px 0;
         overflow-x: scroll;
         overflow-y: hidden;
@@ -79,8 +78,8 @@
         background-size: cover;
         background-position: center;
         position: relative;
-        width: 180px;
-        height: 180px;
+        width: 165px;
+        height: 120px;
     }
      
     .Category-name {

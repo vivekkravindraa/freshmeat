@@ -7,7 +7,7 @@ import beefS from '../../../assets/HomeComponentAssets/beef/beefS.png';
 import seafoodS from '../../../assets/HomeComponentAssets/seafood/seafoodS.png';
 import goatAndLambS from '../../../assets/ProductComponentAssets/goatAndLamb/goatAndLambS.png';
 
-export const productPricingItems = [
+const productPricingItems = [
     {
         productId: 1,
         productImage: chickenFullS,
@@ -426,3 +426,5 @@ export const productPricingItems = [
         }
     }
 ];
+
+export default productPricingItems;

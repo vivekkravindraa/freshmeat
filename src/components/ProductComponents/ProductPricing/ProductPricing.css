@@ -217,6 +217,7 @@
     .ProductPricing-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 75px;
     }
     
     .ProductPricing-header {

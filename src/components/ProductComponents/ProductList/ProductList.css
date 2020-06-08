@@ -1,0 +1,253 @@
+@media (min-width: 320px) and (max-width: 767px) {
+    .ProductList-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+    
+    .ProductList-header__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 32px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 5px 0;
+    }
+    
+    .ProductList-header__sub-title {
+        text-align: left;
+        font-weight: bold;
+        font-size: 28px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #2e1500;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .ProductList-header__sub-title:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 40%;
+        left: 80px;
+        padding-top: 20px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-categorySortItems {
+        display: flex;
+        align-items: center;
+        padding: 50px 0 0 0;
+        overflow-y: auto;
+    }
+    
+    .ProductList-categorySortItems button {
+        margin-right: 100px;
+        border-radius: 22px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        color: #bd2c36;
+        border: 1px solid #bd2c36;
+    }
+    
+    .ProductList-categorySortItems button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+    
+    .ProductList-categorySortItems button:last-child {
+        margin-right: 0;
+    }
+    
+    .ProductList-popularProductItems {
+        display: grid;
+        grid-template-columns: repeat(2, 6fr);
+        column-gap: 25px;
+        row-gap: 25px;
+        padding: 25px;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ProductList-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+    
+    .ProductList-header__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 32px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 5px 0;
+    }
+    
+    .ProductList-header__sub-title {
+        text-align: left;
+        font-weight: bold;
+        font-size: 28px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #2e1500;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .ProductList-header__sub-title:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 40%;
+        left: 80px;
+        padding-top: 20px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-categorySortItems {
+        display: flex;
+        align-items: center;
+        padding: 50px 0 0 0;
+        overflow-y: auto;
+    }
+    
+    .ProductList-categorySortItems button {
+        margin-right: 100px;
+        border-radius: 22px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        color: #bd2c36;
+        border: 1px solid #bd2c36;
+    }
+    
+    .ProductList-categorySortItems button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+    
+    .ProductList-categorySortItems button:last-child {
+        margin-right: 0;
+    }
+    
+    .ProductList-popularProductItems {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 25px;
+        row-gap: 25px;
+        padding: 50px;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 4000px) {
+    .ProductList-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+    
+    .ProductList-header__title {
+        text-align: left;
+        font-style: Italic;
+        font-size: 32px;
+        font-family: Brush Script MT, sans-serif;
+        letter-spacing: 0px;
+        color: #bd2c36;
+        opacity: 1;
+        margin: 0 0 5px 0;
+    }
+    
+    .ProductList-header__sub-title {
+        text-align: left;
+        font-weight: bold;
+        font-size: 28px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        color: #2e1500;
+        opacity: 1;
+        margin: 0;
+    }
+    
+    .ProductList-header__sub-title:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 40%;
+        left: 80px;
+        padding-top: 20px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-categorySortItems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0 0 0;
+    }
+    
+    .ProductList-categorySortItems button {
+        margin-right: 100px;
+        border-radius: 22px;
+        opacity: 1;
+        outline: none;
+        border: none;
+        padding: 2px 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Montserrat;
+        letter-spacing: 0px;
+        opacity: 1;
+        background-color: #ffffff;
+        color: #bd2c36;
+        border: 1px solid #bd2c36;
+    }
+    
+    .ProductList-categorySortItems button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+    
+    .ProductList-categorySortItems button:last-child {
+        margin-right: 0;
+    }
+
+    .ProductList-popularProductItems {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 25px;
+        row-gap: 25px;
+        padding: 50px;
+    }
+}

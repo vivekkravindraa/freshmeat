@@ -8,7 +8,7 @@
     .Footer-query-section {
         display: flex;
         flex-direction: row;
-        padding: 25px 10px;
+        padding: 25px 25px;
         word-break: break-word;;
     }
 
@@ -24,7 +24,7 @@
     .Footer-query-section__content {
         text-align: left;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 0.4px;
         color: #424242;
@@ -35,32 +35,7 @@
     .Footer-query-section__writeToUs {
         text-align: left;
         font-weight: bold;
-        font-size: 16px;
-        font-family: Montserrat;
-        letter-spacing: 0.43px;
-        color: #424242;
-        opacity: 1;
-    }
-    
-    .Footer-query-section__mail {
-        margin-bottom: 50px;
-    }
-    
-    .Footer-query-section__mail span {
-        text-align: left;
-        text-decoration: underline;
-        font-weight: bold;
-        font-size: 16px;
-        font-family: Montserrat;
-        letter-spacing: 0.43px;
-        color: #424242;
-        opacity: 1;
-    }
-    
-    .Footer-query-section__callUs {
-        text-align: left;
-        font-weight: bold;
-        font-size: 16px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #424242;
@@ -68,10 +43,37 @@
         margin: 0;
     }
     
+    .Footer-query-section__mail {
+        margin-bottom: 50px;
+        margin: 0 0 10px 0;
+    }
+    
+    .Footer-query-section__mail span {
+        text-align: left;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #db2c36;
+        opacity: 1;
+    }
+    
+    .Footer-query-section__callUs {
+        text-align: left;
+        font-weight: bold;
+        font-size: 10px;
+        font-family: Montserrat;
+        letter-spacing: 0.43px;
+        color: #424242;
+        opacity: 1;
+        margin: 0 0 10px 0;
+    }
+    
     .Footer-query-section__phoneNumber {
         text-align: left;
         font-style: Regular;
-        font-size: 22px;
+        font-size: 20px;
         font-family: Poppins;
         letter-spacing: 0.9px;
         color: #424242;
@@ -86,7 +88,7 @@
     .Footer-query-content__subscribe {
         display: flex;
         flex-direction: column;
-        padding: 50px 0;
+        padding: 25px 0;
         border-top: 1px solid #ffffff   ;
         border-bottom: 1px solid #ffffff;
     }
@@ -96,7 +98,7 @@
         align-items: center;
         text-align: center;
         font-weight: bolder;
-        font-size: 16px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 1.3px;
         color: #424242;
@@ -111,7 +113,7 @@
         border-bottom-right-radius: 0;
         border-style: none;
         opacity: 1;
-        padding: 15px 15px 15px 15px;
+        padding: 10px 10px;
         outline: none;
     }
 
@@ -131,11 +133,11 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-style: none;
-        padding: 14px 10px 15px 10px;
+        padding: 10px 10px;
         outline: none;
         text-align: left;
         font-weight: Medium;
-        font-size: 14px;
+        font-size: 10px;
         font-family: Montserrat;
         letter-spacing: 0.43px;
         color: #ffffff;
@@ -148,7 +150,7 @@
     }
 
     .Footer-query-content__links-list {
-        padding: 50px 0;
+        padding: 25px 0;
     }
     
     .Footer-query-content__links-header,
@@ -158,7 +160,7 @@
         justify-content: center;
         text-align: left;
         font-weight: bolder;
-        font-size: 16px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 1.3px;
         color: #424242;
@@ -177,7 +179,7 @@
         text-decoration: none;
         text-align: left;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 11px;
         font-family: Montserrat;
         letter-spacing: 1.2px;
         color: #424242;
@@ -195,13 +197,13 @@
         align-items: center;
         background: #ffffff 0% 0% no-repeat padding-box;
         margin: 10px auto;
-        width: 120px;
+        width: 100px;
         opacity: 1;
         border-radius: 6px;
     }
 
     .Footer-query-content__paySecurely {
-        padding: 50px 0;
+        padding: 25px 0;
         border-top: 1px solid #ffffff;
         border-bottom: 1px solid #ffffff;
     }
@@ -219,13 +221,13 @@
     }
     
     .Footer-query-content__paySecurely-gateways > li > a > img {
-        width: 60px;
+        width: 40px;
     }
     
     .Footer-social {
         display: flex;
         justify-content: center;
-        padding: 25px 0 50px 0;
+        padding: 0 0 25px 0;
         background-color: #eeeeee;
     }
     
@@ -235,12 +237,44 @@
     
     .Footer-social__icons i {
         color: #757575;
-        margin-right: 20px;
         font-size: 1.7em;
+    }
+
+    .Footer-social__icons > a {
+        margin-right: 40px;
+    }
+
+    .Footer-social__icons > a:last-child {
+        margin-right: 0;
     }
 
     .Footer-social__links {
         display: none;
+    }
+
+    .Footer-copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: Medium;
+        font-size: 14px;
+        font-family: Montserrat;
+        color: #000000;
+        padding: 10px 0;
+    }
+
+    .Footer-copyright > p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Footer-copyright > p > b {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        white-space: pre;
     }
 }
 
@@ -488,6 +522,10 @@
     .Footer-social__links {
         display: none;
     }
+
+    .Footer-copyright {
+        display: none;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 4000px) {
@@ -720,5 +758,9 @@
     
     .Footer-social__link:last-child {
         border: none;
-    }    
+    }
+
+    .Footer-copyright {
+        display: none;
+    }
 }

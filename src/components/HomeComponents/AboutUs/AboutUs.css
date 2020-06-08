@@ -3,7 +3,7 @@
         display: flex;
         flex-direction: column-reverse;
         position: relative;
-        margin-bottom: 75px;
+        margin-bottom: 25px;
     }
     
     .AboutUs-content {
@@ -120,6 +120,16 @@
         flex-direction: column;
         position: relative;
     }
+
+    .AboutUs-container__bottom:after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 100px;
+        border-bottom: 1px solid lightgray;
+    }
     
     .AboutUs-banner {
         background-image: url("../../../assets/ProductComponentAssets/goatAndLamb/goatAndLambL.png");
@@ -176,16 +186,17 @@
     .AboutUs-description {
         text-align: center;
         font-weight: Medium;
-        font-size: 22px;
+        font-size: 14px;
         font-family: Montserrat;
         letter-spacing: 0.65px;
         opacity: 1;
+        line-height: 1.5;
     }
     
     .AboutUs-description span {
         text-align: left;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0.65px;
         color: #bd2c36;
@@ -198,10 +209,10 @@
     
     .AboutUs-analytics__items {
         display: flex;
-        padding: 15px;
+        padding: 35px 0 35px 25px;
         background-color: #bd2c36;
         position: absolute;
-        top: -50px;
+        top: -20px;
         right: 0;
     }
     
@@ -229,9 +240,8 @@
     .AboutUs-analytics__item-description {
         text-align: left;
         font-weight: SemiBold;
-        font-size: 16px;
+        font-size: 10px;
         font-family: Montserrat;
-        letter-spacing: 0.54px;
         color: #ffff8d;
         opacity: 1;
         margin: 0;

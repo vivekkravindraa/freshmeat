@@ -10,14 +10,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 50px 0 0 0;
-        margin: 75px 0;
+        padding: 25px 0 35px 0;
     }
     
     .PopularProducts-header__title {
         text-align: left;
         font-style: Italic;
-        font-size: 32px;
+        font-size: 16px;
         font-family: Brush Script MT, sans-serif;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -28,7 +27,7 @@
     .PopularProducts-header__sub-title {
         text-align: left;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 16px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #2e1500;
@@ -40,16 +39,15 @@
         content: "";
         display: block;
         position: relative;
-        width: 40%;
-        left: 80px;
-        padding-top: 20px;
+        width: 52%;
+        left: 40px;
+        padding-top: 10px;
         border-bottom: 2px solid #bd2c36;
     }
     
     .PopularProducts-items {
         display: flex;
         overflow-x: scroll;
-        padding: 25px 0px;
         -ms-overflow-style: none;
     }
 

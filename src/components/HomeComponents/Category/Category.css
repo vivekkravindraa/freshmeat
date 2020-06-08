@@ -31,9 +31,8 @@
     .Category-title {
         text-align: left;
         font-weight: bolder;
-        font-size: 20px;
+        font-size: 16px;
         font-family: Montserrat;
-        letter-spacing: 0px;
         color: #2E1500;
         opacity: 1;
         position: relative;
@@ -45,7 +44,7 @@
         display: block;
         margin: 0 auto;
         width: 42%;
-        padding-top: 15px;
+        padding-top: 10px;
         border-bottom: 2px solid #db2c36;
     }
     

@@ -66,7 +66,8 @@ export default function Footer() {
                     </div>
                     <div className="Footer-query-section__info">
                         <p className="Footer-query-section__content">
-                            In case you have any questions or reviews, wtite to us vie the e-mail or make a call! We are available 7 days a week.
+                            In case you have any questions or reviews,<br />
+                            write to us vie the e-mail or make a call! We are available 7 days a week.
                         </p>
                         <p className="Footer-query-section__writeToUs">
                             Write to us at
@@ -157,6 +158,9 @@ export default function Footer() {
                         })}
                     </Router>
                 </div>
+            </div>
+            <div className="Footer-copyright">
+                <p>All Rights reserved<b> &#169; </b>Copyright 2019</p>
             </div>
         </div>
     )

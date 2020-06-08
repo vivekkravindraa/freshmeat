@@ -13,7 +13,7 @@ const categorySortItems = [
     },
     {
         categoryId: 4,
-        categoryName: 'beef & lamb'
+        categoryName: 'goat & lamb'
     }
 ];
 

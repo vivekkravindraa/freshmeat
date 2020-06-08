@@ -331,7 +331,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 26,
@@ -344,7 +344,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 27,
@@ -357,7 +357,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 28,
@@ -370,7 +370,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00 ',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 29,
@@ -383,7 +383,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 30,
@@ -396,7 +396,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 31,
@@ -409,7 +409,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     },{
         productId: 32,
@@ -422,7 +422,7 @@ const productPricingItems = [
         productPrice: 'AED 3.00',
         category: {
             categoryId: 4,
-            categoryName: 'goat'
+            categoryName: 'goat & lamb'
         }
     }
 ];

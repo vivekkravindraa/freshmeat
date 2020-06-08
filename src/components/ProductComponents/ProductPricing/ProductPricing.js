@@ -11,6 +11,8 @@ import './ProductPricing.css';
 
 function ProductPricing(props) {
     const [ idx, setIndex] = useState(0);
+    const [ category, setCategory ] = useState('chicken');
+    const [ filteredProducts, setFilteredProducts ] = useState([]);
 
     const quantity = useSelector(state => state);
     const dispatch = useDispatch();
@@ -22,12 +24,11 @@ function ProductPricing(props) {
     const increment = () => dispatch({ type: 'INCREMENT' });
     const decrement = () => dispatch({ type: 'DECREMENT' });
 
-    const [ filteredProducts, setFilteredProducts ] = useState([]);
-
     const filterProducts = (e) => {
         let prodcutsFilteredByCategory = productPricingItems.filter((product) => {
             return e.target.value === product.category.categoryName;
         });
+        setCategory(e.target.value);
         setFilteredProducts(prodcutsFilteredByCategory);
     }
 
@@ -41,6 +42,7 @@ function ProductPricing(props) {
                 <CategorySortItems
                     categorySortItems={categorySortItems}
                     filterProducts={filterProducts}
+                    category={category}
                 />
             </div>
             <div className="ProductPricing-items">

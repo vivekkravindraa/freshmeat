@@ -50,7 +50,7 @@
         align-items: center;
         overflow-x: scroll;
         -ms-overflow-style: none;
-        margin-left: 25px;
+        margin: 0 0 25px 25px;
     }
 
     .ProductPricing-category-sort::-webkit-scrollbar {
@@ -90,7 +90,9 @@
         grid-template-rows: repeat(4, 12fr);
         column-gap: 50px;
         row-gap: 10px;
-        padding: 25px;
+        padding: 0 0 25px 0;
+        margin: 0 25px;
+        border-top: 1px solid lightgray;
     }
     
     .ProductPricing-item {
@@ -98,11 +100,6 @@
         grid-template-columns: 2fr 4fr;
         padding: 25px 0;
         border-bottom: 1px solid lightgray;
-    }
-
-    .ProductPricing-item:first-child {
-        margin-top: 30px;
-        border-top: 1px solid lightgray;
     }
     
     .ProductPricing-item:nth-last-child(-n + 1) {
@@ -315,7 +312,8 @@
         grid-template-rows: repeat(4, 12fr);
         column-gap: 50px;
         row-gap: 10px;
-        padding: 25px;
+        padding: 0 0 25px 0;
+        margin: 0 25px;
         -ms-overflow-style: none;
     }
 
@@ -326,11 +324,11 @@
     .ProductPricing-item {
         display: grid;
         grid-template-columns: 2fr 4fr;
-        padding: 25px;
+        padding: 25px 0;
         border-bottom: 1px solid lightgray;
     }
 
-    .ProductPricing-item:first-child {
+    .ProductPricing-items {
         border-top: 1px solid lightgray;
     }
 
@@ -526,9 +524,9 @@
         color: #bd2c36;
         border: 1px solid #bd2c36;
     }
-    
-    .ProductPricing-category-sort button:hover {
-        background: #bd2c36 0% 0% no-repeat padding-box;
+
+    .selected {
+        background-color: #bd2c36;
         color: #ffffff;
     }
     
@@ -664,5 +662,5 @@
         letter-spacing: 1.2px;
         color: #bd2c36;
         opacity: 1;
-    }    
+    }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CategorySortItems =  ({ categorySortItems, filterProducts }) => categorySortItems.map((category, index) => {
+const CategorySortItems = ({ categorySortItems, filterProducts, category }) => categorySortItems.map((item, index) => {
     return (
-        <button key={index} onClick={(e) => filterProducts(e)} value={category.categoryName}>
-            {category.categoryName.toUpperCase()}
+        <button className={`${category === item.categoryName ? `selected` : ``}`} key={index} onClick={(e) => filterProducts(e)} value={item.categoryName}>
+            {item.categoryName.toUpperCase()}
         </button>
     )
 })

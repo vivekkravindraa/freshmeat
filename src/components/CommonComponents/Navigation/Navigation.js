@@ -72,7 +72,7 @@ export default function Navigation(props) {
 
 	return (
 		<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
-			<nav className={`Navigation-menu`}>
+			<nav className="Navigation-menu">
 				<ul className="Navigation-menu-items">
 					{navigationItems.map((item,index) => {
 						return (

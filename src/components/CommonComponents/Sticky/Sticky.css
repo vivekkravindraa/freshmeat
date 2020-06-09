@@ -1,0 +1,194 @@
+@media (min-width: 320px) and (max-width:767px) {
+    .Sticky-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding: 10px 0;
+        border-bottom: rgba(red, green, blue, alpha);
+    }
+
+    .Sticky-icons__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Sticky-navigation__links {
+        display: none;
+    }
+
+    .Navigation-container {
+        margin-bottom: 0;
+    }
+
+    .Navigation-menu__item-link {
+        color: #000000;
+    }
+
+    .Sticky-icons__site {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Sticky-icons__site-link {
+        margin: 0 15px 0 0;
+        position: relative;
+        padding: 15px 15px;
+    }
+    
+    .Sticky-icons__site-link i {
+        color: #000000;
+    }
+    
+    .Sticky-icons__site-link span {
+        background-color: #bd2c36;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Sticky-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        padding: 10px 0;
+    }
+
+    .Sticky-icons__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Sticky-navigation__links {
+        display: none;
+    }
+
+    .Navigation-container {
+        margin-bottom: 0;
+    }
+
+    .Navigation-menu__item-link {
+        color: #000000;
+    }
+
+    .Sticky-icons__site {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Sticky-icons__site-link {
+        margin: 0 15px 0 0;
+        position: relative;
+        padding: 15px 15px;
+    }
+    
+    .Sticky-icons__site-link i {
+        color: #000000;
+    }
+    
+    .Sticky-icons__site-link span {
+        background-color: #bd2c36;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 3000px) {
+    .Sticky-container {
+        display: grid;
+        grid-template-columns: 2fr 8fr 2fr;
+        padding: 10px 0;
+    }
+
+    .Sticky-icons__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Sticky-navigation__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Navigation-container {
+        margin-bottom: 0;
+    }
+
+    .Navigation-menu__item-link {
+        color: #000000;
+    }
+
+    .Sticky-icons__site {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .Sticky-icons__site-link {
+        font-size: 1.5em;
+        margin: 0 15px 0 0;
+        position: relative;
+        padding: 15px 15px;
+    }
+    
+    .Sticky-icons__site-link:last-child {
+        display: none;
+        margin: 0;
+    }
+    
+    .Sticky-icons__site-link i {
+        color: #000000;
+    }
+    
+    .Sticky-icons__site-link span {
+        background-color: #bd2c36;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 999;
+    }
+}

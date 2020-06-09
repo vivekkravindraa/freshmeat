@@ -48,9 +48,9 @@ export default function Sticky() {
                     })}
                 </Router>
             </div>
-            {/* <div className={`Sticky-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
+            <div className={`Sticky-cart-popup ${isCartTouched ? `showCartPopup` : `hideCartPopup`}`}>
                 <MyCart closeCart={() => setIsCartTouched(false)} />
-            </div> */}
+            </div>
         </div>
     )
 }

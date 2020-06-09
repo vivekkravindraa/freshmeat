@@ -74,9 +74,9 @@ export default function ProductList() {
                             <Filter />
                         </div>
                         <div className="ProductList-items">
-                            {/* <div className="ProductList-categorySortItems">
+                            <div className="ProductList-categorySortItems">
                                 <CategorySortItems categorySortItems={categorySortItems} />
-                            </div> */}
+                            </div>
                             <div className="ProductList-popularProductItems">
                                 <PopularProductItems popularProductItems={popularProductItems} />
                             </div>

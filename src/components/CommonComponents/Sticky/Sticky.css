@@ -2,8 +2,7 @@
     .Sticky-container {
         display: grid;
         grid-template-columns: 2fr 2fr;
-        padding: 10px 0;
-        border-bottom: rgba(red, green, blue, alpha);
+        padding: 10px 10px;
     }
 
     .Sticky-icons__main {
@@ -122,6 +121,7 @@
         display: grid;
         grid-template-columns: 2fr 8fr 2fr;
         padding: 10px 0;
+        position: relative;
     }
 
     .Sticky-icons__main {
@@ -190,5 +190,20 @@
         width: 100%;
         background-color: #ffffff;
         z-index: 999;
+    }
+
+    .Sticky-cart-popup {
+        display: none;
+    }
+    
+    .showCartPopup {
+        display: block;
+        height: auto;
+        width: auto;
+        background: #ffffff;
+        position: absolute;
+        top: 122px;
+        right: 2px;
+        border-bottom-left-radius: 12px;
     }
 }

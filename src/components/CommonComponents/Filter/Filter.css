@@ -6,7 +6,7 @@
     padding: 35px 0 35px 0;
 }
 
-.Filter-header {
+/* .Filter-header {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,6 +37,42 @@
     color: #000000;
     opacity: 1;
     word-break: break-all;
+} */
+
+.Filter-header {
+    background-color: #bd2c36;
+    padding: 50px 25px;
+    margin-left: 25px;
+    position: relative;
+}
+
+.Filter-header > i {
+    position: relative;
+    right: -200px;
+    top: -35px;
+    color: gray;
+}
+
+input[type="text"] {
+    border-radius: 25px;
+    padding: 15px 40px;
+    outline: none;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    color: gray;
+}
+  
+:-ms-input-placeholder {
+    color: gray;
+}
+  
+::placeholder {
+    color: gray;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .Filter-byCategories {

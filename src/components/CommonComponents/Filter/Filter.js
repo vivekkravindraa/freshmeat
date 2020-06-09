@@ -4,7 +4,6 @@ import './Filter.css';
 
 export default function Filter() {
     const [ selectedTags, setSelectedTags ] = useState([]);
-    console.log('slectedTags', selectedTags);
 
     const filterByCategoryOptions = [
         'Chicken',
@@ -41,9 +40,13 @@ export default function Filter() {
 
     return (
         <div className="Filter-container">
-            <div className="Filter-header">
+            {/* <div className="Filter-header">
                 <i className="fas fa-filter"></i>
                 <p>Filter</p>
+            </div> */}
+            <div className="Filter-header">
+                <input type="text" placeholder="Search Products..." />
+                <i className="fas fa-search fa-lg"></i>
             </div>
             <div className="Filter-byCategories">
                 <p className="Filter-byCategories-title">BY CATEGORIES</p>

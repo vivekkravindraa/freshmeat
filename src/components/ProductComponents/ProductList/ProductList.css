@@ -1,4 +1,78 @@
 @media (min-width: 320px) and (max-width: 767px) {
+    .ProductList-content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .ProductList-location {
+        display: none;
+    }
+
+    .ProductList-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../assets/ProductComponentAssets/productListBanner/productListBannerL.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 350px;
+    }
+
+    .ProductList-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .ProductList-title:after {
+        content: "";
+        display: block;
+        width: 74%;
+        position: relative;
+        padding-top: 10px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-breadcrumb-items {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .ProductList-breadcrumb-item {
+        margin-right: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child {
+        margin-right: 0; 
+    }
+
+    .ProductList-breadcrumb-item:after {
+        color: #ffffff;
+        content: "\003e";
+        margin-left: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child:after {
+        content: "";
+    }
+
+    .ProductList-breadcrumb-item > a {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
     .ProductList-header {
         display: flex;
         flex-direction: column;
@@ -35,8 +109,12 @@
         position: relative;
         width: 40%;
         left: 80px;
-        padding-top: 20px;
+        padding-top: 10px;
         border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-filters {
+        display: none;
     }
 
     .ProductList-categorySortItems {
@@ -44,7 +122,7 @@
         align-items: center;
         padding: 50px 0 0 0;
         margin-left: 25px;
-        overflow-y: auto;
+        overflow-y: scroll;
         -ms-overflow-style: none;
     }
 
@@ -81,15 +159,98 @@
     }
     
     .ProductList-popularProductItems {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        column-gap: 25px;
-        row-gap: 25px;
-        padding: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .ProductList-popularProductItems > div:nth-child(even) {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .PopularProducts-item {
+        margin-right: 0;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .ProductList-content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .ProductList-location {
+        display: none;
+    }
+
+    .ProductList-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../assets/ProductComponentAssets/productListBanner/productListBannerL.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 350px;
+    }
+
+    .ProductList-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .ProductList-title:after {
+        content: "";
+        display: block;
+        width: 74%;
+        position: relative;
+        padding-top: 10px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-breadcrumb-items {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .ProductList-breadcrumb-item {
+        margin-right: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child {
+        margin-right: 0; 
+    }
+
+    .ProductList-breadcrumb-item:after {
+        color: #ffffff;
+        content: "\003e";
+        margin-left: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child:after {
+        content: "";
+    }
+
+    .ProductList-breadcrumb-item > a {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
     .ProductList-header {
         display: flex;
         flex-direction: column;
@@ -101,7 +262,7 @@
     .ProductList-header__title {
         text-align: left;
         font-style: Italic;
-        font-size: 32px;
+        font-size: 16px;
         font-family: Brush Script MT, sans-serif;
         letter-spacing: 0px;
         color: #bd2c36;
@@ -112,7 +273,7 @@
     .ProductList-header__sub-title {
         text-align: left;
         font-weight: bold;
-        font-size: 28px;
+        font-size: 18px;
         font-family: Montserrat;
         letter-spacing: 0px;
         color: #2e1500;
@@ -126,19 +287,30 @@
         position: relative;
         width: 40%;
         left: 80px;
-        padding-top: 20px;
+        padding-top: 10px;
         border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-filters {
+        display: none;
     }
 
     .ProductList-categorySortItems {
         display: flex;
         align-items: center;
         padding: 50px 0 0 0;
-        overflow-y: auto;
+        margin-left: 25px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+    }
+
+    .ProductList-categorySortItems::-webkit-scrollbar {
+        display: none;
     }
     
     .ProductList-categorySortItems button {
-        margin-right: 100px;
+        white-space: pre;
+        margin-right: 25px;
         border-radius: 22px;
         opacity: 1;
         outline: none;
@@ -165,27 +337,92 @@
     }
     
     .ProductList-popularProductItems {
-        display: grid;
-        grid-template-columns: repeat(4, 3fr);
-        column-gap: 25px;
-        row-gap: 25px;
-        padding: 50px;
-        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .ProductList-popularProductItems > div {
+        margin-right: 5px;
+        margin-bottom: 25px;
+    }
+
+    .PopularProducts-item {
+        margin-right: 0;
     }
 }
 
 @media (min-width: 992px) and (max-width: 4000px) {
     .ProductList-content {
         display: grid;
-        grid-template-columns: 4fr 8fr;
+        grid-template-columns: auto auto;
     }
 
     .ProductList-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-image: url('../../../assets/ProductComponentAssets/productListBanner/productListBannerL.png');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 350px;
+    }
+
+    .ProductList-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        font-family: Montserrat;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .ProductList-title:after {
+        content: "";
+        display: block;
+        width: 74%;
+        position: relative;
+        padding-top: 10px;
+        border-bottom: 2px solid #bd2c36;
+    }
+
+    .ProductList-breadcrumb-items {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .ProductList-breadcrumb-item {
+        margin-right: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child {
+        margin-right: 0; 
+    }
+
+    .ProductList-breadcrumb-item:after {
+        color: #ffffff;
+        content: "\003e";
+        margin-left: 10px; 
+    }
+
+    .ProductList-breadcrumb-item:last-child:after {
+        content: "";
+    }
+
+    .ProductList-breadcrumb-item > a {
+        text-decoration: none;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
     }
 
     .ProductList-header {

@@ -628,6 +628,7 @@
         display: grid;
         grid-template-columns: repeat(4, 3fr);
         column-gap: 25px;
+        row-gap: 25px;
         padding: 50px 50px 100px 50px;
     }
     

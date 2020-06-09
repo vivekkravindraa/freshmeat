@@ -1,0 +1,48 @@
+.Location-container {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    background-color: #bd2c36;
+    color: #ffffff;
+}
+
+.Location-store {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Location-store > i {
+    margin-right: 10px;
+}
+
+.Location-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Location-appDownloads {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Location-appDownloads > p {
+    margin-right: 10px;
+}
+
+.Location-appDownloads > i {
+    margin-right: 10px;
+}

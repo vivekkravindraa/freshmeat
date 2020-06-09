@@ -15,37 +15,37 @@ export default function Navigation(props) {
 		},
 		{
 			id: 2,
-			path: "/products",
+			path: "/",
 			content: "Products",
 			subNavigationItems: [
 				{
 					id: 1,
-					path: "/",
+					path: "/product-list",
 					content: "All Products"
 				},
 				{
 					id: 2,
-					path: "/",
+					path: "/product-list/chicken",
 					content: "Chicken"
 				},
 				{
 					id: 3,
-					path: "/",
+					path: "/product-list/seafood",
 					content: "Seafood"
 				},
 				{
 					id: 4,
-					path: "/",
+					path: "/product-list/beef",
 					content: "Beef"
 				},
 				{
 					id: 5,
-					path: "/",
+					path: "/product-list/goatandlamb",
 					content: "Goat & Lamb"
 				},
 				{
 					id: 6,
-					path: "/",
+					path: "/product-list/eggs",
 					content: "Eggs"
 				}
 			]
@@ -71,36 +71,34 @@ export default function Navigation(props) {
 	];
 
 	return (
-		<Router>
-			<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
-				<nav className={`Navigation-menu`}>
-					<ul className="Navigation-menu-items">
-						{navigationItems.map((item,index) => {
-							return (
-								<li key={index} className="Navigation-menu__item" onMouseEnter={() => setId(index + 1)} onMouseLeave={() => setId(0)}>
-									<Link className="Navigation-menu__item-link" to={item.path}>
-										{item.content}
-									</Link>
-									{index + 1 === id ? <span>-</span> : <span>+</span>}
-									<div className={`Navigation-menu__subNavigation-dropdown ${index + 1 === id ? `showDropdown` : `hideDropdown`}`}>
-										<ul className="Navigation-menu__subNavigation-items">
-											{item.subNavigationItems.map((item, index) => {
-												return (
-													<li key={index} className="Navigation-menu__subNavigation-item">
-														<Link className="Navigation-menu__subNavigation-item-link" to={item.path}>
-															{item.content}
-														</Link>
-													</li>
-												)
-											})}
-										</ul>
-									</div>
-								</li>
-							)
-						})}
-					</ul>
-				</nav>
-			</div>
-		</Router>
+		<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
+			<nav className={`Navigation-menu`}>
+				<ul className="Navigation-menu-items">
+					{navigationItems.map((item,index) => {
+						return (
+							<li key={index} className="Navigation-menu__item" onMouseEnter={() => setId(index + 1)} onMouseLeave={() => setId(0)}>
+								<Router><Link className="Navigation-menu__item-link" to={item.path}>
+									{item.content}
+								</Link></Router>
+								{index + 1 === id ? <span>-</span> : <span>+</span>}
+								<div className={`Navigation-menu__subNavigation-dropdown ${index + 1 === id ? `showDropdown` : `hideDropdown`}`}>
+									<ul className="Navigation-menu__subNavigation-items">
+										{item.subNavigationItems.map((item, index) => {
+											return (
+												<li key={index} className="Navigation-menu__subNavigation-item">
+													<Router><Link className="Navigation-menu__subNavigation-item-link" to={item.path}>
+														{item.content}
+													</Link></Router>
+												</li>
+											)
+										})}
+									</ul>
+								</div>
+							</li>
+						)
+					})}
+				</ul>
+			</nav>
+		</div>
 	)
 }

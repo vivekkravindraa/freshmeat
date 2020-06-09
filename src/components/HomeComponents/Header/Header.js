@@ -24,7 +24,7 @@ const Header = (props) => {
         { id: 1, path: "/", icon: "fas fa-user", size: 'fa-lg' },
         { id: 2, path: "/", icon: "fas fa-shopping-cart", size: 'fa-lg' },
         { id: 3, path: "/", icon: "fas fa-search", size: 'fa-lg' },
-        { id: 4, path: "/", icon: "fas fa-bars", size: 'fa-lg' }
+        { id: 4, path: "/", icon: "fas fa-bars", size: 'fa-lg' },
     ];
 
     const quantity = useSelector(state => state);

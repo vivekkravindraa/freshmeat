@@ -45,7 +45,7 @@ export default function Filter() {
                 <p>Filter</p>
             </div> */}
             <div className="Filter-header">
-                <input type="text" placeholder="Search Products..." />
+                <input className="Filter-searchInput" type="text" placeholder="Search Products..." />
                 <i className="fas fa-search fa-lg"></i>
             </div>
             <div className="Filter-byCategories">

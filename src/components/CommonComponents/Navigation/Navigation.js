@@ -70,6 +70,27 @@ export default function Navigation(props) {
 		}
 	];
 
+	// let geocoder;
+
+	// const getLocation = () => {
+	// 	if (navigator.geolocation) {
+	// 	  	navigator.geolocation.getCurrentPosition(showPosition);
+	// 	}
+	// }
+	  
+	// const showPosition = (position) => {
+	// 	const latitude = position.coords.latitude;
+	// 	const longitude = position.coords.longitude;
+	// 	codeLatLng(latitude, longitude);
+	// }
+
+	// useEffect(() => {
+	// 	getLocation();
+	// 	return () => {
+	// 		getLocation();
+	// 	}
+	// }, []);
+
 	return (
 		<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
 			<nav className="Navigation-menu">

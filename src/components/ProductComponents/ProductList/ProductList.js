@@ -4,8 +4,8 @@ import Location from '../../CommonComponents/Location/Location';
 import Filter from '../../CommonComponents/Filter/Filter';
 import PopularProductItems from '../PopularProducts/PopularProductItems';
 import popularProductItems from '../PopularProducts/PopularProductJsonData';
-import CategorySortItems from '../ProductPricing/CategorySortItems';
-import categorySortItems from '../ProductPricing/CategorySortJsonData';
+// import CategorySortItems from '../ProductPricing/CategorySortItems';
+// import categorySortItems from '../ProductPricing/CategorySortJsonData';
 import Footer from '../../HomeComponents/Footer/Footer';
 import Sticky from '../../CommonComponents/Sticky/Sticky';
 
@@ -74,9 +74,9 @@ export default function ProductList() {
                             <Filter />
                         </div>
                         <div className="ProductList-items">
-                            <div className="ProductList-categorySortItems">
+                            {/* <div className="ProductList-categorySortItems">
                                 <CategorySortItems categorySortItems={categorySortItems} />
-                            </div>
+                            </div> */}
                             <div className="ProductList-popularProductItems">
                                 <PopularProductItems popularProductItems={popularProductItems} />
                             </div>

@@ -1,7 +1,6 @@
 @media (min-width: 320px) and (max-width: 767px) {
     .ProductList-content {
         display: grid;
-        grid-template-columns: auto auto;
     }
 
     .ProductList-location {
@@ -158,19 +157,18 @@
     }
     
     .ProductList-popularProductItems {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 25px 0;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+        row-gap: 25px;
+        padding: 25px 10px;
+    }
+
+    .ProductList-popularProductItems > div:nth-child(odd) {
+        margin-right: 0;
     }
 
     .ProductList-popularProductItems > div:nth-child(even) {
-        margin-right: 0;
-        margin-bottom: 25px;
-    }
-
-    .PopularProducts-item {
         margin-right: 0;
     }
 }

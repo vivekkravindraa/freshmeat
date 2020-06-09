@@ -7,8 +7,10 @@
 
     .Sticky-icons__main {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-start;
         align-items: center;
+        margin-left: 15px;
     }
 
     .Sticky-navigation__links {
@@ -25,7 +27,8 @@
 
     .Sticky-icons__site {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: flex-end;
         align-items: center;
     }
     
@@ -37,6 +40,18 @@
     
     .Sticky-icons__site-link i {
         color: #000000;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 2) {
+        display: inline-block;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 3) {
+        display: none;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 4) {
+        display: inline-block;
     }
     
     .Sticky-icons__site-link span {
@@ -54,6 +69,22 @@
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .Sticky-cart-popup {
+        display: none;
+    }
+    
+    .showCartPopup {
+        display: block;
+        height: auto;
+        width: auto;
+        background: #ffffff;
+        position: absolute;
+        top: 122px;
+        right: 2px;
+        z-index: 999;
+        border-bottom-left-radius: 12px;
     }
 }
 
@@ -61,13 +92,14 @@
     .Sticky-container {
         display: grid;
         grid-template-columns: 2fr 2fr;
-        padding: 10px 0;
+        padding: 10px;
     }
 
     .Sticky-icons__main {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        margin-left: 15px;
     }
 
     .Sticky-navigation__links {
@@ -84,7 +116,7 @@
 
     .Sticky-icons__site {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
     
@@ -96,6 +128,18 @@
     
     .Sticky-icons__site-link i {
         color: #000000;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 2) {
+        display: inline-block;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 3) {
+        display: none;
+    }
+
+    .Sticky-icons__site-link:nth-child(n + 4) {
+        display: inline-block;
     }
     
     .Sticky-icons__site-link span {
@@ -113,6 +157,22 @@
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .Sticky-cart-popup {
+        display: none;
+    }
+    
+    .showCartPopup {
+        display: block;
+        height: auto;
+        width: max-content;
+        background: #ffffff;
+        position: absolute;
+        top: 122px;
+        right: 2px;
+        z-index: 999;
+        border-bottom-left-radius: 12px;
     }
 }
 

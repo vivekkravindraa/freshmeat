@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import './Navigation.css';
@@ -6,6 +7,7 @@ import './Navigation.css';
 export default function Navigation(props) {
 	const [ id, setId ] = useState(0);
 	const [ isPathHome, setIsPathHome ] = useState(false);
+	const history = useHistory();
 
 	const navigationItems = [
 		{
@@ -93,7 +95,7 @@ export default function Navigation(props) {
 	// }, []);
 
 	const redirectRoute = (pathname) => {
-		console.log(pathname);
+		history.push(pathname);
 	}
 
 	useEffect(() => {

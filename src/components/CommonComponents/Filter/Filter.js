@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import popularProductItems from '../../ProductComponents/PopularProducts/PopularProductJsonData';
 
 import './Filter.css';
 
@@ -18,9 +19,17 @@ export default function Filter() {
         'Ribs'
     ];
 
-    const [ price, setPrice ] = useState('0.00');
+    const [ searchedProducts, setSearchedProducts ] = useState([]); console.log(searchedProducts);
     const [ categoryFilters, setCategoryFilters ] = useState([]); console.log(categoryFilters);
+    const [ price, setPrice ] = useState('0.00');
     const [ selectedTags, setSelectedTags ] = useState([]);
+
+    const searchProducts = (e) => {
+        const searchedResults = popularProductItems.filter((product) => {
+            return product.category.categoryName.toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0;
+        });
+        setSearchedProducts(searchedResults);
+    }
 
     const filterByCategoriesHandle = (e) => {
         const nodes = document.getElementsByClassName('Filter-byCategories-checkboxInput');
@@ -58,7 +67,7 @@ export default function Filter() {
                 <p>Filter</p>
             </div> */}
             <div className="Filter-header">
-                <input className="Filter-searchInput" type="text" placeholder="Search Products..." />
+                <input className="Filter-searchInput" type="text" placeholder="Search Products..." onChange={(e) => searchProducts(e)} />
                 <i className="fas fa-search fa-lg"></i>
             </div>
             <div className="Filter-byCategories">

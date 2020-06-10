@@ -114,7 +114,7 @@ export default function ProductList() {
                                                 style={{ backgroundImage: `url(${item.productImage})` }}
                                             >
                                                 <div className={`PopularProducts-item-button ${index + 1 === selectedProduct ? `showButton` : `hideButton`}`}>
-                                                    <button className="PopularProducts-item__addToBagButton">
+                                                    <button className="PopularProducts-item__addToBagButton changeBackground">
                                                         ADD TO BAG +
                                                     </button>
                                                 </div>

@@ -525,6 +525,11 @@
         border: 1px solid #bd2c36;
     }
 
+    .ProductPricing-category-sort button:hover {
+        background: #bd2c36 0% 0% no-repeat padding-box;
+        color: #ffffff;
+    }
+
     .selected {
         background-color: #bd2c36;
         color: #ffffff;

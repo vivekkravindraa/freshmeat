@@ -171,6 +171,10 @@
     .ProductList-popularProductItems > div:nth-child(even) {
         margin-right: 0;
     }
+
+    .changeBackground {
+        background-color: green;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -348,6 +352,10 @@
     .PopularProducts-item {
         margin-right: 0;
     }
+
+    .changeBackground {
+        background-color: green;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 4000px) {
@@ -474,5 +482,9 @@
         column-gap: 25px;
         row-gap: 25px;
         padding: 50px;
+    }
+
+    .changeBackground {
+        background-color: green;
     }
 }

@@ -116,8 +116,6 @@
     }
 
     .ProductList-categorySortItems {
-        display: flex;
-        align-items: center;
         padding: 50px 0 0 0;
         margin-left: 25px;
         overflow-y: scroll;
@@ -129,7 +127,7 @@
     }
     
     .ProductList-categorySortItems button {
-        white-space: pre;
+        white-space: nowrap;
         margin-right: 25px;
         border-radius: 22px;
         opacity: 1;
@@ -296,8 +294,6 @@
     }
 
     .ProductList-categorySortItems {
-        display: flex;
-        align-items: center;
         padding: 50px 0 0 0;
         margin-left: 25px;
         overflow-y: scroll;
@@ -309,7 +305,7 @@
     }
     
     .ProductList-categorySortItems button {
-        white-space: pre;
+        white-space: no wrap;
         margin-right: 25px;
         border-radius: 22px;
         opacity: 1;

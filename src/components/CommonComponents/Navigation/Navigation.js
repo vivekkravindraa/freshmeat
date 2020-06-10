@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import './Navigation.css';
 
 export default function Navigation(props) {
+	const history = useHistory();
+
 	const [ id, setId ] = useState(0);
 	const [ isPathHome, setIsPathHome ] = useState(false);
-	const history = useHistory();
 
 	const navigationItems = [
 		{

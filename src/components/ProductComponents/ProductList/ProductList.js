@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import Location from '../../CommonComponents/Location/Location';
@@ -16,6 +17,8 @@ import Sticky from '../../CommonComponents/Sticky/Sticky';
 import './ProductList.css';
 
 export default function ProductList(props) {
+    const history = useHistory();
+
     const breadcrumbItems = [
         {
             id: 1,
@@ -47,6 +50,10 @@ export default function ProductList(props) {
         setFilterPopularProducts(prodcutsFilteredByCategory);
     }
 
+    const redirectRoute = (pathname) => {
+		history.push(pathname);
+	}
+
     useEffect(() => {
         const header = document.getElementById("header");
         const sticky = header.offsetTop;
@@ -76,7 +83,7 @@ export default function ProductList(props) {
                     <div className="ProductList-breadcrumb-items">
                         {breadcrumbItems.map((breadcrumb, index) => {
                             return (
-                            <li key={index} className="ProductList-breadcrumb-item"><Router><Link to={breadcrumb.path}>{breadcrumb.content}</Link></Router></li>
+                                <li key={index} className="ProductList-breadcrumb-item"><Router><Link to={breadcrumb.path} onClick={() => redirectRoute(breadcrumb.path)}>{breadcrumb.content}</Link></Router></li>
                             )
                         })}
                     </div>

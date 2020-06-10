@@ -10,3 +10,14 @@ function reducer(state = 0, action) {
 }
 
 export default reducer;
+
+// import { combineReducers } from 'redux';
+// import quantity from './quantity';
+// import selected from './selected';
+
+// const reducer = combineReducers({
+//   quantity,
+//   selected
+// });
+
+// export default reducer;

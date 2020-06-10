@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 import Location from '../../CommonComponents/Location/Location';
 import Filter from '../../CommonComponents/Filter/Filter';
-import PopularProductItems from '../PopularProducts/PopularProductItems';
-import popularProductItems from '../PopularProducts/PopularProductJsonData';
+
+import categorySortItems from '../ProductPricing/CategorySortJsonData';
 // import CategorySortItems from '../ProductPricing/CategorySortItems';
-// import categorySortItems from '../ProductPricing/CategorySortJsonData';
+
+import popularProductItems from '../PopularProducts/PopularProductJsonData';
+// import PopularProductItems from '../PopularProducts/PopularProductItems';
+
 import Footer from '../../HomeComponents/Footer/Footer';
 import Sticky from '../../CommonComponents/Sticky/Sticky';
 
@@ -29,6 +33,19 @@ export default function ProductList() {
             content: "All Products"
         }
     ];
+
+    const [ category, setCategory ] = useState('chicken');
+    const [ selectedProduct, setSelectProduct ] = useState(1);
+    const [ filteredPopularProducts, setFilterPopularProducts ] = useState([]);
+
+    const filterPopularProducts = (e) => {
+        const value = e.target.value;
+        const prodcutsFilteredByCategory = popularProductItems.filter((product, index) => {
+            return value === product.category.categoryName;
+        });
+        setCategory(value);
+        setFilterPopularProducts(prodcutsFilteredByCategory);
+    }
 
     useEffect(() => {
         const header = document.getElementById("header");
@@ -74,11 +91,56 @@ export default function ProductList() {
                             <Filter />
                         </div>
                         <div className="ProductList-items">
-                            {/* <div className="ProductList-categorySortItems">
-                                <CategorySortItems categorySortItems={categorySortItems} />
-                            </div> */}
+                            <div className="ProductList-categorySortItems">
+                                {/* <CategorySortItems
+                                    categorySortItems={categorySortItems}
+                                /> */}
+                                {categorySortItems.map((item, index) => {
+                                    return (
+                                        <button className={`${category === item.categoryName ? `selected` : ``}`} key={index} onClick={(e) => filterPopularProducts(e)} value={item.categoryName}>
+                                            {item.categoryName.toUpperCase()}
+                                        </button>
+                                    )
+                                })}
+                            </div>
                             <div className="ProductList-popularProductItems">
-                                <PopularProductItems popularProductItems={popularProductItems} />
+                                {/* <PopularProductItems
+                                    popularProductItems={popularProductItems}
+                                /> */}
+                                {(!filteredPopularProducts.length ? popularProductItems.slice(0,9) : filteredPopularProducts).map((item,index) => {
+                                    return (
+                                        <div key={index} className={`PopularProducts-item ${index + 1 === selectedProduct ? `showShadow` : `hideShadow`}`} onClick={() => setSelectProduct(index + 1)}>
+                                            <div className="PopularProducts-item-image"
+                                                style={{ backgroundImage: `url(${item.productImage})` }}
+                                            >
+                                                <div className={`PopularProducts-item-button ${index + 1 === selectedProduct ? `showButton` : `hideButton`}`}>
+                                                    <button className="PopularProducts-item__addToBagButton">
+                                                        ADD TO BAG +
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="PopularProducts-item-description">
+                                                <p className="PopularProducts-item__title">{item.productTitle}</p>
+                                                <p className="PopularProducts-item__type">{item.productType}</p>
+                                                <p className="PopularProducts-item__quantity">{item.productQuantity}</p>
+                                            </div>
+                                            <div className="PopularProducts-item-details">
+                                                <p className="PopularProducts-item__know-more">
+                                                    Know more<i className="fas fa-arrow-right"></i>
+                                                </p>
+                                                <p className={`PopularProducts-item__price ${index + 1 === selectedProduct ? `selected` : null}`}>{item.productPrice}</p>
+                                            </div>
+                                            <div className="PopularProducts-item-details-mobile">
+                                                <p className={`PopularProducts-item__addProduct ${index + 1 === selectedProduct ? `hideAddProduct` : `showAddProduct`}`}>ADD +</p>
+                                                <div className={`PopularProducts-quantityVariation ${index + 1 === selectedProduct ? `showQuantityVariation` : `hideQuantityVariation`}`}>   
+                                                    <button className="PopularProducts-decreaseButton">-</button>
+                                                    <input className="PopularProducts-inputValue" defaultValue={0} />
+                                                    <button className="PopularProducts-increaseButton">+</button>
+                                                </div>
+                                                <p className="PopularProducts-item__price">{item.productPrice}</p>
+                                            </div>
+                                        </div>
+                                    )})}
                             </div>
                         </div>
                     </div>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import productPricingItems from './ProductPricingJsonData';
-import ProductPricingItems from './ProductPricingItems';
-
 import categorySortItems from './CategorySortJsonData';
 import CategorySortItems from './CategorySortItems';
+
+import productPricingItems from './ProductPricingJsonData';
+import ProductPricingItems from './ProductPricingItems';
 
 import './ProductPricing.css';
 

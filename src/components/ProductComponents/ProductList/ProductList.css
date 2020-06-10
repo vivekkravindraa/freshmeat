@@ -173,12 +173,60 @@
     .changeBackground {
         background-color: green;
     }
+
+    .ProductList-filters-mobile {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px 10px;
+        background: #f5f5f5;
+        border-radius: 12px;
+        position: relative;
+        top: -200px;
+    }
+
+    .ProductList-filters-mobile > div {
+        border-right: 1px solid black;
+    }
+
+    .ProductList-filters-mobile > div:last-child {
+        border-right: 0;
+    }
+
+    .ProductList-filters-mobile > div > p {
+        display: flex;
+        justify-content: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: Medium;
+        margin: 0;
+    }
+
+    .ProductList-filters-mobile > div > p > i {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .ProductList-loadmore {
+        padding: 0 50px 50px;
+    }
+
+    .ProductList-loadmore-button {
+        min-width: -webkit-fill-available;
+        border: 4px solid #bd2c36;
+        border-radius: 4px;
+        background-color: #ffffff;
+        padding: 15px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .ProductList-content {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
 
     .ProductList-location {
@@ -294,6 +342,8 @@
     }
 
     .ProductList-categorySortItems {
+        display: flex;
+        justify-content: center;
         padding: 50px 0 0 0;
         margin-left: 25px;
         overflow-y: scroll;
@@ -351,6 +401,54 @@
 
     .changeBackground {
         background-color: green;
+    }
+
+    .ProductList-filters-mobile {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px 10px;
+        background: #f5f5f5;
+        border-radius: 12px;
+        position: relative;
+        top: -200px;
+    }
+
+    .ProductList-filters-mobile > div {
+        border-right: 1px solid black;
+    }
+
+    .ProductList-filters-mobile > div:last-child {
+        border-right: 0;
+    }
+
+    .ProductList-filters-mobile > div > p {
+        display: flex;
+        justify-content: center;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: Medium;
+        margin: 0;
+    }
+
+    .ProductList-filters-mobile > div > p > i {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .ProductList-loadmore {
+        padding: 0 50px 50px;
+    }
+
+    .ProductList-loadmore-button {
+        min-width: -webkit-fill-available;
+        border: 4px solid #bd2c36;
+        border-radius: 4px;
+        background-color: #ffffff;
+        padding: 15px;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: bold;
     }
 }
 
@@ -482,5 +580,13 @@
 
     .changeBackground {
         background-color: green;
+    }
+
+    .ProductList-filters-mobile {
+        display: none;
+    }
+
+    .ProductList-loadmore {
+        display: none;
     }
 }

@@ -37,6 +37,7 @@ export default function ProductList(props) {
         }
     ];
 
+    const [ limit, setLimit ] = useState(4);
     const [ category, setCategory ] = useState('chicken');
     const [ selectedProduct, setSelectProduct ] = useState(1);
     const [ filteredPopularProducts, setFilterPopularProducts ] = useState([]);
@@ -52,7 +53,7 @@ export default function ProductList(props) {
 
     const redirectRoute = (pathname) => {
 		history.push(pathname);
-	}
+    }
 
     useEffect(() => {
         const header = document.getElementById("header");
@@ -114,7 +115,7 @@ export default function ProductList(props) {
                                 {/* <PopularProductItems
                                     popularProductItems={popularProductItems}
                                 /> */}
-                                {(!filteredPopularProducts.length ? popularProductItems.slice(0,9) : filteredPopularProducts).map((item,index) => {
+                                {(!filteredPopularProducts.length ? popularProductItems.slice(0,limit) : filteredPopularProducts.slice(0,limit)).map((item,index) => {
                                     return (
                                         <div key={index} className={`PopularProducts-item ${index + 1 === selectedProduct ? `showShadow` : `hideShadow`}`} onClick={() => setSelectProduct(index + 1)}>
                                             <div className="PopularProducts-item-image"
@@ -151,6 +152,22 @@ export default function ProductList(props) {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="ProductList-filters-mobile">
+                    <div className="ProductList-filters-mobile__filter">
+                        <p><i className="fas fa-filter"></i>Filter</p>
+                    </div>
+                    <div className="ProductList-filters-mobile__sort">
+                        <p><i className="fas fa-sort"></i>Sort</p>
+                    </div>
+                    <div className="ProductList-filters-mobile__search">
+                        <p><i className="fas fa-search"></i>Search</p>
+                    </div>
+                </div>
+                <div className="ProductList-loadmore">
+                    <button className="ProductList-loadmore-button" onClick={(e) => setLimit(limit + 4)}>
+                        Load More...
+                    </button>
                 </div>
             </div>
             <Footer />

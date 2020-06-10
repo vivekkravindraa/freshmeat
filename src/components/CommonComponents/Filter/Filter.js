@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import './Filter.css';
 
 export default function Filter() {
-    const [ selectedTags, setSelectedTags ] = useState([]);
-
-    const filterByCategoryOptions = [
+    const filterByCategories = [
         'Chicken',
         'Seafood',
         'Beef',
@@ -13,12 +11,27 @@ export default function Filter() {
         'Uncategorized'
     ];
 
-    const filterByProductTags = [
+    const filterByProducts = [
         'Chicken',
         'Wings',
         'Beef',
         'Ribs'
     ];
+
+    const [ price, setPrice ] = useState('0.00');
+    const [ setCategoryFilters ] = useState([]);
+    const [ selectedTags, setSelectedTags ] = useState([]);
+
+    const filterByCategoriesHandle = (e) => {
+        const nodes = document.getElementsByClassName('Filter-byCategories-checkboxInput');
+        const selectedNodes = [];
+        for(let i = 0; i < nodes.length; i++) {
+            if(nodes[i].checked) {
+                selectedNodes.push(nodes[i].value.toLowerCase());
+            }
+        }
+        setCategoryFilters(...selectedNodes);
+    }
 
     const selectTagHandle = (index) => {
         let tags = selectedTags;
@@ -51,12 +64,17 @@ export default function Filter() {
             <div className="Filter-byCategories">
                 <p className="Filter-byCategories-title">BY CATEGORIES</p>
                 <div className="Filter-byCategories-items">
-                    {filterByCategoryOptions.map((option, index) => {
+                    {filterByCategories.map((category, index) => {
                         return (
                             <div className="Filter-byCategories-item" key={index}>
-                                <p value={option}>{option}</p>
+                                <p value={category}>{category}</p>
                                 <div className="Filter-byCategories-checkbox">
-                                    <input type="checkbox" />
+                                    <input
+                                        className="Filter-byCategories-checkboxInput"
+                                        type="checkbox"
+                                        value={category}
+                                        onChange={(e) => filterByCategoriesHandle(e)}
+                                    />
                                 </div>
                             </div>
                         )
@@ -65,13 +83,13 @@ export default function Filter() {
             </div>
             <div className="Filter-byPrice">
                 <p className="Filter-byPrice-title">BY PRICE</p>
-                <input type="range" id="vol" name="vol" min="0" max="50" />
-                <p className="Filter-byPrice-price">Price: AED 0.00 - AED 100.00</p>
+                <input type="range" id="vol" name="vol" min="0" max="100" value={price} onChange={(e) => setPrice(e.target.value + '.00')} />
+                <p className="Filter-byPrice-price">Price: AED 0.00 - AED {price}</p>
             </div>
             <div className="Filter-byProductTags">
                 <p className="Filter-byProductTags-title">BY PRODUCT TAGS</p>
                 <div className="Filter-byProductTags-items">
-                    {filterByProductTags.map((tag,index) => {
+                    {filterByProducts.map((tag,index) => {
                         return (
                             <button
                                 className={`Filter-byProductTags-item`}

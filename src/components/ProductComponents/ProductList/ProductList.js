@@ -15,7 +15,7 @@ import Sticky from '../../CommonComponents/Sticky/Sticky';
 
 import './ProductList.css';
 
-export default function ProductList() {
+export default function ProductList(props) {
     const breadcrumbItems = [
         {
             id: 1,

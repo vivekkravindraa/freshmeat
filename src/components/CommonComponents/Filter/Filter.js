@@ -19,7 +19,7 @@ export default function Filter() {
     ];
 
     const [ price, setPrice ] = useState('0.00');
-    const [ setCategoryFilters ] = useState([]);
+    const [ categoryFilters, setCategoryFilters ] = useState([]); console.log(categoryFilters);
     const [ selectedTags, setSelectedTags ] = useState([]);
 
     const filterByCategoriesHandle = (e) => {

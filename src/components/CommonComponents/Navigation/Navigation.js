@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import './Navigation.css';
 
 export default function Navigation(props) {
 	const [ id, setId ] = useState(0);
+	const [ isPathHome, setIsPathHome ] = useState(false);
 
 	const navigationItems = [
 		{
@@ -15,7 +16,7 @@ export default function Navigation(props) {
 		},
 		{
 			id: 2,
-			path: "/",
+			path: "/products",
 			content: "Products",
 			subNavigationItems: [
 				{
@@ -91,6 +92,18 @@ export default function Navigation(props) {
 	// 	}
 	// }, []);
 
+	const redirectRoute = (pathname) => {
+		console.log(pathname);
+	}
+
+	useEffect(() => {
+    	if(window.location.pathname === "/") {
+			setIsPathHome(true)
+		} else {
+			setIsPathHome(false)
+		}
+    }, []);
+
 	return (
 		<div className={`Navigation-container ${props.isNavigationTouched ? `showNavMenu` : `hideNavMenu`}`}>
 			<nav className="Navigation-menu">
@@ -98,17 +111,17 @@ export default function Navigation(props) {
 					{navigationItems.map((item,index) => {
 						return (
 							<li key={index} className="Navigation-menu__item" onMouseEnter={() => setId(index + 1)} onMouseLeave={() => setId(0)}>
-								<Router><Link className="Navigation-menu__item-link" to={item.path}>
+								<Router><Link className={`Navigation-menu__item-link ${isPathHome ? `defaultColor` : `changeColor`}`} to={item.path} onClick={() => redirectRoute(item.path)}>
 									{item.content}
 								</Link></Router>
 								{index + 1 === id ? <span>-</span> : <span>+</span>}
 								<div className={`Navigation-menu__subNavigation-dropdown ${index + 1 === id ? `showDropdown` : `hideDropdown`}`}>
 									<ul className="Navigation-menu__subNavigation-items">
-										{item.subNavigationItems.map((item, index) => {
+										{item.subNavigationItems.map((subItem, index) => {
 											return (
 												<li key={index} className="Navigation-menu__subNavigation-item">
-													<Router><Link className="Navigation-menu__subNavigation-item-link" to={item.path}>
-														{item.content}
+													<Router><Link className="Navigation-menu__subNavigation-item-link" to={subItem.path} onClick={() => redirectRoute(subItem.path)}>
+														{subItem.content}
 													</Link></Router>
 												</li>
 											)

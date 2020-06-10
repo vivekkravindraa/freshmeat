@@ -97,10 +97,10 @@ export default function Navigation(props) {
 	}
 
 	useEffect(() => {
-    	if(window.location.pathname === "/") {
-			setIsPathHome(true)
+    	if(window.location.pathname !== "/") {
+			return;
 		} else {
-			setIsPathHome(false)
+			setIsPathHome(true);
 		}
     }, []);
 
